@@ -439,7 +439,7 @@ def seed_db():
                 section_id = section.get("section_id")
                 
                 # PHẦN I: Trắc nghiệm khách quan
-                if "PHẦN I" in section_title.upper() or section_id == 1:
+                if section_id == 1:
                     for q in section.get("questions", []):
                         choices = q.get("choices", {})
                         options = [
@@ -460,7 +460,7 @@ def seed_db():
                         ))
 
                 # PHẦN II: Trắc nghiệm Đúng/Sai
-                elif "PHẦN II" in section_title.upper() or section_id == 2:
+                elif section_id == 2:
                     for q in section.get("questions", []):
                         context = q.get("context_text", "")
                         for st in q.get("statements", []):
@@ -479,7 +479,7 @@ def seed_db():
                             ))
 
                 # PHẦN III: Điền đáp án ngắn
-                elif "PHẦN III" in section_title.upper() or section_id == 3:
+                elif section_id == 3:
                     for q in section.get("questions", []):
                         db.add(Question(
                             subject="math",
