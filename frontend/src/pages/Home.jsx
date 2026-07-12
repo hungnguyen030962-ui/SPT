@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Play, BookOpen, Bookmark, FileText, 
-  CheckCircle, ArrowRight, BarChart3, AlertCircle 
+  CheckCircle, ArrowRight, BarChart3, AlertCircle, RefreshCw
 } from 'lucide-react';
 
 export function Home() {
@@ -48,7 +48,7 @@ export function Home() {
             Hệ thống luyện thi SPT HNUE
           </h1>
           <p className="text-blue-100 text-sm md:text-base mb-6 leading-relaxed">
-            Nền tảng thi thử trực tuyến hoàn chỉnh 3 môn Toán học, Ngữ văn và Tiếng Anh. Không cần đăng nhập, vào làm bài ngay lập tức, lời giải chi tiết và phân tích tiến độ thông minh.
+            Nền tảng thi thử trực tuyến hoàn chỉnh môn Toán học. Không cần đăng nhập, vào làm bài ngay lập tức, lời giải chi tiết và phân tích tiến độ thông minh.
           </p>
           <div className="flex flex-wrap gap-3">
             <Link
@@ -56,12 +56,6 @@ export function Home() {
               className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white text-brand-600 hover:bg-slate-50 font-bold text-sm shadow-md transition-all hover:translate-x-0.5"
             >
               <Play className="w-4 h-4 fill-brand-600" /> Bắt đầu làm đề
-            </Link>
-            <Link
-              to="/questions"
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white/10 text-white hover:bg-white/20 font-semibold text-sm transition-all"
-            >
-              Xem ngân hàng câu hỏi <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
@@ -86,61 +80,42 @@ export function Home() {
       </div>
 
       {/* Main Sections Link Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Math & Science card */}
         <div className="bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700/50 p-6 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
           <div>
             <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-blue-600 dark:bg-blue-950/50 dark:text-blue-400 mb-4 font-bold text-xl">
               ∑
             </div>
-            <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100 mb-2">Toán học</h3>
+            <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100 mb-2">Đề thi thử Toán học</h3>
             <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6">
-              Luyện tập các chuyên đề Hàm số, Tích phân, Hình không gian. Hiển thị lời giải từng bước và liên kết công thức chi tiết.
+              Luyện tập các đề thi thử ĐGNL môn Toán chuẩn cấu trúc HNUE. Hỗ trợ hiển thị công thức LaTeX trực quan và cung cấp lời giải chi tiết từng bước.
             </p>
           </div>
           <Link
             to="/exam?subject=math"
             className="flex items-center gap-1.5 text-sm font-bold text-brand-600 dark:text-brand-400 hover:gap-2.5 transition-all mt-auto"
           >
-            Vào ôn luyện Toán <ArrowRight className="w-4 h-4" />
+            Vào làm đề Toán <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
 
-        {/* Literature card */}
+        {/* Review & Revision card */}
         <div className="bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700/50 p-6 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
           <div>
-            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-purple-100 text-purple-600 dark:bg-purple-950/50 dark:text-purple-400 mb-4">
-              <FileText className="w-6 h-6" />
+            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-rose-100 text-rose-600 dark:bg-rose-950/50 dark:text-rose-400 mb-4">
+              <RefreshCw className="w-6 h-6" />
             </div>
-            <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100 mb-2">Ngữ văn</h3>
+            <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100 mb-2">Trung tâm ôn tập</h3>
             <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6">
-              Luyện đề thi thử môn Ngữ văn đánh giá năng lực HNUE. Bao gồm đọc hiểu, kiến thức văn học chung.
+              Xem lại các câu hỏi đã lưu, xem danh sách các câu làm sai và thực hiện luyện tập lại để củng cố kiến thức còn yếu.
             </p>
           </div>
           <Link
-            to="/exam?subject=literature"
+            to="/review"
             className="flex items-center gap-1.5 text-sm font-bold text-brand-600 dark:text-brand-400 hover:gap-2.5 transition-all mt-auto"
           >
-            Vào ôn luyện Văn <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
-
-        {/* English card */}
-        <div className="bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700/50 p-6 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
-          <div>
-            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-100 text-amber-600 dark:bg-amber-950/50 dark:text-amber-400 mb-4 font-bold text-lg">
-              A-Z
-            </div>
-            <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100 mb-2">Tiếng Anh</h3>
-            <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6">
-              Học từ vựng qua Flashcard thông minh. Ôn luyện các chuyên đề ngữ pháp, đọc hiểu văn bản, và điền từ cloze test.
-            </p>
-          </div>
-          <Link
-            to="/review?tab=flashcards"
-            className="flex items-center gap-1.5 text-sm font-bold text-brand-600 dark:text-brand-400 hover:gap-2.5 transition-all mt-auto"
-          >
-            Học Flashcards Anh <ArrowRight className="w-4 h-4" />
+            Vào trung tâm ôn tập <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </div>

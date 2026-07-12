@@ -52,7 +52,7 @@ export function Sidebar({ isOpen, onClose }) {
           <div className="border-t border-slate-100 dark:border-slate-800 pt-4 mt-6">
             <div className="rounded-xl bg-slate-50 dark:bg-slate-800/50 p-4 text-xs">
               <p className="font-semibold text-slate-700 dark:text-slate-300">Tuyển sinh SPT HNUE</p>
-              <p className="text-slate-400 dark:text-slate-500 mt-0.5">Luyện thi Đánh giá năng lực 3 môn Toán, Văn, Anh.</p>
+              <p className="text-slate-400 dark:text-slate-500 mt-0.5">Luyện thi Đánh giá năng lực môn Toán học.</p>
             </div>
           </div>
         </div>
