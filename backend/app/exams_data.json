@@ -1,0 +1,2234 @@
+[
+  {
+    "exam_title": "Đề số 1",
+    "duration_minutes": 90,
+    "sections": [
+      {
+        "section_id": 1,
+        "section_title": "PHẦN I. TRẮC NGHIỆM KHÁCH QUAN",
+        "questions": [
+          {
+            "question_number": 1,
+            "question_text": "Cho hàm số $y = f(x) = x^3 - 3(1)x^2 + 2$ liên tục trên $\\mathbb{R}$. Tìm tập hợp tất cả các giá trị của tham số $m$ để phương trình $f(x) = m$ có đúng 3 nghiệm thực phân biệt.",
+            "choices": {
+              "A": "$-2 < m < 2$",
+              "B": "$m > 2$",
+              "C": "$m < -2$",
+              "D": "$m = 2$ hoặc $m = -2$"
+            },
+            "correct_answer": "A",
+            "explanation": "Đạo hàm $y' = 3x^2 - 6(1)x = 3x(x - 2)$. Cho $y' = 0 \\Leftrightarrow x = 0$ hoặc $x = 2$. Đồ thị có điểm cực đại là $(0; 2)$ và điểm cực tiểu là $(2; -2)$. Phương trình có 3 nghiệm phân biệt khi đường thẳng $y = m$ cắt đồ thị tại 3 điểm phân biệt, tương đương $-2 < m < 2$."
+          },
+          {
+            "question_number": 2,
+            "question_text": "Tính đạo hàm của hàm số $y = 3^{x^2 - 2x}$.",
+            "choices": {
+              "A": "$y' = (2x - 2) \\cdot 3^{x^2 - 2x} \\cdot \\ln 3$",
+              "B": "$y' = (x^2 - 2x) \\cdot 3^{x^2 - 2x - 1}$",
+              "C": "$y' = 3^{x^2 - 2x} \\cdot \\ln 3$",
+              "D": "$y' = \\frac{2x - 2}{\\ln 3} \\cdot 3^{x^2 - 2x}$"
+            },
+            "correct_answer": "A",
+            "explanation": "Áp dụng công thức đạo hàm hàm hợp $(a^u)' = u' \\cdot a^u \\cdot \\ln a$. Ở đây $a = 3$, $u = x^2 - 2x \\Rightarrow u' = 2x - 2$. Do đó ta có: $y' = (2x - 2) \\cdot 3^{x^2 - 2x} \\cdot \\ln 3$."
+          },
+          {
+            "question_number": 3,
+            "question_text": "Tìm tập xác định $D$ của hàm số $y = (x^2 - 3x + 2)^{-e}$.",
+            "choices": {
+              "A": "$D = (-\\infty; 1) \\cup (2; +\\infty)$",
+              "B": "$D = \\mathbb{R} \\setminus \\{1; 2\\}$",
+              "C": "$D = (1; 2)$",
+              "D": "$D = \\mathbb{R}$"
+            },
+            "correct_answer": "A",
+            "explanation": "Hàm số lũy thừa có số mũ không nguyên xác định khi cơ số dương: $x^2 - 3x + 2 > 0 \\Leftrightarrow (x-1)(x-2) > 0 \\Leftrightarrow x < 1$ hoặc $x > 2$. Tập xác định là $D = (-\\infty; 1) \\cup (2; +\\infty)$."
+          },
+          {
+            "question_number": 4,
+            "question_text": "Giải phương trình $\\log_2(x - 3) + \\log_2(x - 1) = 3$.",
+            "choices": {
+              "A": "$x = 5$",
+              "B": "$x = 5$ hoặc $x = -1$",
+              "C": "$x = 4$",
+              "D": "$x = 3$"
+            },
+            "correct_answer": "A",
+            "explanation": "Điều kiện: $x > 3$. Phương trình viết lại: $\\log_2[(x - 3)(x - 1)] = 3 \\Leftrightarrow x^2 - 4x + 3 = 8 \\Leftrightarrow x^2 - 4x + -5 = 0 \\Leftrightarrow x = 5$ (nhận) hoặc $x = -1$ (loại do điều kiện)."
+          },
+          {
+            "question_number": 5,
+            "question_text": "Tìm nguyên hàm $F(x)$ của hàm số $f(x) = \\frac{2x + 3}{x + 1}$ trên khoảng $(-1; +\\infty)$ biết $F(0) = 2$.",
+            "choices": {
+              "A": "$F(x) = 2x + 1\\ln(x + 1) + 2$",
+              "B": "$F(x) = 2x + 1\\ln|x + 1| + C$",
+              "C": "$F(x) = 2x - 1\\ln(x + 1) + 2$",
+              "D": "$F(x) = 2x + 3\\ln(x + 1) + 2$"
+            },
+            "correct_answer": "A",
+            "explanation": "Ta có $f(x) = \\frac{2(x+1) + 1}{x+1} = 2 + \\frac{1}{x+1}$. Nguyên hàm là $F(x) = 2x + 1\\ln(x+1) + C$ (vì $x > -1$). Từ $F(0) = 2 \\Rightarrow 0 + 0 + C = 2 \\Rightarrow C = 2$. Vậy $F(x) = 2x + 1\\ln(x+1) + 2$."
+          },
+          {
+            "question_number": 6,
+            "question_text": "Tính diện tích $S$ của hình phẳng giới hạn bởi đồ thị hàm số $y = x^3 - 1x$ và trục hoành $Ox$.",
+            "choices": {
+              "A": "$S = \\frac{1}{2}$",
+              "B": "$S = \\frac{1}{4}$",
+              "C": "$S = 1$",
+              "D": "$S = 2(1)$"
+            },
+            "correct_answer": "A",
+            "explanation": "Phương trình hoành độ giao điểm: $x^3 - 1x = 0 \\Leftrightarrow x = 0, x = \\pm 1$. Do đồ thị đối xứng qua gốc tọa độ: $S = 2 \\int_{0}^{1} |x^3 - 1x| dx = 2 \\int_{0}^{1} (1x - x^3) dx = 2 \\left. \\left( \\frac{1x^2}{2} - \\frac{x^4}{4} \\right) \\right|_{0}^{1} = 2 \\left( \\frac{1}{2} - \\frac{1}{4} \\right) = \\frac{1}{2}$."
+          },
+          {
+            "question_number": 7,
+            "question_text": "Tìm số phức liên hợp $\\overline{z}$ của số phức $z$ thỏa mãn $(1 + i)z = 3 - i$.",
+            "choices": {
+              "A": "$\\overline{z} = \\frac{2}{2} + \\frac{4}{2}i$",
+              "B": "$\\overline{z} = \\frac{2}{2} - \\frac{4}{2}i$",
+              "C": "$\\overline{z} = \\frac{4}{2} + \\frac{2}{2}i$",
+              "D": "$\\overline{z} = -\\frac{2}{2} - \\frac{4}{2}i$"
+            },
+            "correct_answer": "A",
+            "explanation": "Ta có $z = \\frac{3 - i}{1 + i} = \\frac{(3 - i)(1 - i)}{2} = \\frac{2 - (4)i}{2}$. Suy ra số phức liên hợp là $\\overline{z} = \\frac{2}{2} + \\frac{4}{2}i$."
+          },
+          {
+            "question_number": 8,
+            "question_text": "Tính môđun của số phức $z = 1 + 4i$.",
+            "choices": {
+              "A": "$|z| = \\sqrt{17}$",
+              "B": "$|z| = 17$",
+              "C": "$|z| = 5$",
+              "D": "$|z| = \\sqrt{-15}$"
+            },
+            "correct_answer": "A",
+            "explanation": "Áp dụng công thức tính môđun của số phức $z = a + bi$: $|z| = \\sqrt{a^2 + b^2} = \\sqrt{1^2 + 4^2} = \\sqrt{17}$."
+          },
+          {
+            "question_number": 9,
+            "question_text": "Trong không gian $Oxyz$, cho hai điểm $A(1; 2; -3)$ và $B(3; 0; -1)$. Tìm tọa độ trung điểm $M$ của đoạn thẳng $AB$.",
+            "choices": {
+              "A": "$M\\left(\\frac{4}{2}; 1; -2\\right)$",
+              "B": "$M(4; 2; -4)$",
+              "C": "$M\\left(\\frac{-2}{2}; 1; -1\\right)$",
+              "D": "$M\\left(\\frac{4}{2}; 1; -1\\right)$"
+            },
+            "correct_answer": "A",
+            "explanation": "Áp dụng công thức trung điểm: $x_M = \\frac{x_A + x_B}{2} = \\frac{1 + 3}{2}$; $y_M = 1$; $z_M = -2$. Tọa độ trung điểm là $M\\left(\\frac{4}{2}; 1; -2\\right)$."
+          },
+          {
+            "question_number": 10,
+            "question_text": "Trong không gian $Oxyz$, viết phương trình mặt phẳng đi qua điểm $A(1; 2; 3)$ và song song với mặt phẳng $(P): 2x - y + 1z - 5 = 0$.",
+            "choices": {
+              "A": "$2x - y + 1z - 3 = 0$",
+              "B": "$2x - y + 1z + 3 = 0$",
+              "C": "$2x - y + 1z - 5 = 0$",
+              "D": "$2x - y + 1z = 0$"
+            },
+            "correct_answer": "A",
+            "explanation": "Mặt phẳng song song có dạng $2x - y + 1z + D = 0$. Thế điểm $A(1;2;3)$ vào: $2(1) - (2) + 1(3) + D = 0 \\Leftrightarrow D = -3$. Phương trình cần tìm là $2x - y + 1z - 3 = 0$."
+          },
+          {
+            "question_number": 11,
+            "question_text": "Trong không gian $Oxyz$, cho hai đường thẳng $d_1: \\frac{x-1}{1} = \\frac{y}{1} = \\frac{z-1}{-1}$ và $d_2: \\frac{x}{2} = \\frac{y-1}{1} = \\frac{z+2}{1}$. Tính tích vô hướng của hai vectơ chỉ phương của $d_1$ và $d_2$.",
+            "choices": {
+              "A": "$2$",
+              "B": "$0$",
+              "C": "$1$",
+              "D": "$21$"
+            },
+            "correct_answer": "A",
+            "explanation": "Vectơ chỉ phương của $d_1$ là $\\vec{u}_1 = (1; 1; -1)$, của $d_2$ là $\\vec{u}_2 = (2; 1; 1)$. Tích vô hướng: $\\vec{u}_1 \\cdot \\vec{u}_2 = 1(2) + 1(1) + (-1)(1) = 2$."
+          },
+          {
+            "question_number": 12,
+            "question_text": "Chọn ngẫu nhiên đồng thời 2 tấm thẻ từ một hộp chứa 9 tấm thẻ được đánh số từ 1 đến 9. Tính xác suất để tích hai số ghi trên hai tấm thẻ chọn ra là một số chẵn.",
+            "choices": {
+              "A": "$0.722$",
+              "B": "$0.278$",
+              "C": "$0.5$",
+              "D": "$0.75$"
+            },
+            "correct_answer": "A",
+            "explanation": "Tích hai số ghi trên thẻ là số lẻ khi và chỉ khi cả 2 thẻ đều lẻ. Số thẻ lẻ là 5. Số cách chọn 2 thẻ lẻ là $C_{5}^2 = 10$. Tổng số cách chọn 2 thẻ bất kỳ là $C_{9}^2 = 36$. Xác suất tích lẻ là 10/36. Do đó xác suất tích chẵn là $1 - 10/36 = 0.722$."
+          },
+          {
+            "question_number": 13,
+            "question_text": "Cho cấp số cộng $(u_n)$ có số hạng đầu $u_1 = 1$ và công sai $d = 3$. Tìm số hạng thứ 10 của cấp số cộng đó.",
+            "choices": {
+              "A": "$28$",
+              "B": "$31$",
+              "C": "$25$",
+              "D": "$101$"
+            },
+            "correct_answer": "A",
+            "explanation": "Số hạng thứ 10 là $u_{10} = u_1 + 9d = 1 + 9(3) = 28$."
+          },
+          {
+            "question_number": 14,
+            "question_text": "Cho cấp số nhân $(u_n)$ có số hạng đầu $u_1 = 3$ và công sai (công bội) $q = 2$. Tính tổng 5 số hạng đầu tiên $S_5$.",
+            "choices": {
+              "A": "$93$",
+              "B": "$96$",
+              "C": "$90$",
+              "D": "$15$"
+            },
+            "correct_answer": "A",
+            "explanation": "Áp dụng công thức tính tổng cấp số nhân: $S_5 = u_1 \\frac{q^5 - 1}{q - 1} = 3 \\cdot \\frac{2^5 - 1}{1} = 93$."
+          },
+          {
+            "question_number": 15,
+            "question_text": "Cho khối tứ diện đều $ABCD$ có tất cả các cạnh bằng $1a$. Tính thể tích $V$ của khối tứ diện đều đó.",
+            "choices": {
+              "A": "$V = \\frac{1a^3\\sqrt{2}}{12}$",
+              "B": "$V = \\frac{1a^3\\sqrt{2}}{4}$",
+              "C": "$V = \\frac{1a^3\\sqrt{3}}{12}$",
+              "D": "$V = \\frac{1a^3}{6}$"
+            },
+            "correct_answer": "A",
+            "explanation": "Thể tích khối tứ diện đều cạnh $x$ là $V = \\frac{x^3\\sqrt{2}}{12}$. Với $x = 1a$, ta có $V = \\frac{1a^3\\sqrt{2}}{12}$."
+          },
+          {
+            "question_number": 16,
+            "question_text": "Một hình nón có bán kính đáy $r = 4$ cm và chiều cao $h = 3$ cm. Tính thể tích $V$ của khối nón tương ứng.",
+            "choices": {
+              "A": "$16\\pi$ cm$^3$",
+              "B": "$48\\pi$ cm$^3$",
+              "C": "$5.3\\pi$ cm$^3$",
+              "D": "$20\\pi$ cm$^3$"
+            },
+            "correct_answer": "A",
+            "explanation": "Thể tích hình nón: $V = \\frac{1}{3} \\pi r^2 h = \\frac{1}{3} \\pi (16) (3) = 16\\pi$ cm$^3$."
+          }
+        ]
+      },
+      {
+        "section_id": 2,
+        "section_title": "PHẦN II. TRĂC NGHIỆM ĐÚNG SAI",
+        "questions": [
+          {
+            "question_number": 1,
+            "context_text": "Cho hàm số bậc ba $y = f(x) = x^3 - 3(1)x^2 + 1$ có đồ thị là $(C)$.",
+            "statements": [
+              {
+                "label": "a",
+                "text": "Đạo hàm của hàm số là $f'(x) = 3x^2 - 6x$.",
+                "correct_value": "Đúng",
+                "explanation": "Áp dụng các quy tắc đạo hàm cơ bản ta có: $f'(x) = 3x^2 - 6x$."
+              },
+              {
+                "label": "b",
+                "text": "Hàm số đạt cực đại tại điểm $x = 2$ và cực tiểu tại $x = 0$.",
+                "correct_value": "Sai",
+                "explanation": "Giải phương trình $f'(x) = 0 \\Leftrightarrow x=0$ (cực đại) hoặc $x=2$ (cực tiểu)."
+              },
+              {
+                "label": "c",
+                "text": "Đường thẳng nối hai cực trị của đồ thị có phương trình dạng $y = -2x + 1$.",
+                "correct_value": "Đúng",
+                "explanation": "Đường thẳng qua cực trị là phần dư của phép chia $f(x)$ cho $f'(x)$, tương ứng $y = -2x + 1$."
+              },
+              {
+                "label": "d",
+                "text": "Đồ thị hàm số nhận điểm uốn $I(1; 1 - 2)$ làm tâm đối xứng.",
+                "correct_value": "Đúng",
+                "explanation": "Đạo hàm cấp hai $f''(x) = 6x - 6 = 0 \\Rightarrow x=1$."
+              }
+            ]
+          },
+          {
+            "question_number": 2,
+            "context_text": "Trong không gian tọa độ $Oxyz$, cho điểm $A(1; 2; -1)$ và đường thẳng $d: \\frac{{x-2}}{{1}} = \\frac{{y+1}}{{2}} = \\frac{{z}}{{-2}}$. Gọi $(P)$ là mặt phẳng đi qua $A$ và vuông góc với đường thẳng $d$.",
+            "statements": [
+              {
+                "label": "a",
+                "text": "Vectơ chỉ phương của đường thẳng $d$ là $\\vec{{u}}_d = (1; 2; -2)$.",
+                "correct_value": "Đúng",
+                "explanation": "Từ phương trình chính tắc của đường thẳng $d$, các hệ số dưới mẫu số là tọa độ của vectơ chỉ phương $\\vec{{u}}_d = (1; 2; -2)$."
+              },
+              {
+                "label": "b",
+                "text": "Mặt phẳng $(P)$ nhận vectơ chỉ phương $\\vec{{u}}_d$ làm vectơ pháp tuyến.",
+                "correct_value": "Đúng",
+                "explanation": "Vì $(P) \\perp d$ nên vectơ pháp tuyến $\\vec{{n}}_P = \\vec{{u}}_d = (1; 2; -2)$."
+              },
+              {
+                "label": "c",
+                "text": "Phương trình tổng quát của mặt phẳng $(P)$ là $x + 2y - 2z + 1 = 0$.",
+                "correct_value": "Sai",
+                "explanation": "Phương trình $(P): 1(x-1) + 2(y-2) - 2(z+1) = 0 \\Leftrightarrow x + 2y - 2z - 7 = 0$."
+              },
+              {
+                "label": "d",
+                "text": "Đường thẳng $d$ song song với mặt phẳng $(P)$.",
+                "correct_value": "Sai",
+                "explanation": "Vì đường thẳng $d \\perp (P)$ nên phát biểu $d \\parallel (P)$ là Sai."
+              }
+            ]
+          },
+          {
+            "question_number": 3,
+            "context_text": "Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình vuông cạnh $a$. Cạnh bên $SA$ vuông góc với đáy và $SA = a\\sqrt{2}$. Gọi $\\alpha$ là góc giữa $SC$ và mặt phẳng $(SAB)$.",
+            "statements": [
+              {
+                "label": "a",
+                "text": "Đường thẳng $BC$ vuông góc với mặt phẳng $(SAB)$.",
+                "correct_value": "Đúng",
+                "explanation": "Ta có $BC \\perp AB$ và $BC \\perp SA \\Rightarrow BC \\perp (SAB)$."
+              },
+              {
+                "label": "b",
+                "text": "Hình chiếu vuông góc của đường thẳng $SC$ lên mặt phẳng $(SAB)$ là đường thẳng $SB$.",
+                "correct_value": "Đúng",
+                "explanation": "Hình chiếu của $S$ trên $(SAB)$ chính là $S$. Hình chiếu của $C$ trên $(SAB)$ là $B$ (vì $CB \\perp (SAB)$)."
+              },
+              {
+                "label": "c",
+                "text": "Góc giữa đường thẳng $SC$ và mặt phẳng $(SAB)$ là góc $\\widehat{{BSC}}$.",
+                "correct_value": "Đúng",
+                "explanation": "Góc giữa đường thẳng và mặt phẳng là góc giữa đường thẳng đó và hình chiếu của nó lên mặt phẳng. Vậy $\\alpha = \\widehat{BSC}$."
+              },
+              {
+                "label": "d",
+                "text": "Tam giác $SBC$ là tam giác đều.",
+                "correct_value": "Sai",
+                "explanation": "Tam giác $SBC$ vuông tại $B$ nên không thể là tam giác đều."
+              }
+            ]
+          },
+          {
+            "question_number": 4,
+            "context_text": "Cho hộp thứ nhất chứa 3 viên bi đỏ và 2 viên bi xanh; hộp thứ hai chứa 4 viên bi đỏ và 3 viên bi xanh. Lấy ngẫu nhiên từ mỗi hộp ra 1 viên bi.",
+            "statements": [
+              {
+                "label": "a",
+                "text": "Xác suất để lấy được hai viên bi cùng màu đỏ là $\\frac{{12}}{{35}}$.",
+                "correct_value": "Đúng",
+                "explanation": "Xác suất lấy bi đỏ từ hộp 1 là $P(R_1) = \\frac{3}{5}$. Xác suất lấy bi đỏ từ hộp 2 là $P(R_2) = \\frac{4}{7}$. Xác suất cả hai cùng đỏ là $P = \\frac{3}{5} \\times \\frac{4}{7} = \\frac{12}{35}$."
+              },
+              {
+                "label": "b",
+                "text": "Xác suất để lấy được hai viên bi cùng màu xanh là $\\frac{{6}}{{35}}$.",
+                "correct_value": "Đúng",
+                "explanation": "Xác suất lấy bi xanh từ hộp 1 là $P(G_1) = \\frac{2}{5}$. Xác suất lấy bi xanh từ hộp 2 là $P(G_2) = \\frac{3}{7}$. Xác suất cả hai cùng xanh là $P = \\frac{2}{5} \\times \\frac{3}{7} = \\frac{6}{35}$."
+              },
+              {
+                "label": "c",
+                "text": "Xác suất để lấy được hai viên bi khác màu là $\\frac{{17}}{{35}}$.",
+                "correct_value": "Đúng",
+                "explanation": "Xác suất lấy được 2 viên cùng màu là $P_{cm} = P_{đỏ} + P_{xanh} = \\frac{12}{35} + \\frac{6}{35} = \\frac{18}{35}$. Xác suất hai viên khác màu là $P = 1 - \\frac{18}{35} = \\frac{17}{35}$."
+              },
+              {
+                "label": "d",
+                "text": "Xác suất để có ít nhất một viên bi đỏ là $1.0$.",
+                "correct_value": "Sai",
+                "explanation": "Ít nhất một đỏ: $1 - P(\\text{cả hai cùng xanh}) = 1 - \\frac{6}{35} = \\frac{29}{35} \\neq 1.0$."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "section_id": 3,
+        "section_title": "PHẦN III. TRẢ LỜI NGẮN",
+        "questions": [
+          {
+            "question_number": 1,
+            "question_text": "Một xưởng muốn sản xuất chiếc lon hình trụ có thể tích $V = 250\\pi$ cm$^3$. Tìm bán kính đáy $R$ (cm) của lon để diện tích kim loại toàn phần làm chiếc lon đạt giá trị nhỏ nhất.",
+            "correct_answer": "5",
+            "explanation": "Thể tích $V = \\pi R^2 h = 2 \\cdot 125 \\pi \\Rightarrow h = \\frac{2 \\cdot 125}{R^2}$. Diện tích toàn phần $S(R) = 2\\pi R h + 2\\pi R^2 = \\frac{4\\pi \\cdot 125}{R} + 2\\pi R^2$. Đạo hàm $S'(R) = -\\frac{4\\pi \\cdot 125}{R^2} + 4\\pi R = 0 \\Leftrightarrow R = 5$ cm."
+          },
+          {
+            "question_number": 2,
+            "question_text": "Tìm số hạng đầu $u_1$ của cấp số cộng $(u_n)$ biết tổng của 15 số hạng đầu tiên của nó bằng $465$ và công sai $d = 3$.",
+            "correct_answer": "10",
+            "explanation": "Ta có $S_{15} = \\frac{15}{2}[2u_1 + 14(3)] = 465 \\Leftrightarrow \\frac{1}{2}[2u_1 + 42] = 31 \\Leftrightarrow u_1 + 21 = 31 \\Leftrightarrow u_1 = 10$."
+          },
+          {
+            "question_number": 3,
+            "question_text": "Có bao nhiêu số tự nhiên chẵn gồm 4 chữ số đôi một khác nhau được lập từ tập hợp gồm 6 chữ số từ 1 đến 6?",
+            "correct_answer": "360",
+            "explanation": "Số cách lập số tự nhiên chẵn được tính bằng việc chọn chữ số hàng đơn vị chẵn trước, sau đó chọn 3 chữ số khác nhau xếp vào 3 vị trí còn lại."
+          },
+          {
+            "question_number": 4,
+            "question_text": "Tính diện tích hình phẳng giới hạn bởi đồ thị hàm số $y = x^2$ và đường thẳng $y = -x + 2$ (Lấy kết quả làm tròn đến 2 chữ số thập phân).",
+            "correct_answer": "4.5",
+            "explanation": "Phương trình hoành độ giao điểm, sau đó tích phân hiệu hai đồ thị trên khoảng hai nghiệm."
+          },
+          {
+            "question_number": 5,
+            "question_text": "Trong không gian $Oxyz$, tìm khoảng cách ngắn nhất từ gốc tọa độ $O(0;0;0)$ đến đường thẳng $d: \\{x = 2 + t, y = 2 - t, z = 1\\}.",
+            "correct_answer": "3",
+            "explanation": "Tính khoảng cách từ điểm đến đường thẳng bằng công thức tích có hướng hoặc lập hàm số cực tiểu."
+          },
+          {
+            "question_number": 6,
+            "question_text": "Một người gửi 100 triệu đồng vào ngân hàng với lãi suất 6%/năm lãi kép. Hỏi sau tối thiểu bao nhiêu năm người đó nhận được số tiền gấp đôi ban đầu?",
+            "correct_answer": "12",
+            "explanation": "Sử dụng bất phương trình lãi kép $100(1 + r)^n > 200$, tìm n tối thiểu."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "exam_title": "Đề số 2",
+    "duration_minutes": 90,
+    "sections": [
+      {
+        "section_id": 1,
+        "section_title": "PHẦN I. TRẮC NGHIỆM KHÁCH QUAN",
+        "questions": [
+          {
+            "question_number": 1,
+            "question_text": "Cho hàm số $y = f(x) = x^3 - 3(2)x^2 + 2$ liên tục trên $\\mathbb{R}$. Tìm tập hợp tất cả các giá trị của tham số $m$ để phương trình $f(x) = m$ có đúng 3 nghiệm thực phân biệt.",
+            "choices": {
+              "A": "$-30 < m < 2$",
+              "B": "$m > 2$",
+              "C": "$m < -30$",
+              "D": "$m = 2$ hoặc $m = -30$"
+            },
+            "correct_answer": "A",
+            "explanation": "Đạo hàm $y' = 3x^2 - 6(2)x = 3x(x - 4)$. Cho $y' = 0 \\Leftrightarrow x = 0$ hoặc $x = 4$. Đồ thị có điểm cực đại là $(0; 2)$ và điểm cực tiểu là $(4; -30)$. Phương trình có 3 nghiệm phân biệt khi đường thẳng $y = m$ cắt đồ thị tại 3 điểm phân biệt, tương đương $-30 < m < 2$."
+          },
+          {
+            "question_number": 2,
+            "question_text": "Tính đạo hàm của hàm số $y = 4^{x^2 - 2x}$.",
+            "choices": {
+              "A": "$y' = (2x - 2) \\cdot 4^{x^2 - 2x} \\cdot \\ln 4$",
+              "B": "$y' = (x^2 - 2x) \\cdot 4^{x^2 - 2x - 1}$",
+              "C": "$y' = 4^{x^2 - 2x} \\cdot \\ln 4$",
+              "D": "$y' = \\frac{2x - 2}{\\ln 4} \\cdot 4^{x^2 - 2x}$"
+            },
+            "correct_answer": "A",
+            "explanation": "Áp dụng công thức đạo hàm hàm hợp $(a^u)' = u' \\cdot a^u \\cdot \\ln a$. Ở đây $a = 4$, $u = x^2 - 2x \\Rightarrow u' = 2x - 2$. Do đó ta có: $y' = (2x - 2) \\cdot 4^{x^2 - 2x} \\cdot \\ln 4$."
+          },
+          {
+            "question_number": 3,
+            "question_text": "Tìm tập xác định $D$ của hàm số $y = (x^2 - 4x + 3)^{-e}$.",
+            "choices": {
+              "A": "$D = (-\\infty; 1) \\cup (3; +\\infty)$",
+              "B": "$D = \\mathbb{R} \\setminus \\{1; 3\\}$",
+              "C": "$D = (1; 3)$",
+              "D": "$D = \\mathbb{R}$"
+            },
+            "correct_answer": "A",
+            "explanation": "Hàm số lũy thừa có số mũ không nguyên xác định khi cơ số dương: $x^2 - 4x + 3 > 0 \\Leftrightarrow (x-1)(x-3) > 0 \\Leftrightarrow x < 1$ hoặc $x > 3$. Tập xác định là $D = (-\\infty; 1) \\cup (3; +\\infty)$."
+          },
+          {
+            "question_number": 4,
+            "question_text": "Giải phương trình $\\log_2(x - 4) + \\log_2(x - 2) = 3$.",
+            "choices": {
+              "A": "$x = 6$",
+              "B": "$x = 6$ hoặc $x = 0$",
+              "C": "$x = 5$",
+              "D": "$x = 4$"
+            },
+            "correct_answer": "A",
+            "explanation": "Điều kiện: $x > 4$. Phương trình viết lại: $\\log_2[(x - 4)(x - 2)] = 3 \\Leftrightarrow x^2 - 6x + 8 = 8 \\Leftrightarrow x^2 - 6x + 0 = 0 \\Leftrightarrow x = 6$ (nhận) hoặc $x = 0$ (loại do điều kiện)."
+          },
+          {
+            "question_number": 5,
+            "question_text": "Tìm nguyên hàm $F(x)$ của hàm số $f(x) = \\frac{2x + 4}{x + 1}$ trên khoảng $(-1; +\\infty)$ biết $F(0) = 2$.",
+            "choices": {
+              "A": "$F(x) = 2x + 2\\ln(x + 1) + 2$",
+              "B": "$F(x) = 2x + 2\\ln|x + 1| + C$",
+              "C": "$F(x) = 2x - 2\\ln(x + 1) + 2$",
+              "D": "$F(x) = 2x + 4\\ln(x + 1) + 2$"
+            },
+            "correct_answer": "A",
+            "explanation": "Ta có $f(x) = \\frac{2(x+1) + 2}{x+1} = 2 + \\frac{2}{x+1}$. Nguyên hàm là $F(x) = 2x + 2\\ln(x+1) + C$ (vì $x > -1$). Từ $F(0) = 2 \\Rightarrow 0 + 0 + C = 2 \\Rightarrow C = 2$. Vậy $F(x) = 2x + 2\\ln(x+1) + 2$."
+          },
+          {
+            "question_number": 6,
+            "question_text": "Tính diện tích $S$ của hình phẳng giới hạn bởi đồ thị hàm số $y = x^3 - 4x$ và trục hoành $Ox$.",
+            "choices": {
+              "A": "$S = \\frac{16}{2}$",
+              "B": "$S = \\frac{16}{4}$",
+              "C": "$S = 16$",
+              "D": "$S = 2(16)$"
+            },
+            "correct_answer": "A",
+            "explanation": "Phương trình hoành độ giao điểm: $x^3 - 4x = 0 \\Leftrightarrow x = 0, x = \\pm 2$. Do đồ thị đối xứng qua gốc tọa độ: $S = 2 \\int_{0}^{2} |x^3 - 4x| dx = 2 \\int_{0}^{2} (4x - x^3) dx = 2 \\left. \\left( \\frac{4x^2}{2} - \\frac{x^4}{4} \\right) \\right|_{0}^{2} = 2 \\left( \\frac{16}{2} - \\frac{16}{4} \\right) = \\frac{16}{2}$."
+          },
+          {
+            "question_number": 7,
+            "question_text": "Tìm số phức liên hợp $\\overline{z}$ của số phức $z$ thỏa mãn $(1 + i)z = 4 - i$.",
+            "choices": {
+              "A": "$\\overline{z} = \\frac{3}{2} + \\frac{5}{2}i$",
+              "B": "$\\overline{z} = \\frac{3}{2} - \\frac{5}{2}i$",
+              "C": "$\\overline{z} = \\frac{5}{2} + \\frac{3}{2}i$",
+              "D": "$\\overline{z} = -\\frac{3}{2} - \\frac{5}{2}i$"
+            },
+            "correct_answer": "A",
+            "explanation": "Ta có $z = \\frac{4 - i}{1 + i} = \\frac{(4 - i)(1 - i)}{2} = \\frac{3 - (5)i}{2}$. Suy ra số phức liên hợp là $\\overline{z} = \\frac{3}{2} + \\frac{5}{2}i$."
+          },
+          {
+            "question_number": 8,
+            "question_text": "Tính môđun của số phức $z = 2 + 4i$.",
+            "choices": {
+              "A": "$|z| = \\sqrt{20}$",
+              "B": "$|z| = 20$",
+              "C": "$|z| = 6$",
+              "D": "$|z| = \\sqrt{-12}$"
+            },
+            "correct_answer": "A",
+            "explanation": "Áp dụng công thức tính môđun của số phức $z = a + bi$: $|z| = \\sqrt{a^2 + b^2} = \\sqrt{2^2 + 4^2} = \\sqrt{20}$."
+          },
+          {
+            "question_number": 9,
+            "question_text": "Trong không gian $Oxyz$, cho hai điểm $A(2; 2; -3)$ và $B(3; 0; -1)$. Tìm tọa độ trung điểm $M$ của đoạn thẳng $AB$.",
+            "choices": {
+              "A": "$M\\left(\\frac{5}{2}; 1; -2\\right)$",
+              "B": "$M(5; 2; -4)$",
+              "C": "$M\\left(\\frac{-1}{2}; 1; -1\\right)$",
+              "D": "$M\\left(\\frac{5}{2}; 1; -1\\right)$"
+            },
+            "correct_answer": "A",
+            "explanation": "Áp dụng công thức trung điểm: $x_M = \\frac{x_A + x_B}{2} = \\frac{2 + 3}{2}$; $y_M = 1$; $z_M = -2$. Tọa độ trung điểm là $M\\left(\\frac{5}{2}; 1; -2\\right)$."
+          },
+          {
+            "question_number": 10,
+            "question_text": "Trong không gian $Oxyz$, viết phương trình mặt phẳng đi qua điểm $A(1; 2; 3)$ và song song với mặt phẳng $(P): 2x - y + 2z - 5 = 0$.",
+            "choices": {
+              "A": "$2x - y + 2z - 6 = 0$",
+              "B": "$2x - y + 2z + 6 = 0$",
+              "C": "$2x - y + 2z - 5 = 0$",
+              "D": "$2x - y + 2z = 0$"
+            },
+            "correct_answer": "A",
+            "explanation": "Mặt phẳng song song có dạng $2x - y + 2z + D = 0$. Thế điểm $A(1;2;3)$ vào: $2(1) - (2) + 2(3) + D = 0 \\Leftrightarrow D = -6$. Phương trình cần tìm là $2x - y + 2z - 6 = 0$."
+          },
+          {
+            "question_number": 11,
+            "question_text": "Trong không gian $Oxyz$, cho hai đường thẳng $d_1: \\frac{x-1}{1} = \\frac{y}{2} = \\frac{z-1}{-1}$ và $d_2: \\frac{x}{2} = \\frac{y-1}{1} = \\frac{z+2}{1}$. Tính tích vô hướng của hai vectơ chỉ phương của $d_1$ và $d_2$.",
+            "choices": {
+              "A": "$3$",
+              "B": "$1$",
+              "C": "$2$",
+              "D": "$22$"
+            },
+            "correct_answer": "A",
+            "explanation": "Vectơ chỉ phương của $d_1$ là $\\vec{u}_1 = (1; 2; -1)$, của $d_2$ là $\\vec{u}_2 = (2; 1; 1)$. Tích vô hướng: $\\vec{u}_1 \\cdot \\vec{u}_2 = 1(2) + 2(1) + (-1)(1) = 3$."
+          },
+          {
+            "question_number": 12,
+            "question_text": "Chọn ngẫu nhiên đồng thời 2 tấm thẻ từ một hộp chứa 10 tấm thẻ được đánh số từ 1 đến 10. Tính xác suất để tích hai số ghi trên hai tấm thẻ chọn ra là một số chẵn.",
+            "choices": {
+              "A": "$0.778$",
+              "B": "$0.222$",
+              "C": "$0.5$",
+              "D": "$0.75$"
+            },
+            "correct_answer": "A",
+            "explanation": "Tích hai số ghi trên thẻ là số lẻ khi và chỉ khi cả 2 thẻ đều lẻ. Số thẻ lẻ là 5. Số cách chọn 2 thẻ lẻ là $C_{5}^2 = 10$. Tổng số cách chọn 2 thẻ bất kỳ là $C_{10}^2 = 45$. Xác suất tích lẻ là 10/45. Do đó xác suất tích chẵn là $1 - 10/45 = 0.778$."
+          },
+          {
+            "question_number": 13,
+            "question_text": "Cho cấp số cộng $(u_n)$ có số hạng đầu $u_1 = 2$ và công sai $d = 3$. Tìm số hạng thứ 10 của cấp số cộng đó.",
+            "choices": {
+              "A": "$29$",
+              "B": "$32$",
+              "C": "$26$",
+              "D": "$102$"
+            },
+            "correct_answer": "A",
+            "explanation": "Số hạng thứ 10 là $u_{10} = u_1 + 9d = 2 + 9(3) = 29$."
+          },
+          {
+            "question_number": 14,
+            "question_text": "Cho cấp số nhân $(u_n)$ có số hạng đầu $u_1 = 3$ và công sai (công bội) $q = 2$. Tính tổng 5 số hạng đầu tiên $S_5$.",
+            "choices": {
+              "A": "$93$",
+              "B": "$96$",
+              "C": "$90$",
+              "D": "$15$"
+            },
+            "correct_answer": "A",
+            "explanation": "Áp dụng công thức tính tổng cấp số nhân: $S_5 = u_1 \\frac{q^5 - 1}{q - 1} = 3 \\cdot \\frac{2^5 - 1}{1} = 93$."
+          },
+          {
+            "question_number": 15,
+            "question_text": "Cho khối tứ diện đều $ABCD$ có tất cả các cạnh bằng $2a$. Tính thể tích $V$ của khối tứ diện đều đó.",
+            "choices": {
+              "A": "$V = \\frac{8a^3\\sqrt{2}}{12}$",
+              "B": "$V = \\frac{8a^3\\sqrt{2}}{4}$",
+              "C": "$V = \\frac{8a^3\\sqrt{3}}{12}$",
+              "D": "$V = \\frac{8a^3}{6}$"
+            },
+            "correct_answer": "A",
+            "explanation": "Thể tích khối tứ diện đều cạnh $x$ là $V = \\frac{x^3\\sqrt{2}}{12}$. Với $x = 2a$, ta có $V = \\frac{8a^3\\sqrt{2}}{12}$."
+          },
+          {
+            "question_number": 16,
+            "question_text": "Một hình nón có bán kính đáy $r = 4$ cm và chiều cao $h = 6$ cm. Tính thể tích $V$ của khối nón tương ứng.",
+            "choices": {
+              "A": "$32\\pi$ cm$^3$",
+              "B": "$96\\pi$ cm$^3$",
+              "C": "$10.7\\pi$ cm$^3$",
+              "D": "$20\\pi$ cm$^3$"
+            },
+            "correct_answer": "A",
+            "explanation": "Thể tích hình nón: $V = \\frac{1}{3} \\pi r^2 h = \\frac{1}{3} \\pi (16) (6) = 32\\pi$ cm$^3$."
+          }
+        ]
+      },
+      {
+        "section_id": 2,
+        "section_title": "PHẦN II. TRĂC NGHIỆM ĐÚNG SAI",
+        "questions": [
+          {
+            "question_number": 1,
+            "context_text": "Cho hàm số bậc ba $y = f(x) = x^3 - 3(2)x^2 + 1$ có đồ thị là $(C)$.",
+            "statements": [
+              {
+                "label": "a",
+                "text": "Đạo hàm của hàm số là $f'(x) = 3x^2 - 12x$.",
+                "correct_value": "Đúng",
+                "explanation": "Áp dụng các quy tắc đạo hàm cơ bản ta có: $f'(x) = 3x^2 - 12x$."
+              },
+              {
+                "label": "b",
+                "text": "Hàm số đạt cực đại tại điểm $x = 4$ và cực tiểu tại $x = 0$.",
+                "correct_value": "Sai",
+                "explanation": "Giải phương trình $f'(x) = 0 \\Leftrightarrow x=0$ (cực đại) hoặc $x=4$ (cực tiểu)."
+              },
+              {
+                "label": "c",
+                "text": "Đường thẳng nối hai cực trị của đồ thị có phương trình dạng $y = -8x + 1$.",
+                "correct_value": "Đúng",
+                "explanation": "Đường thẳng qua cực trị là phần dư của phép chia $f(x)$ cho $f'(x)$, tương ứng $y = -8x + 1$."
+              },
+              {
+                "label": "d",
+                "text": "Đồ thị hàm số nhận điểm uốn $I(2; 1 - 16)$ làm tâm đối xứng.",
+                "correct_value": "Đúng",
+                "explanation": "Đạo hàm cấp hai $f''(x) = 6x - 12 = 0 \\Rightarrow x=2$."
+              }
+            ]
+          },
+          {
+            "question_number": 2,
+            "context_text": "Trong không gian tọa độ $Oxyz$, cho điểm $A(1; 2; -1)$ và đường thẳng $d: \\frac{{x-2}}{{1}} = \\frac{{y+1}}{{2}} = \\frac{{z}}{{-2}}$. Gọi $(P)$ là mặt phẳng đi qua $A$ và vuông góc với đường thẳng $d$.",
+            "statements": [
+              {
+                "label": "a",
+                "text": "Vectơ chỉ phương của đường thẳng $d$ là $\\vec{{u}}_d = (1; 2; -2)$.",
+                "correct_value": "Đúng",
+                "explanation": "Từ phương trình chính tắc của đường thẳng $d$, các hệ số dưới mẫu số là tọa độ của vectơ chỉ phương $\\vec{{u}}_d = (1; 2; -2)$."
+              },
+              {
+                "label": "b",
+                "text": "Mặt phẳng $(P)$ nhận vectơ chỉ phương $\\vec{{u}}_d$ làm vectơ pháp tuyến.",
+                "correct_value": "Đúng",
+                "explanation": "Vì $(P) \\perp d$ nên vectơ pháp tuyến $\\vec{{n}}_P = \\vec{{u}}_d = (1; 2; -2)$."
+              },
+              {
+                "label": "c",
+                "text": "Phương trình tổng quát của mặt phẳng $(P)$ là $x + 2y - 2z + 2 = 0$.",
+                "correct_value": "Sai",
+                "explanation": "Phương trình $(P): 1(x-1) + 2(y-2) - 2(z+1) = 0 \\Leftrightarrow x + 2y - 2z - 7 = 0$."
+              },
+              {
+                "label": "d",
+                "text": "Đường thẳng $d$ song song với mặt phẳng $(P)$.",
+                "correct_value": "Sai",
+                "explanation": "Vì đường thẳng $d \\perp (P)$ nên phát biểu $d \\parallel (P)$ là Sai."
+              }
+            ]
+          },
+          {
+            "question_number": 3,
+            "context_text": "Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình vuông cạnh $a$. Cạnh bên $SA$ vuông góc với đáy và $SA = a\\sqrt{2}$. Gọi $\\alpha$ là góc giữa $SC$ và mặt phẳng $(SAB)$.",
+            "statements": [
+              {
+                "label": "a",
+                "text": "Đường thẳng $BC$ vuông góc với mặt phẳng $(SAB)$.",
+                "correct_value": "Đúng",
+                "explanation": "Ta có $BC \\perp AB$ và $BC \\perp SA \\Rightarrow BC \\perp (SAB)$."
+              },
+              {
+                "label": "b",
+                "text": "Hình chiếu vuông góc của đường thẳng $SC$ lên mặt phẳng $(SAB)$ là đường thẳng $SB$.",
+                "correct_value": "Đúng",
+                "explanation": "Hình chiếu của $S$ trên $(SAB)$ chính là $S$. Hình chiếu của $C$ trên $(SAB)$ là $B$ (vì $CB \\perp (SAB)$)."
+              },
+              {
+                "label": "c",
+                "text": "Góc giữa đường thẳng $SC$ và mặt phẳng $(SAB)$ là góc $\\widehat{{BSC}}$.",
+                "correct_value": "Đúng",
+                "explanation": "Góc giữa đường thẳng và mặt phẳng là góc giữa đường thẳng đó và hình chiếu của nó lên mặt phẳng. Vậy $\\alpha = \\widehat{BSC}$."
+              },
+              {
+                "label": "d",
+                "text": "Tam giác $SBC$ là tam giác đều.",
+                "correct_value": "Sai",
+                "explanation": "Tam giác $SBC$ vuông tại $B$ nên không thể là tam giác đều."
+              }
+            ]
+          },
+          {
+            "question_number": 4,
+            "context_text": "Cho hộp thứ nhất chứa 3 viên bi đỏ và 2 viên bi xanh; hộp thứ hai chứa 4 viên bi đỏ và 3 viên bi xanh. Lấy ngẫu nhiên từ mỗi hộp ra 1 viên bi.",
+            "statements": [
+              {
+                "label": "a",
+                "text": "Xác suất để lấy được hai viên bi cùng màu đỏ là $\\frac{{12}}{{35}}$.",
+                "correct_value": "Đúng",
+                "explanation": "Xác suất lấy bi đỏ từ hộp 1 là $P(R_1) = \\frac{3}{5}$. Xác suất lấy bi đỏ từ hộp 2 là $P(R_2) = \\frac{4}{7}$. Xác suất cả hai cùng đỏ là $P = \\frac{3}{5} \\times \\frac{4}{7} = \\frac{12}{35}$."
+              },
+              {
+                "label": "b",
+                "text": "Xác suất để lấy được hai viên bi cùng màu xanh là $\\frac{{6}}{{35}}$.",
+                "correct_value": "Đúng",
+                "explanation": "Xác suất lấy bi xanh từ hộp 1 là $P(G_1) = \\frac{2}{5}$. Xác suất lấy bi xanh từ hộp 2 là $P(G_2) = \\frac{3}{7}$. Xác suất cả hai cùng xanh là $P = \\frac{2}{5} \\times \\frac{3}{7} = \\frac{6}{35}$."
+              },
+              {
+                "label": "c",
+                "text": "Xác suất để lấy được hai viên bi khác màu là $\\frac{{17}}{{35}}$.",
+                "correct_value": "Đúng",
+                "explanation": "Xác suất lấy được 2 viên cùng màu là $P_{cm} = P_{đỏ} + P_{xanh} = \\frac{12}{35} + \\frac{6}{35} = \\frac{18}{35}$. Xác suất hai viên khác màu là $P = 1 - \\frac{18}{35} = \\frac{17}{35}$."
+              },
+              {
+                "label": "d",
+                "text": "Xác suất để có ít nhất một viên bi đỏ là $1.0$.",
+                "correct_value": "Sai",
+                "explanation": "Ít nhất một đỏ: $1 - P(\\text{cả hai cùng xanh}) = 1 - \\frac{6}{35} = \\frac{29}{35} \\neq 1.0$."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "section_id": 3,
+        "section_title": "PHẦN III. TRẢ LỜI NGẮN",
+        "questions": [
+          {
+            "question_number": 1,
+            "question_text": "Một xưởng muốn sản xuất chiếc lon hình trụ có thể tích $V = 2000\\pi$ cm$^3$. Tìm bán kính đáy $R$ (cm) của lon để diện tích kim loại toàn phần làm chiếc lon đạt giá trị nhỏ nhất.",
+            "correct_answer": "10",
+            "explanation": "Thể tích $V = \\pi R^2 h = 2 \\cdot 1000 \\pi \\Rightarrow h = \\frac{2 \\cdot 1000}{R^2}$. Diện tích toàn phần $S(R) = 2\\pi R h + 2\\pi R^2 = \\frac{4\\pi \\cdot 1000}{R} + 2\\pi R^2$. Đạo hàm $S'(R) = -\\frac{4\\pi \\cdot 1000}{R^2} + 4\\pi R = 0 \\Leftrightarrow R = 10$ cm."
+          },
+          {
+            "question_number": 2,
+            "question_text": "Tìm số hạng đầu $u_1$ của cấp số cộng $(u_n)$ biết tổng của 15 số hạng đầu tiên của nó bằng $615$ và công sai $d = 3$.",
+            "correct_answer": "20",
+            "explanation": "Ta có $S_{15} = \\frac{15}{2}[2u_1 + 14(3)] = 615 \\Leftrightarrow \\frac{1}{2}[2u_1 + 42] = 41 \\Leftrightarrow u_1 + 21 = 41 \\Leftrightarrow u_1 = 20$."
+          },
+          {
+            "question_number": 3,
+            "question_text": "Có bao nhiêu số tự nhiên chẵn gồm 4 chữ số đôi một khác nhau được lập từ tập hợp gồm 7 chữ số từ 1 đến 7?",
+            "correct_answer": "240",
+            "explanation": "Số cách lập số tự nhiên chẵn được tính bằng việc chọn chữ số hàng đơn vị chẵn trước, sau đó chọn 3 chữ số khác nhau xếp vào 3 vị trí còn lại."
+          },
+          {
+            "question_number": 4,
+            "question_text": "Tính diện tích hình phẳng giới hạn bởi đồ thị hàm số $y = x^2$ và đường thẳng $y = -x + 4$ (Lấy kết quả làm tròn đến 2 chữ số thập phân).",
+            "correct_answer": "12.33",
+            "explanation": "Phương trình hoành độ giao điểm, sau đó tích phân hiệu hai đồ thị trên khoảng hai nghiệm."
+          },
+          {
+            "question_number": 5,
+            "question_text": "Trong không gian $Oxyz$, tìm khoảng cách ngắn nhất từ gốc tọa độ $O(0;0;0)$ đến đường thẳng $d: \\{x = 2 + t, y = 2 - t, z = 2\\}.",
+            "correct_answer": "4",
+            "explanation": "Tính khoảng cách từ điểm đến đường thẳng bằng công thức tích có hướng hoặc lập hàm số cực tiểu."
+          },
+          {
+            "question_number": 6,
+            "question_text": "Một người gửi 100 triệu đồng vào ngân hàng với lãi suất 7%/năm lãi kép. Hỏi sau tối thiểu bao nhiêu năm người đó nhận được số tiền gấp đôi ban đầu?",
+            "correct_answer": "12",
+            "explanation": "Sử dụng bất phương trình lãi kép $100(1 + r)^n > 200$, tìm n tối thiểu."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "exam_title": "Đề số 3",
+    "duration_minutes": 90,
+    "sections": [
+      {
+        "section_id": 1,
+        "section_title": "PHẦN I. TRẮC NGHIỆM KHÁCH QUAN",
+        "questions": [
+          {
+            "question_number": 1,
+            "question_text": "Cho hàm số $y = f(x) = x^3 - 3(3)x^2 + 2$ liên tục trên $\\mathbb{R}$. Tìm tập hợp tất cả các giá trị của tham số $m$ để phương trình $f(x) = m$ có đúng 3 nghiệm thực phân biệt.",
+            "choices": {
+              "A": "$-106 < m < 2$",
+              "B": "$m > 2$",
+              "C": "$m < -106$",
+              "D": "$m = 2$ hoặc $m = -106$"
+            },
+            "correct_answer": "A",
+            "explanation": "Đạo hàm $y' = 3x^2 - 6(3)x = 3x(x - 6)$. Cho $y' = 0 \\Leftrightarrow x = 0$ hoặc $x = 6$. Đồ thị có điểm cực đại là $(0; 2)$ và điểm cực tiểu là $(6; -106)$. Phương trình có 3 nghiệm phân biệt khi đường thẳng $y = m$ cắt đồ thị tại 3 điểm phân biệt, tương đương $-106 < m < 2$."
+          },
+          {
+            "question_number": 2,
+            "question_text": "Tính đạo hàm của hàm số $y = 5^{x^2 - 2x}$.",
+            "choices": {
+              "A": "$y' = (2x - 2) \\cdot 5^{x^2 - 2x} \\cdot \\ln 5$",
+              "B": "$y' = (x^2 - 2x) \\cdot 5^{x^2 - 2x - 1}$",
+              "C": "$y' = 5^{x^2 - 2x} \\cdot \\ln 5$",
+              "D": "$y' = \\frac{2x - 2}{\\ln 5} \\cdot 5^{x^2 - 2x}$"
+            },
+            "correct_answer": "A",
+            "explanation": "Áp dụng công thức đạo hàm hàm hợp $(a^u)' = u' \\cdot a^u \\cdot \\ln a$. Ở đây $a = 5$, $u = x^2 - 2x \\Rightarrow u' = 2x - 2$. Do đó ta có: $y' = (2x - 2) \\cdot 5^{x^2 - 2x} \\cdot \\ln 5$."
+          },
+          {
+            "question_number": 3,
+            "question_text": "Tìm tập xác định $D$ của hàm số $y = (x^2 - 5x + 4)^{-e}$.",
+            "choices": {
+              "A": "$D = (-\\infty; 1) \\cup (4; +\\infty)$",
+              "B": "$D = \\mathbb{R} \\setminus \\{1; 4\\}$",
+              "C": "$D = (1; 4)$",
+              "D": "$D = \\mathbb{R}$"
+            },
+            "correct_answer": "A",
+            "explanation": "Hàm số lũy thừa có số mũ không nguyên xác định khi cơ số dương: $x^2 - 5x + 4 > 0 \\Leftrightarrow (x-1)(x-4) > 0 \\Leftrightarrow x < 1$ hoặc $x > 4$. Tập xác định là $D = (-\\infty; 1) \\cup (4; +\\infty)$."
+          },
+          {
+            "question_number": 4,
+            "question_text": "Giải phương trình $\\log_2(x - 5) + \\log_2(x - 3) = 3$.",
+            "choices": {
+              "A": "$x = 7$",
+              "B": "$x = 7$ hoặc $x = 1$",
+              "C": "$x = 6$",
+              "D": "$x = 5$"
+            },
+            "correct_answer": "A",
+            "explanation": "Điều kiện: $x > 5$. Phương trình viết lại: $\\log_2[(x - 5)(x - 3)] = 3 \\Leftrightarrow x^2 - 8x + 15 = 8 \\Leftrightarrow x^2 - 8x + 7 = 0 \\Leftrightarrow x = 7$ (nhận) hoặc $x = 1$ (loại do điều kiện)."
+          },
+          {
+            "question_number": 5,
+            "question_text": "Tìm nguyên hàm $F(x)$ của hàm số $f(x) = \\frac{2x + 5}{x + 1}$ trên khoảng $(-1; +\\infty)$ biết $F(0) = 2$.",
+            "choices": {
+              "A": "$F(x) = 2x + 3\\ln(x + 1) + 2$",
+              "B": "$F(x) = 2x + 3\\ln|x + 1| + C$",
+              "C": "$F(x) = 2x - 3\\ln(x + 1) + 2$",
+              "D": "$F(x) = 2x + 5\\ln(x + 1) + 2$"
+            },
+            "correct_answer": "A",
+            "explanation": "Ta có $f(x) = \\frac{2(x+1) + 3}{x+1} = 2 + \\frac{3}{x+1}$. Nguyên hàm là $F(x) = 2x + 3\\ln(x+1) + C$ (vì $x > -1$). Từ $F(0) = 2 \\Rightarrow 0 + 0 + C = 2 \\Rightarrow C = 2$. Vậy $F(x) = 2x + 3\\ln(x+1) + 2$."
+          },
+          {
+            "question_number": 6,
+            "question_text": "Tính diện tích $S$ của hình phẳng giới hạn bởi đồ thị hàm số $y = x^3 - 9x$ và trục hoành $Ox$.",
+            "choices": {
+              "A": "$S = \\frac{81}{2}$",
+              "B": "$S = \\frac{81}{4}$",
+              "C": "$S = 81$",
+              "D": "$S = 2(81)$"
+            },
+            "correct_answer": "A",
+            "explanation": "Phương trình hoành độ giao điểm: $x^3 - 9x = 0 \\Leftrightarrow x = 0, x = \\pm 3$. Do đồ thị đối xứng qua gốc tọa độ: $S = 2 \\int_{0}^{3} |x^3 - 9x| dx = 2 \\int_{0}^{3} (9x - x^3) dx = 2 \\left. \\left( \\frac{9x^2}{2} - \\frac{x^4}{4} \\right) \\right|_{0}^{3} = 2 \\left( \\frac{81}{2} - \\frac{81}{4} \\right) = \\frac{81}{2}$."
+          },
+          {
+            "question_number": 7,
+            "question_text": "Tìm số phức liên hợp $\\overline{z}$ của số phức $z$ thỏa mãn $(1 + i)z = 5 - i$.",
+            "choices": {
+              "A": "$\\overline{z} = \\frac{4}{2} + \\frac{6}{2}i$",
+              "B": "$\\overline{z} = \\frac{4}{2} - \\frac{6}{2}i$",
+              "C": "$\\overline{z} = \\frac{6}{2} + \\frac{4}{2}i$",
+              "D": "$\\overline{z} = -\\frac{4}{2} - \\frac{6}{2}i$"
+            },
+            "correct_answer": "A",
+            "explanation": "Ta có $z = \\frac{5 - i}{1 + i} = \\frac{(5 - i)(1 - i)}{2} = \\frac{4 - (6)i}{2}$. Suy ra số phức liên hợp là $\\overline{z} = \\frac{4}{2} + \\frac{6}{2}i$."
+          },
+          {
+            "question_number": 8,
+            "question_text": "Tính môđun của số phức $z = 3 + 4i$.",
+            "choices": {
+              "A": "$|z| = \\sqrt{25}$",
+              "B": "$|z| = 25$",
+              "C": "$|z| = 7$",
+              "D": "$|z| = \\sqrt{-7}$"
+            },
+            "correct_answer": "A",
+            "explanation": "Áp dụng công thức tính môđun của số phức $z = a + bi$: $|z| = \\sqrt{a^2 + b^2} = \\sqrt{3^2 + 4^2} = \\sqrt{25}$."
+          },
+          {
+            "question_number": 9,
+            "question_text": "Trong không gian $Oxyz$, cho hai điểm $A(3; 2; -3)$ và $B(3; 0; -1)$. Tìm tọa độ trung điểm $M$ của đoạn thẳng $AB$.",
+            "choices": {
+              "A": "$M\\left(\\frac{6}{2}; 1; -2\\right)$",
+              "B": "$M(6; 2; -4)$",
+              "C": "$M\\left(\\frac{0}{2}; 1; -1\\right)$",
+              "D": "$M\\left(\\frac{6}{2}; 1; -1\\right)$"
+            },
+            "correct_answer": "A",
+            "explanation": "Áp dụng công thức trung điểm: $x_M = \\frac{x_A + x_B}{2} = \\frac{3 + 3}{2}$; $y_M = 1$; $z_M = -2$. Tọa độ trung điểm là $M\\left(\\frac{6}{2}; 1; -2\\right)$."
+          },
+          {
+            "question_number": 10,
+            "question_text": "Trong không gian $Oxyz$, viết phương trình mặt phẳng đi qua điểm $A(1; 2; 3)$ và song song với mặt phẳng $(P): 2x - y + 3z - 5 = 0$.",
+            "choices": {
+              "A": "$2x - y + 3z - 9 = 0$",
+              "B": "$2x - y + 3z + 9 = 0$",
+              "C": "$2x - y + 3z - 5 = 0$",
+              "D": "$2x - y + 3z = 0$"
+            },
+            "correct_answer": "A",
+            "explanation": "Mặt phẳng song song có dạng $2x - y + 3z + D = 0$. Thế điểm $A(1;2;3)$ vào: $2(1) - (2) + 3(3) + D = 0 \\Leftrightarrow D = -9$. Phương trình cần tìm là $2x - y + 3z - 9 = 0$."
+          },
+          {
+            "question_number": 11,
+            "question_text": "Trong không gian $Oxyz$, cho hai đường thẳng $d_1: \\frac{x-1}{1} = \\frac{y}{3} = \\frac{z-1}{-1}$ và $d_2: \\frac{x}{2} = \\frac{y-1}{1} = \\frac{z+2}{1}$. Tính tích vô hướng của hai vectơ chỉ phương của $d_1$ và $d_2$.",
+            "choices": {
+              "A": "$4$",
+              "B": "$2$",
+              "C": "$3$",
+              "D": "$23$"
+            },
+            "correct_answer": "A",
+            "explanation": "Vectơ chỉ phương của $d_1$ là $\\vec{u}_1 = (1; 3; -1)$, của $d_2$ là $\\vec{u}_2 = (2; 1; 1)$. Tích vô hướng: $\\vec{u}_1 \\cdot \\vec{u}_2 = 1(2) + 3(1) + (-1)(1) = 4$."
+          },
+          {
+            "question_number": 12,
+            "question_text": "Chọn ngẫu nhiên đồng thời 2 tấm thẻ từ một hộp chứa 11 tấm thẻ được đánh số từ 1 đến 11. Tính xác suất để tích hai số ghi trên hai tấm thẻ chọn ra là một số chẵn.",
+            "choices": {
+              "A": "$0.727$",
+              "B": "$0.273$",
+              "C": "$0.5$",
+              "D": "$0.75$"
+            },
+            "correct_answer": "A",
+            "explanation": "Tích hai số ghi trên thẻ là số lẻ khi và chỉ khi cả 2 thẻ đều lẻ. Số thẻ lẻ là 6. Số cách chọn 2 thẻ lẻ là $C_{6}^2 = 15$. Tổng số cách chọn 2 thẻ bất kỳ là $C_{11}^2 = 55$. Xác suất tích lẻ là 15/55. Do đó xác suất tích chẵn là $1 - 15/55 = 0.727$."
+          },
+          {
+            "question_number": 13,
+            "question_text": "Cho cấp số cộng $(u_n)$ có số hạng đầu $u_1 = 3$ và công sai $d = 3$. Tìm số hạng thứ 10 của cấp số cộng đó.",
+            "choices": {
+              "A": "$30$",
+              "B": "$33$",
+              "C": "$27$",
+              "D": "$103$"
+            },
+            "correct_answer": "A",
+            "explanation": "Số hạng thứ 10 là $u_{10} = u_1 + 9d = 3 + 9(3) = 30$."
+          },
+          {
+            "question_number": 14,
+            "question_text": "Cho cấp số nhân $(u_n)$ có số hạng đầu $u_1 = 3$ và công sai (công bội) $q = 2$. Tính tổng 5 số hạng đầu tiên $S_5$.",
+            "choices": {
+              "A": "$93$",
+              "B": "$96$",
+              "C": "$90$",
+              "D": "$15$"
+            },
+            "correct_answer": "A",
+            "explanation": "Áp dụng công thức tính tổng cấp số nhân: $S_5 = u_1 \\frac{q^5 - 1}{q - 1} = 3 \\cdot \\frac{2^5 - 1}{1} = 93$."
+          },
+          {
+            "question_number": 15,
+            "question_text": "Cho khối tứ diện đều $ABCD$ có tất cả các cạnh bằng $3a$. Tính thể tích $V$ của khối tứ diện đều đó.",
+            "choices": {
+              "A": "$V = \\frac{27a^3\\sqrt{2}}{12}$",
+              "B": "$V = \\frac{27a^3\\sqrt{2}}{4}$",
+              "C": "$V = \\frac{27a^3\\sqrt{3}}{12}$",
+              "D": "$V = \\frac{27a^3}{6}$"
+            },
+            "correct_answer": "A",
+            "explanation": "Thể tích khối tứ diện đều cạnh $x$ là $V = \\frac{x^3\\sqrt{2}}{12}$. Với $x = 3a$, ta có $V = \\frac{27a^3\\sqrt{2}}{12}$."
+          },
+          {
+            "question_number": 16,
+            "question_text": "Một hình nón có bán kính đáy $r = 4$ cm và chiều cao $h = 9$ cm. Tính thể tích $V$ của khối nón tương ứng.",
+            "choices": {
+              "A": "$48\\pi$ cm$^3$",
+              "B": "$144\\pi$ cm$^3$",
+              "C": "$16.0\\pi$ cm$^3$",
+              "D": "$20\\pi$ cm$^3$"
+            },
+            "correct_answer": "A",
+            "explanation": "Thể tích hình nón: $V = \\frac{1}{3} \\pi r^2 h = \\frac{1}{3} \\pi (16) (9) = 48\\pi$ cm$^3$."
+          }
+        ]
+      },
+      {
+        "section_id": 2,
+        "section_title": "PHẦN II. TRĂC NGHIỆM ĐÚNG SAI",
+        "questions": [
+          {
+            "question_number": 1,
+            "context_text": "Cho hàm số bậc ba $y = f(x) = x^3 - 3(3)x^2 + 1$ có đồ thị là $(C)$.",
+            "statements": [
+              {
+                "label": "a",
+                "text": "Đạo hàm của hàm số là $f'(x) = 3x^2 - 18x$.",
+                "correct_value": "Đúng",
+                "explanation": "Áp dụng các quy tắc đạo hàm cơ bản ta có: $f'(x) = 3x^2 - 18x$."
+              },
+              {
+                "label": "b",
+                "text": "Hàm số đạt cực đại tại điểm $x = 6$ và cực tiểu tại $x = 0$.",
+                "correct_value": "Sai",
+                "explanation": "Giải phương trình $f'(x) = 0 \\Leftrightarrow x=0$ (cực đại) hoặc $x=6$ (cực tiểu)."
+              },
+              {
+                "label": "c",
+                "text": "Đường thẳng nối hai cực trị của đồ thị có phương trình dạng $y = -18x + 1$.",
+                "correct_value": "Đúng",
+                "explanation": "Đường thẳng qua cực trị là phần dư của phép chia $f(x)$ cho $f'(x)$, tương ứng $y = -18x + 1$."
+              },
+              {
+                "label": "d",
+                "text": "Đồ thị hàm số nhận điểm uốn $I(3; 1 - 54)$ làm tâm đối xứng.",
+                "correct_value": "Đúng",
+                "explanation": "Đạo hàm cấp hai $f''(x) = 6x - 18 = 0 \\Rightarrow x=3$."
+              }
+            ]
+          },
+          {
+            "question_number": 2,
+            "context_text": "Trong không gian tọa độ $Oxyz$, cho điểm $A(1; 2; -1)$ và đường thẳng $d: \\frac{{x-2}}{{1}} = \\frac{{y+1}}{{2}} = \\frac{{z}}{{-2}}$. Gọi $(P)$ là mặt phẳng đi qua $A$ và vuông góc với đường thẳng $d$.",
+            "statements": [
+              {
+                "label": "a",
+                "text": "Vectơ chỉ phương của đường thẳng $d$ là $\\vec{{u}}_d = (1; 2; -2)$.",
+                "correct_value": "Đúng",
+                "explanation": "Từ phương trình chính tắc của đường thẳng $d$, các hệ số dưới mẫu số là tọa độ của vectơ chỉ phương $\\vec{{u}}_d = (1; 2; -2)$."
+              },
+              {
+                "label": "b",
+                "text": "Mặt phẳng $(P)$ nhận vectơ chỉ phương $\\vec{{u}}_d$ làm vectơ pháp tuyến.",
+                "correct_value": "Đúng",
+                "explanation": "Vì $(P) \\perp d$ nên vectơ pháp tuyến $\\vec{{n}}_P = \\vec{{u}}_d = (1; 2; -2)$."
+              },
+              {
+                "label": "c",
+                "text": "Phương trình tổng quát của mặt phẳng $(P)$ là $x + 2y - 2z + 3 = 0$.",
+                "correct_value": "Sai",
+                "explanation": "Phương trình $(P): 1(x-1) + 2(y-2) - 2(z+1) = 0 \\Leftrightarrow x + 2y - 2z - 7 = 0$."
+              },
+              {
+                "label": "d",
+                "text": "Đường thẳng $d$ song song với mặt phẳng $(P)$.",
+                "correct_value": "Sai",
+                "explanation": "Vì đường thẳng $d \\perp (P)$ nên phát biểu $d \\parallel (P)$ là Sai."
+              }
+            ]
+          },
+          {
+            "question_number": 3,
+            "context_text": "Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình vuông cạnh $a$. Cạnh bên $SA$ vuông góc với đáy và $SA = a\\sqrt{2}$. Gọi $\\alpha$ là góc giữa $SC$ và mặt phẳng $(SAB)$.",
+            "statements": [
+              {
+                "label": "a",
+                "text": "Đường thẳng $BC$ vuông góc với mặt phẳng $(SAB)$.",
+                "correct_value": "Đúng",
+                "explanation": "Ta có $BC \\perp AB$ và $BC \\perp SA \\Rightarrow BC \\perp (SAB)$."
+              },
+              {
+                "label": "b",
+                "text": "Hình chiếu vuông góc của đường thẳng $SC$ lên mặt phẳng $(SAB)$ là đường thẳng $SB$.",
+                "correct_value": "Đúng",
+                "explanation": "Hình chiếu của $S$ trên $(SAB)$ chính là $S$. Hình chiếu của $C$ trên $(SAB)$ là $B$ (vì $CB \\perp (SAB)$)."
+              },
+              {
+                "label": "c",
+                "text": "Góc giữa đường thẳng $SC$ và mặt phẳng $(SAB)$ là góc $\\widehat{{BSC}}$.",
+                "correct_value": "Đúng",
+                "explanation": "Góc giữa đường thẳng và mặt phẳng là góc giữa đường thẳng đó và hình chiếu của nó lên mặt phẳng. Vậy $\\alpha = \\widehat{BSC}$."
+              },
+              {
+                "label": "d",
+                "text": "Tam giác $SBC$ là tam giác đều.",
+                "correct_value": "Sai",
+                "explanation": "Tam giác $SBC$ vuông tại $B$ nên không thể là tam giác đều."
+              }
+            ]
+          },
+          {
+            "question_number": 4,
+            "context_text": "Cho hộp thứ nhất chứa 3 viên bi đỏ và 2 viên bi xanh; hộp thứ hai chứa 4 viên bi đỏ và 3 viên bi xanh. Lấy ngẫu nhiên từ mỗi hộp ra 1 viên bi.",
+            "statements": [
+              {
+                "label": "a",
+                "text": "Xác suất để lấy được hai viên bi cùng màu đỏ là $\\frac{{12}}{{35}}$.",
+                "correct_value": "Đúng",
+                "explanation": "Xác suất lấy bi đỏ từ hộp 1 là $P(R_1) = \\frac{3}{5}$. Xác suất lấy bi đỏ từ hộp 2 là $P(R_2) = \\frac{4}{7}$. Xác suất cả hai cùng đỏ là $P = \\frac{3}{5} \\times \\frac{4}{7} = \\frac{12}{35}$."
+              },
+              {
+                "label": "b",
+                "text": "Xác suất để lấy được hai viên bi cùng màu xanh là $\\frac{{6}}{{35}}$.",
+                "correct_value": "Đúng",
+                "explanation": "Xác suất lấy bi xanh từ hộp 1 là $P(G_1) = \\frac{2}{5}$. Xác suất lấy bi xanh từ hộp 2 là $P(G_2) = \\frac{3}{7}$. Xác suất cả hai cùng xanh là $P = \\frac{2}{5} \\times \\frac{3}{7} = \\frac{6}{35}$."
+              },
+              {
+                "label": "c",
+                "text": "Xác suất để lấy được hai viên bi khác màu là $\\frac{{17}}{{35}}$.",
+                "correct_value": "Đúng",
+                "explanation": "Xác suất lấy được 2 viên cùng màu là $P_{cm} = P_{đỏ} + P_{xanh} = \\frac{12}{35} + \\frac{6}{35} = \\frac{18}{35}$. Xác suất hai viên khác màu là $P = 1 - \\frac{18}{35} = \\frac{17}{35}$."
+              },
+              {
+                "label": "d",
+                "text": "Xác suất để có ít nhất một viên bi đỏ là $1.0$.",
+                "correct_value": "Sai",
+                "explanation": "Ít nhất một đỏ: $1 - P(\\text{cả hai cùng xanh}) = 1 - \\frac{6}{35} = \\frac{29}{35} \\neq 1.0$."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "section_id": 3,
+        "section_title": "PHẦN III. TRẢ LỜI NGẮN",
+        "questions": [
+          {
+            "question_number": 1,
+            "question_text": "Một xưởng muốn sản xuất chiếc lon hình trụ có thể tích $V = 6750\\pi$ cm$^3$. Tìm bán kính đáy $R$ (cm) của lon để diện tích kim loại toàn phần làm chiếc lon đạt giá trị nhỏ nhất.",
+            "correct_answer": "15",
+            "explanation": "Thể tích $V = \\pi R^2 h = 2 \\cdot 3375 \\pi \\Rightarrow h = \\frac{2 \\cdot 3375}{R^2}$. Diện tích toàn phần $S(R) = 2\\pi R h + 2\\pi R^2 = \\frac{4\\pi \\cdot 3375}{R} + 2\\pi R^2$. Đạo hàm $S'(R) = -\\frac{4\\pi \\cdot 3375}{R^2} + 4\\pi R = 0 \\Leftrightarrow R = 15$ cm."
+          },
+          {
+            "question_number": 2,
+            "question_text": "Tìm số hạng đầu $u_1$ của cấp số cộng $(u_n)$ biết tổng của 15 số hạng đầu tiên của nó bằng $765$ và công sai $d = 3$.",
+            "correct_answer": "30",
+            "explanation": "Ta có $S_{15} = \\frac{15}{2}[2u_1 + 14(3)] = 765 \\Leftrightarrow \\frac{1}{2}[2u_1 + 42] = 51 \\Leftrightarrow u_1 + 21 = 51 \\Leftrightarrow u_1 = 30$."
+          },
+          {
+            "question_number": 3,
+            "question_text": "Có bao nhiêu số tự nhiên chẵn gồm 4 chữ số đôi một khác nhau được lập từ tập hợp gồm 8 chữ số từ 1 đến 8?",
+            "correct_answer": "360",
+            "explanation": "Số cách lập số tự nhiên chẵn được tính bằng việc chọn chữ số hàng đơn vị chẵn trước, sau đó chọn 3 chữ số khác nhau xếp vào 3 vị trí còn lại."
+          },
+          {
+            "question_number": 4,
+            "question_text": "Tính diện tích hình phẳng giới hạn bởi đồ thị hàm số $y = x^2$ và đường thẳng $y = -x + 6$ (Lấy kết quả làm tròn đến 2 chữ số thập phân).",
+            "correct_answer": "12.33",
+            "explanation": "Phương trình hoành độ giao điểm, sau đó tích phân hiệu hai đồ thị trên khoảng hai nghiệm."
+          },
+          {
+            "question_number": 5,
+            "question_text": "Trong không gian $Oxyz$, tìm khoảng cách ngắn nhất từ gốc tọa độ $O(0;0;0)$ đến đường thẳng $d: \\{x = 2 + t, y = 2 - t, z = 3\\}.",
+            "correct_answer": "5",
+            "explanation": "Tính khoảng cách từ điểm đến đường thẳng bằng công thức tích có hướng hoặc lập hàm số cực tiểu."
+          },
+          {
+            "question_number": 6,
+            "question_text": "Một người gửi 100 triệu đồng vào ngân hàng với lãi suất 8%/năm lãi kép. Hỏi sau tối thiểu bao nhiêu năm người đó nhận được số tiền gấp đôi ban đầu?",
+            "correct_answer": "10",
+            "explanation": "Sử dụng bất phương trình lãi kép $100(1 + r)^n > 200$, tìm n tối thiểu."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "exam_title": "Đề số 4",
+    "duration_minutes": 90,
+    "sections": [
+      {
+        "section_id": 1,
+        "section_title": "PHẦN I. TRẮC NGHIỆM KHÁCH QUAN",
+        "questions": [
+          {
+            "question_number": 1,
+            "question_text": "Cho hàm số $y = f(x) = x^3 - 3(4)x^2 + 2$ liên tục trên $\\mathbb{R}$. Tìm tập hợp tất cả các giá trị của tham số $m$ để phương trình $f(x) = m$ có đúng 3 nghiệm thực phân biệt.",
+            "choices": {
+              "A": "$-254 < m < 2$",
+              "B": "$m > 2$",
+              "C": "$m < -254$",
+              "D": "$m = 2$ hoặc $m = -254$"
+            },
+            "correct_answer": "A",
+            "explanation": "Đạo hàm $y' = 3x^2 - 6(4)x = 3x(x - 8)$. Cho $y' = 0 \\Leftrightarrow x = 0$ hoặc $x = 8$. Đồ thị có điểm cực đại là $(0; 2)$ và điểm cực tiểu là $(8; -254)$. Phương trình có 3 nghiệm phân biệt khi đường thẳng $y = m$ cắt đồ thị tại 3 điểm phân biệt, tương đương $-254 < m < 2$."
+          },
+          {
+            "question_number": 2,
+            "question_text": "Tính đạo hàm của hàm số $y = 6^{x^2 - 2x}$.",
+            "choices": {
+              "A": "$y' = (2x - 2) \\cdot 6^{x^2 - 2x} \\cdot \\ln 6$",
+              "B": "$y' = (x^2 - 2x) \\cdot 6^{x^2 - 2x - 1}$",
+              "C": "$y' = 6^{x^2 - 2x} \\cdot \\ln 6$",
+              "D": "$y' = \\frac{2x - 2}{\\ln 6} \\cdot 6^{x^2 - 2x}$"
+            },
+            "correct_answer": "A",
+            "explanation": "Áp dụng công thức đạo hàm hàm hợp $(a^u)' = u' \\cdot a^u \\cdot \\ln a$. Ở đây $a = 6$, $u = x^2 - 2x \\Rightarrow u' = 2x - 2$. Do đó ta có: $y' = (2x - 2) \\cdot 6^{x^2 - 2x} \\cdot \\ln 6$."
+          },
+          {
+            "question_number": 3,
+            "question_text": "Tìm tập xác định $D$ của hàm số $y = (x^2 - 6x + 5)^{-e}$.",
+            "choices": {
+              "A": "$D = (-\\infty; 1) \\cup (5; +\\infty)$",
+              "B": "$D = \\mathbb{R} \\setminus \\{1; 5\\}$",
+              "C": "$D = (1; 5)$",
+              "D": "$D = \\mathbb{R}$"
+            },
+            "correct_answer": "A",
+            "explanation": "Hàm số lũy thừa có số mũ không nguyên xác định khi cơ số dương: $x^2 - 6x + 5 > 0 \\Leftrightarrow (x-1)(x-5) > 0 \\Leftrightarrow x < 1$ hoặc $x > 5$. Tập xác định là $D = (-\\infty; 1) \\cup (5; +\\infty)$."
+          },
+          {
+            "question_number": 4,
+            "question_text": "Giải phương trình $\\log_2(x - 6) + \\log_2(x - 4) = 3$.",
+            "choices": {
+              "A": "$x = 8$",
+              "B": "$x = 8$ hoặc $x = 2$",
+              "C": "$x = 7$",
+              "D": "$x = 6$"
+            },
+            "correct_answer": "A",
+            "explanation": "Điều kiện: $x > 6$. Phương trình viết lại: $\\log_2[(x - 6)(x - 4)] = 3 \\Leftrightarrow x^2 - 10x + 24 = 8 \\Leftrightarrow x^2 - 10x + 16 = 0 \\Leftrightarrow x = 8$ (nhận) hoặc $x = 2$ (loại do điều kiện)."
+          },
+          {
+            "question_number": 5,
+            "question_text": "Tìm nguyên hàm $F(x)$ của hàm số $f(x) = \\frac{2x + 6}{x + 1}$ trên khoảng $(-1; +\\infty)$ biết $F(0) = 2$.",
+            "choices": {
+              "A": "$F(x) = 2x + 4\\ln(x + 1) + 2$",
+              "B": "$F(x) = 2x + 4\\ln|x + 1| + C$",
+              "C": "$F(x) = 2x - 4\\ln(x + 1) + 2$",
+              "D": "$F(x) = 2x + 6\\ln(x + 1) + 2$"
+            },
+            "correct_answer": "A",
+            "explanation": "Ta có $f(x) = \\frac{2(x+1) + 4}{x+1} = 2 + \\frac{4}{x+1}$. Nguyên hàm là $F(x) = 2x + 4\\ln(x+1) + C$ (vì $x > -1$). Từ $F(0) = 2 \\Rightarrow 0 + 0 + C = 2 \\Rightarrow C = 2$. Vậy $F(x) = 2x + 4\\ln(x+1) + 2$."
+          },
+          {
+            "question_number": 6,
+            "question_text": "Tính diện tích $S$ của hình phẳng giới hạn bởi đồ thị hàm số $y = x^3 - 16x$ và trục hoành $Ox$.",
+            "choices": {
+              "A": "$S = \\frac{256}{2}$",
+              "B": "$S = \\frac{256}{4}$",
+              "C": "$S = 256$",
+              "D": "$S = 2(256)$"
+            },
+            "correct_answer": "A",
+            "explanation": "Phương trình hoành độ giao điểm: $x^3 - 16x = 0 \\Leftrightarrow x = 0, x = \\pm 4$. Do đồ thị đối xứng qua gốc tọa độ: $S = 2 \\int_{0}^{4} |x^3 - 16x| dx = 2 \\int_{0}^{4} (16x - x^3) dx = 2 \\left. \\left( \\frac{16x^2}{2} - \\frac{x^4}{4} \\right) \\right|_{0}^{4} = 2 \\left( \\frac{256}{2} - \\frac{256}{4} \\right) = \\frac{256}{2}$."
+          },
+          {
+            "question_number": 7,
+            "question_text": "Tìm số phức liên hợp $\\overline{z}$ của số phức $z$ thỏa mãn $(1 + i)z = 6 - i$.",
+            "choices": {
+              "A": "$\\overline{z} = \\frac{5}{2} + \\frac{7}{2}i$",
+              "B": "$\\overline{z} = \\frac{5}{2} - \\frac{7}{2}i$",
+              "C": "$\\overline{z} = \\frac{7}{2} + \\frac{5}{2}i$",
+              "D": "$\\overline{z} = -\\frac{5}{2} - \\frac{7}{2}i$"
+            },
+            "correct_answer": "A",
+            "explanation": "Ta có $z = \\frac{6 - i}{1 + i} = \\frac{(6 - i)(1 - i)}{2} = \\frac{5 - (7)i}{2}$. Suy ra số phức liên hợp là $\\overline{z} = \\frac{5}{2} + \\frac{7}{2}i$."
+          },
+          {
+            "question_number": 8,
+            "question_text": "Tính môđun của số phức $z = 4 + 4i$.",
+            "choices": {
+              "A": "$|z| = \\sqrt{32}$",
+              "B": "$|z| = 32$",
+              "C": "$|z| = 8$",
+              "D": "$|z| = \\sqrt{0}$"
+            },
+            "correct_answer": "A",
+            "explanation": "Áp dụng công thức tính môđun của số phức $z = a + bi$: $|z| = \\sqrt{a^2 + b^2} = \\sqrt{4^2 + 4^2} = \\sqrt{32}$."
+          },
+          {
+            "question_number": 9,
+            "question_text": "Trong không gian $Oxyz$, cho hai điểm $A(4; 2; -3)$ và $B(3; 0; -1)$. Tìm tọa độ trung điểm $M$ của đoạn thẳng $AB$.",
+            "choices": {
+              "A": "$M\\left(\\frac{7}{2}; 1; -2\\right)$",
+              "B": "$M(7; 2; -4)$",
+              "C": "$M\\left(\\frac{1}{2}; 1; -1\\right)$",
+              "D": "$M\\left(\\frac{7}{2}; 1; -1\\right)$"
+            },
+            "correct_answer": "A",
+            "explanation": "Áp dụng công thức trung điểm: $x_M = \\frac{x_A + x_B}{2} = \\frac{4 + 3}{2}$; $y_M = 1$; $z_M = -2$. Tọa độ trung điểm là $M\\left(\\frac{7}{2}; 1; -2\\right)$."
+          },
+          {
+            "question_number": 10,
+            "question_text": "Trong không gian $Oxyz$, viết phương trình mặt phẳng đi qua điểm $A(1; 2; 3)$ và song song với mặt phẳng $(P): 2x - y + 4z - 5 = 0$.",
+            "choices": {
+              "A": "$2x - y + 4z - 12 = 0$",
+              "B": "$2x - y + 4z + 12 = 0$",
+              "C": "$2x - y + 4z - 5 = 0$",
+              "D": "$2x - y + 4z = 0$"
+            },
+            "correct_answer": "A",
+            "explanation": "Mặt phẳng song song có dạng $2x - y + 4z + D = 0$. Thế điểm $A(1;2;3)$ vào: $2(1) - (2) + 4(3) + D = 0 \\Leftrightarrow D = -12$. Phương trình cần tìm là $2x - y + 4z - 12 = 0$."
+          },
+          {
+            "question_number": 11,
+            "question_text": "Trong không gian $Oxyz$, cho hai đường thẳng $d_1: \\frac{x-1}{1} = \\frac{y}{4} = \\frac{z-1}{-1}$ và $d_2: \\frac{x}{2} = \\frac{y-1}{1} = \\frac{z+2}{1}$. Tính tích vô hướng của hai vectơ chỉ phương của $d_1$ và $d_2$.",
+            "choices": {
+              "A": "$5$",
+              "B": "$3$",
+              "C": "$4$",
+              "D": "$24$"
+            },
+            "correct_answer": "A",
+            "explanation": "Vectơ chỉ phương của $d_1$ là $\\vec{u}_1 = (1; 4; -1)$, của $d_2$ là $\\vec{u}_2 = (2; 1; 1)$. Tích vô hướng: $\\vec{u}_1 \\cdot \\vec{u}_2 = 1(2) + 4(1) + (-1)(1) = 5$."
+          },
+          {
+            "question_number": 12,
+            "question_text": "Chọn ngẫu nhiên đồng thời 2 tấm thẻ từ một hộp chứa 12 tấm thẻ được đánh số từ 1 đến 12. Tính xác suất để tích hai số ghi trên hai tấm thẻ chọn ra là một số chẵn.",
+            "choices": {
+              "A": "$0.773$",
+              "B": "$0.227$",
+              "C": "$0.5$",
+              "D": "$0.75$"
+            },
+            "correct_answer": "A",
+            "explanation": "Tích hai số ghi trên thẻ là số lẻ khi và chỉ khi cả 2 thẻ đều lẻ. Số thẻ lẻ là 6. Số cách chọn 2 thẻ lẻ là $C_{6}^2 = 15$. Tổng số cách chọn 2 thẻ bất kỳ là $C_{12}^2 = 66$. Xác suất tích lẻ là 15/66. Do đó xác suất tích chẵn là $1 - 15/66 = 0.773$."
+          },
+          {
+            "question_number": 13,
+            "question_text": "Cho cấp số cộng $(u_n)$ có số hạng đầu $u_1 = 4$ và công sai $d = 3$. Tìm số hạng thứ 10 của cấp số cộng đó.",
+            "choices": {
+              "A": "$31$",
+              "B": "$34$",
+              "C": "$28$",
+              "D": "$104$"
+            },
+            "correct_answer": "A",
+            "explanation": "Số hạng thứ 10 là $u_{10} = u_1 + 9d = 4 + 9(3) = 31$."
+          },
+          {
+            "question_number": 14,
+            "question_text": "Cho cấp số nhân $(u_n)$ có số hạng đầu $u_1 = 3$ và công sai (công bội) $q = 2$. Tính tổng 5 số hạng đầu tiên $S_5$.",
+            "choices": {
+              "A": "$93$",
+              "B": "$96$",
+              "C": "$90$",
+              "D": "$15$"
+            },
+            "correct_answer": "A",
+            "explanation": "Áp dụng công thức tính tổng cấp số nhân: $S_5 = u_1 \\frac{q^5 - 1}{q - 1} = 3 \\cdot \\frac{2^5 - 1}{1} = 93$."
+          },
+          {
+            "question_number": 15,
+            "question_text": "Cho khối tứ diện đều $ABCD$ có tất cả các cạnh bằng $4a$. Tính thể tích $V$ của khối tứ diện đều đó.",
+            "choices": {
+              "A": "$V = \\frac{64a^3\\sqrt{2}}{12}$",
+              "B": "$V = \\frac{64a^3\\sqrt{2}}{4}$",
+              "C": "$V = \\frac{64a^3\\sqrt{3}}{12}$",
+              "D": "$V = \\frac{64a^3}{6}$"
+            },
+            "correct_answer": "A",
+            "explanation": "Thể tích khối tứ diện đều cạnh $x$ là $V = \\frac{x^3\\sqrt{2}}{12}$. Với $x = 4a$, ta có $V = \\frac{64a^3\\sqrt{2}}{12}$."
+          },
+          {
+            "question_number": 16,
+            "question_text": "Một hình nón có bán kính đáy $r = 4$ cm và chiều cao $h = 12$ cm. Tính thể tích $V$ của khối nón tương ứng.",
+            "choices": {
+              "A": "$64\\pi$ cm$^3$",
+              "B": "$192\\pi$ cm$^3$",
+              "C": "$21.3\\pi$ cm$^3$",
+              "D": "$20\\pi$ cm$^3$"
+            },
+            "correct_answer": "A",
+            "explanation": "Thể tích hình nón: $V = \\frac{1}{3} \\pi r^2 h = \\frac{1}{3} \\pi (16) (12) = 64\\pi$ cm$^3$."
+          }
+        ]
+      },
+      {
+        "section_id": 2,
+        "section_title": "PHẦN II. TRĂC NGHIỆM ĐÚNG SAI",
+        "questions": [
+          {
+            "question_number": 1,
+            "context_text": "Cho hàm số bậc ba $y = f(x) = x^3 - 3(4)x^2 + 1$ có đồ thị là $(C)$.",
+            "statements": [
+              {
+                "label": "a",
+                "text": "Đạo hàm của hàm số là $f'(x) = 3x^2 - 24x$.",
+                "correct_value": "Đúng",
+                "explanation": "Áp dụng các quy tắc đạo hàm cơ bản ta có: $f'(x) = 3x^2 - 24x$."
+              },
+              {
+                "label": "b",
+                "text": "Hàm số đạt cực đại tại điểm $x = 8$ và cực tiểu tại $x = 0$.",
+                "correct_value": "Sai",
+                "explanation": "Giải phương trình $f'(x) = 0 \\Leftrightarrow x=0$ (cực đại) hoặc $x=8$ (cực tiểu)."
+              },
+              {
+                "label": "c",
+                "text": "Đường thẳng nối hai cực trị của đồ thị có phương trình dạng $y = -32x + 1$.",
+                "correct_value": "Đúng",
+                "explanation": "Đường thẳng qua cực trị là phần dư của phép chia $f(x)$ cho $f'(x)$, tương ứng $y = -32x + 1$."
+              },
+              {
+                "label": "d",
+                "text": "Đồ thị hàm số nhận điểm uốn $I(4; 1 - 128)$ làm tâm đối xứng.",
+                "correct_value": "Đúng",
+                "explanation": "Đạo hàm cấp hai $f''(x) = 6x - 24 = 0 \\Rightarrow x=4$."
+              }
+            ]
+          },
+          {
+            "question_number": 2,
+            "context_text": "Trong không gian tọa độ $Oxyz$, cho điểm $A(1; 2; -1)$ và đường thẳng $d: \\frac{{x-2}}{{1}} = \\frac{{y+1}}{{2}} = \\frac{{z}}{{-2}}$. Gọi $(P)$ là mặt phẳng đi qua $A$ và vuông góc với đường thẳng $d$.",
+            "statements": [
+              {
+                "label": "a",
+                "text": "Vectơ chỉ phương của đường thẳng $d$ là $\\vec{{u}}_d = (1; 2; -2)$.",
+                "correct_value": "Đúng",
+                "explanation": "Từ phương trình chính tắc của đường thẳng $d$, các hệ số dưới mẫu số là tọa độ của vectơ chỉ phương $\\vec{{u}}_d = (1; 2; -2)$."
+              },
+              {
+                "label": "b",
+                "text": "Mặt phẳng $(P)$ nhận vectơ chỉ phương $\\vec{{u}}_d$ làm vectơ pháp tuyến.",
+                "correct_value": "Đúng",
+                "explanation": "Vì $(P) \\perp d$ nên vectơ pháp tuyến $\\vec{{n}}_P = \\vec{{u}}_d = (1; 2; -2)$."
+              },
+              {
+                "label": "c",
+                "text": "Phương trình tổng quát của mặt phẳng $(P)$ là $x + 2y - 2z + 4 = 0$.",
+                "correct_value": "Sai",
+                "explanation": "Phương trình $(P): 1(x-1) + 2(y-2) - 2(z+1) = 0 \\Leftrightarrow x + 2y - 2z - 7 = 0$."
+              },
+              {
+                "label": "d",
+                "text": "Đường thẳng $d$ song song với mặt phẳng $(P)$.",
+                "correct_value": "Sai",
+                "explanation": "Vì đường thẳng $d \\perp (P)$ nên phát biểu $d \\parallel (P)$ là Sai."
+              }
+            ]
+          },
+          {
+            "question_number": 3,
+            "context_text": "Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình vuông cạnh $a$. Cạnh bên $SA$ vuông góc với đáy và $SA = a\\sqrt{2}$. Gọi $\\alpha$ là góc giữa $SC$ và mặt phẳng $(SAB)$.",
+            "statements": [
+              {
+                "label": "a",
+                "text": "Đường thẳng $BC$ vuông góc với mặt phẳng $(SAB)$.",
+                "correct_value": "Đúng",
+                "explanation": "Ta có $BC \\perp AB$ và $BC \\perp SA \\Rightarrow BC \\perp (SAB)$."
+              },
+              {
+                "label": "b",
+                "text": "Hình chiếu vuông góc của đường thẳng $SC$ lên mặt phẳng $(SAB)$ là đường thẳng $SB$.",
+                "correct_value": "Đúng",
+                "explanation": "Hình chiếu của $S$ trên $(SAB)$ chính là $S$. Hình chiếu của $C$ trên $(SAB)$ là $B$ (vì $CB \\perp (SAB)$)."
+              },
+              {
+                "label": "c",
+                "text": "Góc giữa đường thẳng $SC$ và mặt phẳng $(SAB)$ là góc $\\widehat{{BSC}}$.",
+                "correct_value": "Đúng",
+                "explanation": "Góc giữa đường thẳng và mặt phẳng là góc giữa đường thẳng đó và hình chiếu của nó lên mặt phẳng. Vậy $\\alpha = \\widehat{BSC}$."
+              },
+              {
+                "label": "d",
+                "text": "Tam giác $SBC$ là tam giác đều.",
+                "correct_value": "Sai",
+                "explanation": "Tam giác $SBC$ vuông tại $B$ nên không thể là tam giác đều."
+              }
+            ]
+          },
+          {
+            "question_number": 4,
+            "context_text": "Cho hộp thứ nhất chứa 3 viên bi đỏ và 2 viên bi xanh; hộp thứ hai chứa 4 viên bi đỏ và 3 viên bi xanh. Lấy ngẫu nhiên từ mỗi hộp ra 1 viên bi.",
+            "statements": [
+              {
+                "label": "a",
+                "text": "Xác suất để lấy được hai viên bi cùng màu đỏ là $\\frac{{12}}{{35}}$.",
+                "correct_value": "Đúng",
+                "explanation": "Xác suất lấy bi đỏ từ hộp 1 là $P(R_1) = \\frac{3}{5}$. Xác suất lấy bi đỏ từ hộp 2 là $P(R_2) = \\frac{4}{7}$. Xác suất cả hai cùng đỏ là $P = \\frac{3}{5} \\times \\frac{4}{7} = \\frac{12}{35}$."
+              },
+              {
+                "label": "b",
+                "text": "Xác suất để lấy được hai viên bi cùng màu xanh là $\\frac{{6}}{{35}}$.",
+                "correct_value": "Đúng",
+                "explanation": "Xác suất lấy bi xanh từ hộp 1 là $P(G_1) = \\frac{2}{5}$. Xác suất lấy bi xanh từ hộp 2 là $P(G_2) = \\frac{3}{7}$. Xác suất cả hai cùng xanh là $P = \\frac{2}{5} \\times \\frac{3}{7} = \\frac{6}{35}$."
+              },
+              {
+                "label": "c",
+                "text": "Xác suất để lấy được hai viên bi khác màu là $\\frac{{17}}{{35}}$.",
+                "correct_value": "Đúng",
+                "explanation": "Xác suất lấy được 2 viên cùng màu là $P_{cm} = P_{đỏ} + P_{xanh} = \\frac{12}{35} + \\frac{6}{35} = \\frac{18}{35}$. Xác suất hai viên khác màu là $P = 1 - \\frac{18}{35} = \\frac{17}{35}$."
+              },
+              {
+                "label": "d",
+                "text": "Xác suất để có ít nhất một viên bi đỏ là $1.0$.",
+                "correct_value": "Sai",
+                "explanation": "Ít nhất một đỏ: $1 - P(\\text{cả hai cùng xanh}) = 1 - \\frac{6}{35} = \\frac{29}{35} \\neq 1.0$."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "section_id": 3,
+        "section_title": "PHẦN III. TRẢ LỜI NGẮN",
+        "questions": [
+          {
+            "question_number": 1,
+            "question_text": "Một xưởng muốn sản xuất chiếc lon hình trụ có thể tích $V = 16000\\pi$ cm$^3$. Tìm bán kính đáy $R$ (cm) của lon để diện tích kim loại toàn phần làm chiếc lon đạt giá trị nhỏ nhất.",
+            "correct_answer": "20",
+            "explanation": "Thể tích $V = \\pi R^2 h = 2 \\cdot 8000 \\pi \\Rightarrow h = \\frac{2 \\cdot 8000}{R^2}$. Diện tích toàn phần $S(R) = 2\\pi R h + 2\\pi R^2 = \\frac{4\\pi \\cdot 8000}{R} + 2\\pi R^2$. Đạo hàm $S'(R) = -\\frac{4\\pi \\cdot 8000}{R^2} + 4\\pi R = 0 \\Leftrightarrow R = 20$ cm."
+          },
+          {
+            "question_number": 2,
+            "question_text": "Tìm số hạng đầu $u_1$ của cấp số cộng $(u_n)$ biết tổng của 15 số hạng đầu tiên của nó bằng $915$ và công sai $d = 3$.",
+            "correct_answer": "40",
+            "explanation": "Ta có $S_{15} = \\frac{15}{2}[2u_1 + 14(3)] = 915 \\Leftrightarrow \\frac{1}{2}[2u_1 + 42] = 61 \\Leftrightarrow u_1 + 21 = 61 \\Leftrightarrow u_1 = 40$."
+          },
+          {
+            "question_number": 3,
+            "question_text": "Có bao nhiêu số tự nhiên chẵn gồm 4 chữ số đôi một khác nhau được lập từ tập hợp gồm 9 chữ số từ 1 đến 9?",
+            "correct_answer": "480",
+            "explanation": "Số cách lập số tự nhiên chẵn được tính bằng việc chọn chữ số hàng đơn vị chẵn trước, sau đó chọn 3 chữ số khác nhau xếp vào 3 vị trí còn lại."
+          },
+          {
+            "question_number": 4,
+            "question_text": "Tính diện tích hình phẳng giới hạn bởi đồ thị hàm số $y = x^2$ và đường thẳng $y = -x + 8$ (Lấy kết quả làm tròn đến 2 chữ số thập phân).",
+            "correct_answer": "12.33",
+            "explanation": "Phương trình hoành độ giao điểm, sau đó tích phân hiệu hai đồ thị trên khoảng hai nghiệm."
+          },
+          {
+            "question_number": 5,
+            "question_text": "Trong không gian $Oxyz$, tìm khoảng cách ngắn nhất từ gốc tọa độ $O(0;0;0)$ đến đường thẳng $d: \\{x = 2 + t, y = 2 - t, z = 4\\}.",
+            "correct_answer": "6",
+            "explanation": "Tính khoảng cách từ điểm đến đường thẳng bằng công thức tích có hướng hoặc lập hàm số cực tiểu."
+          },
+          {
+            "question_number": 6,
+            "question_text": "Một người gửi 100 triệu đồng vào ngân hàng với lãi suất 9%/năm lãi kép. Hỏi sau tối thiểu bao nhiêu năm người đó nhận được số tiền gấp đôi ban đầu?",
+            "correct_answer": "12",
+            "explanation": "Sử dụng bất phương trình lãi kép $100(1 + r)^n > 200$, tìm n tối thiểu."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "exam_title": "Đề số 5",
+    "duration_minutes": 90,
+    "sections": [
+      {
+        "section_id": 1,
+        "section_title": "PHẦN I. TRẮC NGHIỆM KHÁCH QUAN",
+        "questions": [
+          {
+            "question_number": 1,
+            "question_text": "Cho hàm số $y = f(x) = x^3 - 3(5)x^2 + 2$ liên tục trên $\\mathbb{R}$. Tìm tập hợp tất cả các giá trị của tham số $m$ để phương trình $f(x) = m$ có đúng 3 nghiệm thực phân biệt.",
+            "choices": {
+              "A": "$-498 < m < 2$",
+              "B": "$m > 2$",
+              "C": "$m < -498$",
+              "D": "$m = 2$ hoặc $m = -498$"
+            },
+            "correct_answer": "A",
+            "explanation": "Đạo hàm $y' = 3x^2 - 6(5)x = 3x(x - 10)$. Cho $y' = 0 \\Leftrightarrow x = 0$ hoặc $x = 10$. Đồ thị có điểm cực đại là $(0; 2)$ và điểm cực tiểu là $(10; -498)$. Phương trình có 3 nghiệm phân biệt khi đường thẳng $y = m$ cắt đồ thị tại 3 điểm phân biệt, tương đương $-498 < m < 2$."
+          },
+          {
+            "question_number": 2,
+            "question_text": "Tính đạo hàm của hàm số $y = 7^{x^2 - 2x}$.",
+            "choices": {
+              "A": "$y' = (2x - 2) \\cdot 7^{x^2 - 2x} \\cdot \\ln 7$",
+              "B": "$y' = (x^2 - 2x) \\cdot 7^{x^2 - 2x - 1}$",
+              "C": "$y' = 7^{x^2 - 2x} \\cdot \\ln 7$",
+              "D": "$y' = \\frac{2x - 2}{\\ln 7} \\cdot 7^{x^2 - 2x}$"
+            },
+            "correct_answer": "A",
+            "explanation": "Áp dụng công thức đạo hàm hàm hợp $(a^u)' = u' \\cdot a^u \\cdot \\ln a$. Ở đây $a = 7$, $u = x^2 - 2x \\Rightarrow u' = 2x - 2$. Do đó ta có: $y' = (2x - 2) \\cdot 7^{x^2 - 2x} \\cdot \\ln 7$."
+          },
+          {
+            "question_number": 3,
+            "question_text": "Tìm tập xác định $D$ của hàm số $y = (x^2 - 7x + 6)^{-e}$.",
+            "choices": {
+              "A": "$D = (-\\infty; 1) \\cup (6; +\\infty)$",
+              "B": "$D = \\mathbb{R} \\setminus \\{1; 6\\}$",
+              "C": "$D = (1; 6)$",
+              "D": "$D = \\mathbb{R}$"
+            },
+            "correct_answer": "A",
+            "explanation": "Hàm số lũy thừa có số mũ không nguyên xác định khi cơ số dương: $x^2 - 7x + 6 > 0 \\Leftrightarrow (x-1)(x-6) > 0 \\Leftrightarrow x < 1$ hoặc $x > 6$. Tập xác định là $D = (-\\infty; 1) \\cup (6; +\\infty)$."
+          },
+          {
+            "question_number": 4,
+            "question_text": "Giải phương trình $\\log_2(x - 7) + \\log_2(x - 5) = 3$.",
+            "choices": {
+              "A": "$x = 9$",
+              "B": "$x = 9$ hoặc $x = 3$",
+              "C": "$x = 8$",
+              "D": "$x = 7$"
+            },
+            "correct_answer": "A",
+            "explanation": "Điều kiện: $x > 7$. Phương trình viết lại: $\\log_2[(x - 7)(x - 5)] = 3 \\Leftrightarrow x^2 - 12x + 35 = 8 \\Leftrightarrow x^2 - 12x + 27 = 0 \\Leftrightarrow x = 9$ (nhận) hoặc $x = 3$ (loại do điều kiện)."
+          },
+          {
+            "question_number": 5,
+            "question_text": "Tìm nguyên hàm $F(x)$ của hàm số $f(x) = \\frac{2x + 7}{x + 1}$ trên khoảng $(-1; +\\infty)$ biết $F(0) = 2$.",
+            "choices": {
+              "A": "$F(x) = 2x + 5\\ln(x + 1) + 2$",
+              "B": "$F(x) = 2x + 5\\ln|x + 1| + C$",
+              "C": "$F(x) = 2x - 5\\ln(x + 1) + 2$",
+              "D": "$F(x) = 2x + 7\\ln(x + 1) + 2$"
+            },
+            "correct_answer": "A",
+            "explanation": "Ta có $f(x) = \\frac{2(x+1) + 5}{x+1} = 2 + \\frac{5}{x+1}$. Nguyên hàm là $F(x) = 2x + 5\\ln(x+1) + C$ (vì $x > -1$). Từ $F(0) = 2 \\Rightarrow 0 + 0 + C = 2 \\Rightarrow C = 2$. Vậy $F(x) = 2x + 5\\ln(x+1) + 2$."
+          },
+          {
+            "question_number": 6,
+            "question_text": "Tính diện tích $S$ của hình phẳng giới hạn bởi đồ thị hàm số $y = x^3 - 25x$ và trục hoành $Ox$.",
+            "choices": {
+              "A": "$S = \\frac{625}{2}$",
+              "B": "$S = \\frac{625}{4}$",
+              "C": "$S = 625$",
+              "D": "$S = 2(625)$"
+            },
+            "correct_answer": "A",
+            "explanation": "Phương trình hoành độ giao điểm: $x^3 - 25x = 0 \\Leftrightarrow x = 0, x = \\pm 5$. Do đồ thị đối xứng qua gốc tọa độ: $S = 2 \\int_{0}^{5} |x^3 - 25x| dx = 2 \\int_{0}^{5} (25x - x^3) dx = 2 \\left. \\left( \\frac{25x^2}{2} - \\frac{x^4}{4} \\right) \\right|_{0}^{5} = 2 \\left( \\frac{625}{2} - \\frac{625}{4} \\right) = \\frac{625}{2}$."
+          },
+          {
+            "question_number": 7,
+            "question_text": "Tìm số phức liên hợp $\\overline{z}$ của số phức $z$ thỏa mãn $(1 + i)z = 7 - i$.",
+            "choices": {
+              "A": "$\\overline{z} = \\frac{6}{2} + \\frac{8}{2}i$",
+              "B": "$\\overline{z} = \\frac{6}{2} - \\frac{8}{2}i$",
+              "C": "$\\overline{z} = \\frac{8}{2} + \\frac{6}{2}i$",
+              "D": "$\\overline{z} = -\\frac{6}{2} - \\frac{8}{2}i$"
+            },
+            "correct_answer": "A",
+            "explanation": "Ta có $z = \\frac{7 - i}{1 + i} = \\frac{(7 - i)(1 - i)}{2} = \\frac{6 - (8)i}{2}$. Suy ra số phức liên hợp là $\\overline{z} = \\frac{6}{2} + \\frac{8}{2}i$."
+          },
+          {
+            "question_number": 8,
+            "question_text": "Tính môđun của số phức $z = 5 + 4i$.",
+            "choices": {
+              "A": "$|z| = \\sqrt{41}$",
+              "B": "$|z| = 41$",
+              "C": "$|z| = 9$",
+              "D": "$|z| = \\sqrt{9}$"
+            },
+            "correct_answer": "A",
+            "explanation": "Áp dụng công thức tính môđun của số phức $z = a + bi$: $|z| = \\sqrt{a^2 + b^2} = \\sqrt{5^2 + 4^2} = \\sqrt{41}$."
+          },
+          {
+            "question_number": 9,
+            "question_text": "Trong không gian $Oxyz$, cho hai điểm $A(5; 2; -3)$ và $B(3; 0; -1)$. Tìm tọa độ trung điểm $M$ của đoạn thẳng $AB$.",
+            "choices": {
+              "A": "$M\\left(\\frac{8}{2}; 1; -2\\right)$",
+              "B": "$M(8; 2; -4)$",
+              "C": "$M\\left(\\frac{2}{2}; 1; -1\\right)$",
+              "D": "$M\\left(\\frac{8}{2}; 1; -1\\right)$"
+            },
+            "correct_answer": "A",
+            "explanation": "Áp dụng công thức trung điểm: $x_M = \\frac{x_A + x_B}{2} = \\frac{5 + 3}{2}$; $y_M = 1$; $z_M = -2$. Tọa độ trung điểm là $M\\left(\\frac{8}{2}; 1; -2\\right)$."
+          },
+          {
+            "question_number": 10,
+            "question_text": "Trong không gian $Oxyz$, viết phương trình mặt phẳng đi qua điểm $A(1; 2; 3)$ và song song với mặt phẳng $(P): 2x - y + 5z - 5 = 0$.",
+            "choices": {
+              "A": "$2x - y + 5z - 15 = 0$",
+              "B": "$2x - y + 5z + 15 = 0$",
+              "C": "$2x - y + 5z - 5 = 0$",
+              "D": "$2x - y + 5z = 0$"
+            },
+            "correct_answer": "A",
+            "explanation": "Mặt phẳng song song có dạng $2x - y + 5z + D = 0$. Thế điểm $A(1;2;3)$ vào: $2(1) - (2) + 5(3) + D = 0 \\Leftrightarrow D = -15$. Phương trình cần tìm là $2x - y + 5z - 15 = 0$."
+          },
+          {
+            "question_number": 11,
+            "question_text": "Trong không gian $Oxyz$, cho hai đường thẳng $d_1: \\frac{x-1}{1} = \\frac{y}{5} = \\frac{z-1}{-1}$ và $d_2: \\frac{x}{2} = \\frac{y-1}{1} = \\frac{z+2}{1}$. Tính tích vô hướng của hai vectơ chỉ phương của $d_1$ và $d_2$.",
+            "choices": {
+              "A": "$6$",
+              "B": "$4$",
+              "C": "$5$",
+              "D": "$25$"
+            },
+            "correct_answer": "A",
+            "explanation": "Vectơ chỉ phương của $d_1$ là $\\vec{u}_1 = (1; 5; -1)$, của $d_2$ là $\\vec{u}_2 = (2; 1; 1)$. Tích vô hướng: $\\vec{u}_1 \\cdot \\vec{u}_2 = 1(2) + 5(1) + (-1)(1) = 6$."
+          },
+          {
+            "question_number": 12,
+            "question_text": "Chọn ngẫu nhiên đồng thời 2 tấm thẻ từ một hộp chứa 13 tấm thẻ được đánh số từ 1 đến 13. Tính xác suất để tích hai số ghi trên hai tấm thẻ chọn ra là một số chẵn.",
+            "choices": {
+              "A": "$0.731$",
+              "B": "$0.269$",
+              "C": "$0.5$",
+              "D": "$0.75$"
+            },
+            "correct_answer": "A",
+            "explanation": "Tích hai số ghi trên thẻ là số lẻ khi và chỉ khi cả 2 thẻ đều lẻ. Số thẻ lẻ là 7. Số cách chọn 2 thẻ lẻ là $C_{7}^2 = 21$. Tổng số cách chọn 2 thẻ bất kỳ là $C_{13}^2 = 78$. Xác suất tích lẻ là 21/78. Do đó xác suất tích chẵn là $1 - 21/78 = 0.731$."
+          },
+          {
+            "question_number": 13,
+            "question_text": "Cho cấp số cộng $(u_n)$ có số hạng đầu $u_1 = 5$ và công sai $d = 3$. Tìm số hạng thứ 10 của cấp số cộng đó.",
+            "choices": {
+              "A": "$32$",
+              "B": "$35$",
+              "C": "$29$",
+              "D": "$105$"
+            },
+            "correct_answer": "A",
+            "explanation": "Số hạng thứ 10 là $u_{10} = u_1 + 9d = 5 + 9(3) = 32$."
+          },
+          {
+            "question_number": 14,
+            "question_text": "Cho cấp số nhân $(u_n)$ có số hạng đầu $u_1 = 3$ và công sai (công bội) $q = 2$. Tính tổng 5 số hạng đầu tiên $S_5$.",
+            "choices": {
+              "A": "$93$",
+              "B": "$96$",
+              "C": "$90$",
+              "D": "$15$"
+            },
+            "correct_answer": "A",
+            "explanation": "Áp dụng công thức tính tổng cấp số nhân: $S_5 = u_1 \\frac{q^5 - 1}{q - 1} = 3 \\cdot \\frac{2^5 - 1}{1} = 93$."
+          },
+          {
+            "question_number": 15,
+            "question_text": "Cho khối tứ diện đều $ABCD$ có tất cả các cạnh bằng $5a$. Tính thể tích $V$ của khối tứ diện đều đó.",
+            "choices": {
+              "A": "$V = \\frac{125a^3\\sqrt{2}}{12}$",
+              "B": "$V = \\frac{125a^3\\sqrt{2}}{4}$",
+              "C": "$V = \\frac{125a^3\\sqrt{3}}{12}$",
+              "D": "$V = \\frac{125a^3}{6}$"
+            },
+            "correct_answer": "A",
+            "explanation": "Thể tích khối tứ diện đều cạnh $x$ là $V = \\frac{x^3\\sqrt{2}}{12}$. Với $x = 5a$, ta có $V = \\frac{125a^3\\sqrt{2}}{12}$."
+          },
+          {
+            "question_number": 16,
+            "question_text": "Một hình nón có bán kính đáy $r = 4$ cm và chiều cao $h = 15$ cm. Tính thể tích $V$ của khối nón tương ứng.",
+            "choices": {
+              "A": "$80\\pi$ cm$^3$",
+              "B": "$240\\pi$ cm$^3$",
+              "C": "$26.7\\pi$ cm$^3$",
+              "D": "$20\\pi$ cm$^3$"
+            },
+            "correct_answer": "A",
+            "explanation": "Thể tích hình nón: $V = \\frac{1}{3} \\pi r^2 h = \\frac{1}{3} \\pi (16) (15) = 80\\pi$ cm$^3$."
+          }
+        ]
+      },
+      {
+        "section_id": 2,
+        "section_title": "PHẦN II. TRĂC NGHIỆM ĐÚNG SAI",
+        "questions": [
+          {
+            "question_number": 1,
+            "context_text": "Cho hàm số bậc ba $y = f(x) = x^3 - 3(5)x^2 + 1$ có đồ thị là $(C)$.",
+            "statements": [
+              {
+                "label": "a",
+                "text": "Đạo hàm của hàm số là $f'(x) = 3x^2 - 30x$.",
+                "correct_value": "Đúng",
+                "explanation": "Áp dụng các quy tắc đạo hàm cơ bản ta có: $f'(x) = 3x^2 - 30x$."
+              },
+              {
+                "label": "b",
+                "text": "Hàm số đạt cực đại tại điểm $x = 10$ và cực tiểu tại $x = 0$.",
+                "correct_value": "Sai",
+                "explanation": "Giải phương trình $f'(x) = 0 \\Leftrightarrow x=0$ (cực đại) hoặc $x=10$ (cực tiểu)."
+              },
+              {
+                "label": "c",
+                "text": "Đường thẳng nối hai cực trị của đồ thị có phương trình dạng $y = -50x + 1$.",
+                "correct_value": "Đúng",
+                "explanation": "Đường thẳng qua cực trị là phần dư của phép chia $f(x)$ cho $f'(x)$, tương ứng $y = -50x + 1$."
+              },
+              {
+                "label": "d",
+                "text": "Đồ thị hàm số nhận điểm uốn $I(5; 1 - 250)$ làm tâm đối xứng.",
+                "correct_value": "Đúng",
+                "explanation": "Đạo hàm cấp hai $f''(x) = 6x - 30 = 0 \\Rightarrow x=5$."
+              }
+            ]
+          },
+          {
+            "question_number": 2,
+            "context_text": "Trong không gian tọa độ $Oxyz$, cho điểm $A(1; 2; -1)$ và đường thẳng $d: \\frac{{x-2}}{{1}} = \\frac{{y+1}}{{2}} = \\frac{{z}}{{-2}}$. Gọi $(P)$ là mặt phẳng đi qua $A$ và vuông góc với đường thẳng $d$.",
+            "statements": [
+              {
+                "label": "a",
+                "text": "Vectơ chỉ phương của đường thẳng $d$ là $\\vec{{u}}_d = (1; 2; -2)$.",
+                "correct_value": "Đúng",
+                "explanation": "Từ phương trình chính tắc của đường thẳng $d$, các hệ số dưới mẫu số là tọa độ của vectơ chỉ phương $\\vec{{u}}_d = (1; 2; -2)$."
+              },
+              {
+                "label": "b",
+                "text": "Mặt phẳng $(P)$ nhận vectơ chỉ phương $\\vec{{u}}_d$ làm vectơ pháp tuyến.",
+                "correct_value": "Đúng",
+                "explanation": "Vì $(P) \\perp d$ nên vectơ pháp tuyến $\\vec{{n}}_P = \\vec{{u}}_d = (1; 2; -2)$."
+              },
+              {
+                "label": "c",
+                "text": "Phương trình tổng quát của mặt phẳng $(P)$ là $x + 2y - 2z + 5 = 0$.",
+                "correct_value": "Sai",
+                "explanation": "Phương trình $(P): 1(x-1) + 2(y-2) - 2(z+1) = 0 \\Leftrightarrow x + 2y - 2z - 7 = 0$."
+              },
+              {
+                "label": "d",
+                "text": "Đường thẳng $d$ song song với mặt phẳng $(P)$.",
+                "correct_value": "Sai",
+                "explanation": "Vì đường thẳng $d \\perp (P)$ nên phát biểu $d \\parallel (P)$ là Sai."
+              }
+            ]
+          },
+          {
+            "question_number": 3,
+            "context_text": "Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình vuông cạnh $a$. Cạnh bên $SA$ vuông góc với đáy và $SA = a\\sqrt{2}$. Gọi $\\alpha$ là góc giữa $SC$ và mặt phẳng $(SAB)$.",
+            "statements": [
+              {
+                "label": "a",
+                "text": "Đường thẳng $BC$ vuông góc với mặt phẳng $(SAB)$.",
+                "correct_value": "Đúng",
+                "explanation": "Ta có $BC \\perp AB$ và $BC \\perp SA \\Rightarrow BC \\perp (SAB)$."
+              },
+              {
+                "label": "b",
+                "text": "Hình chiếu vuông góc của đường thẳng $SC$ lên mặt phẳng $(SAB)$ là đường thẳng $SB$.",
+                "correct_value": "Đúng",
+                "explanation": "Hình chiếu của $S$ trên $(SAB)$ chính là $S$. Hình chiếu của $C$ trên $(SAB)$ là $B$ (vì $CB \\perp (SAB)$)."
+              },
+              {
+                "label": "c",
+                "text": "Góc giữa đường thẳng $SC$ và mặt phẳng $(SAB)$ là góc $\\widehat{{BSC}}$.",
+                "correct_value": "Đúng",
+                "explanation": "Góc giữa đường thẳng và mặt phẳng là góc giữa đường thẳng đó và hình chiếu của nó lên mặt phẳng. Vậy $\\alpha = \\widehat{BSC}$."
+              },
+              {
+                "label": "d",
+                "text": "Tam giác $SBC$ là tam giác đều.",
+                "correct_value": "Sai",
+                "explanation": "Tam giác $SBC$ vuông tại $B$ nên không thể là tam giác đều."
+              }
+            ]
+          },
+          {
+            "question_number": 4,
+            "context_text": "Cho hộp thứ nhất chứa 3 viên bi đỏ và 2 viên bi xanh; hộp thứ hai chứa 4 viên bi đỏ và 3 viên bi xanh. Lấy ngẫu nhiên từ mỗi hộp ra 1 viên bi.",
+            "statements": [
+              {
+                "label": "a",
+                "text": "Xác suất để lấy được hai viên bi cùng màu đỏ là $\\frac{{12}}{{35}}$.",
+                "correct_value": "Đúng",
+                "explanation": "Xác suất lấy bi đỏ từ hộp 1 là $P(R_1) = \\frac{3}{5}$. Xác suất lấy bi đỏ từ hộp 2 là $P(R_2) = \\frac{4}{7}$. Xác suất cả hai cùng đỏ là $P = \\frac{3}{5} \\times \\frac{4}{7} = \\frac{12}{35}$."
+              },
+              {
+                "label": "b",
+                "text": "Xác suất để lấy được hai viên bi cùng màu xanh là $\\frac{{6}}{{35}}$.",
+                "correct_value": "Đúng",
+                "explanation": "Xác suất lấy bi xanh từ hộp 1 là $P(G_1) = \\frac{2}{5}$. Xác suất lấy bi xanh từ hộp 2 là $P(G_2) = \\frac{3}{7}$. Xác suất cả hai cùng xanh là $P = \\frac{2}{5} \\times \\frac{3}{7} = \\frac{6}{35}$."
+              },
+              {
+                "label": "c",
+                "text": "Xác suất để lấy được hai viên bi khác màu là $\\frac{{17}}{{35}}$.",
+                "correct_value": "Đúng",
+                "explanation": "Xác suất lấy được 2 viên cùng màu là $P_{cm} = P_{đỏ} + P_{xanh} = \\frac{12}{35} + \\frac{6}{35} = \\frac{18}{35}$. Xác suất hai viên khác màu là $P = 1 - \\frac{18}{35} = \\frac{17}{35}$."
+              },
+              {
+                "label": "d",
+                "text": "Xác suất để có ít nhất một viên bi đỏ là $1.0$.",
+                "correct_value": "Sai",
+                "explanation": "Ít nhất một đỏ: $1 - P(\\text{cả hai cùng xanh}) = 1 - \\frac{6}{35} = \\frac{29}{35} \\neq 1.0$."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "section_id": 3,
+        "section_title": "PHẦN III. TRẢ LỜI NGẮN",
+        "questions": [
+          {
+            "question_number": 1,
+            "question_text": "Một xưởng muốn sản xuất chiếc lon hình trụ có thể tích $V = 31250\\pi$ cm$^3$. Tìm bán kính đáy $R$ (cm) của lon để diện tích kim loại toàn phần làm chiếc lon đạt giá trị nhỏ nhất.",
+            "correct_answer": "25",
+            "explanation": "Thể tích $V = \\pi R^2 h = 2 \\cdot 15625 \\pi \\Rightarrow h = \\frac{2 \\cdot 15625}{R^2}$. Diện tích toàn phần $S(R) = 2\\pi R h + 2\\pi R^2 = \\frac{4\\pi \\cdot 15625}{R} + 2\\pi R^2$. Đạo hàm $S'(R) = -\\frac{4\\pi \\cdot 15625}{R^2} + 4\\pi R = 0 \\Leftrightarrow R = 25$ cm."
+          },
+          {
+            "question_number": 2,
+            "question_text": "Tìm số hạng đầu $u_1$ của cấp số cộng $(u_n)$ biết tổng của 15 số hạng đầu tiên của nó bằng $1065$ và công sai $d = 3$.",
+            "correct_answer": "50",
+            "explanation": "Ta có $S_{15} = \\frac{15}{2}[2u_1 + 14(3)] = 1065 \\Leftrightarrow \\frac{1}{2}[2u_1 + 42] = 71 \\Leftrightarrow u_1 + 21 = 71 \\Leftrightarrow u_1 = 50$."
+          },
+          {
+            "question_number": 3,
+            "question_text": "Có bao nhiêu số tự nhiên chẵn gồm 4 chữ số đôi một khác nhau được lập từ tập hợp gồm 10 chữ số từ 1 đến 10?",
+            "correct_answer": "600",
+            "explanation": "Số cách lập số tự nhiên chẵn được tính bằng việc chọn chữ số hàng đơn vị chẵn trước, sau đó chọn 3 chữ số khác nhau xếp vào 3 vị trí còn lại."
+          },
+          {
+            "question_number": 4,
+            "question_text": "Tính diện tích hình phẳng giới hạn bởi đồ thị hàm số $y = x^2$ và đường thẳng $y = -x + 10$ (Lấy kết quả làm tròn đến 2 chữ số thập phân).",
+            "correct_answer": "12.33",
+            "explanation": "Phương trình hoành độ giao điểm, sau đó tích phân hiệu hai đồ thị trên khoảng hai nghiệm."
+          },
+          {
+            "question_number": 5,
+            "question_text": "Trong không gian $Oxyz$, tìm khoảng cách ngắn nhất từ gốc tọa độ $O(0;0;0)$ đến đường thẳng $d: \\{x = 2 + t, y = 2 - t, z = 5\\}.",
+            "correct_answer": "7",
+            "explanation": "Tính khoảng cách từ điểm đến đường thẳng bằng công thức tích có hướng hoặc lập hàm số cực tiểu."
+          },
+          {
+            "question_number": 6,
+            "question_text": "Một người gửi 100 triệu đồng vào ngân hàng với lãi suất 10%/năm lãi kép. Hỏi sau tối thiểu bao nhiêu năm người đó nhận được số tiền gấp đôi ban đầu?",
+            "correct_answer": "12",
+            "explanation": "Sử dụng bất phương trình lãi kép $100(1 + r)^n > 200$, tìm n tối thiểu."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "exam_title": "Đề số 6",
+    "duration_minutes": 90,
+    "sections": [
+      {
+        "section_id": 1,
+        "section_title": "PHẦN I. TRẮC NGHIỆM KHÁCH QUAN",
+        "questions": [
+          {
+            "question_number": 1,
+            "question_text": "Cho hàm số $y = f(x) = x^3 - 3(6)x^2 + 2$ liên tục trên $\\mathbb{R}$. Tìm tập hợp tất cả các giá trị của tham số $m$ để phương trình $f(x) = m$ có đúng 3 nghiệm thực phân biệt.",
+            "choices": {
+              "A": "$-862 < m < 2$",
+              "B": "$m > 2$",
+              "C": "$m < -862$",
+              "D": "$m = 2$ hoặc $m = -862$"
+            },
+            "correct_answer": "A",
+            "explanation": "Đạo hàm $y' = 3x^2 - 6(6)x = 3x(x - 12)$. Cho $y' = 0 \\Leftrightarrow x = 0$ hoặc $x = 12$. Đồ thị có điểm cực đại là $(0; 2)$ và điểm cực tiểu là $(12; -862)$. Phương trình có 3 nghiệm phân biệt khi đường thẳng $y = m$ cắt đồ thị tại 3 điểm phân biệt, tương đương $-862 < m < 2$."
+          },
+          {
+            "question_number": 2,
+            "question_text": "Tính đạo hàm của hàm số $y = 8^{x^2 - 2x}$.",
+            "choices": {
+              "A": "$y' = (2x - 2) \\cdot 8^{x^2 - 2x} \\cdot \\ln 8$",
+              "B": "$y' = (x^2 - 2x) \\cdot 8^{x^2 - 2x - 1}$",
+              "C": "$y' = 8^{x^2 - 2x} \\cdot \\ln 8$",
+              "D": "$y' = \\frac{2x - 2}{\\ln 8} \\cdot 8^{x^2 - 2x}$"
+            },
+            "correct_answer": "A",
+            "explanation": "Áp dụng công thức đạo hàm hàm hợp $(a^u)' = u' \\cdot a^u \\cdot \\ln a$. Ở đây $a = 8$, $u = x^2 - 2x \\Rightarrow u' = 2x - 2$. Do đó ta có: $y' = (2x - 2) \\cdot 8^{x^2 - 2x} \\cdot \\ln 8$."
+          },
+          {
+            "question_number": 3,
+            "question_text": "Tìm tập xác định $D$ của hàm số $y = (x^2 - 8x + 7)^{-e}$.",
+            "choices": {
+              "A": "$D = (-\\infty; 1) \\cup (7; +\\infty)$",
+              "B": "$D = \\mathbb{R} \\setminus \\{1; 7\\}$",
+              "C": "$D = (1; 7)$",
+              "D": "$D = \\mathbb{R}$"
+            },
+            "correct_answer": "A",
+            "explanation": "Hàm số lũy thừa có số mũ không nguyên xác định khi cơ số dương: $x^2 - 8x + 7 > 0 \\Leftrightarrow (x-1)(x-7) > 0 \\Leftrightarrow x < 1$ hoặc $x > 7$. Tập xác định là $D = (-\\infty; 1) \\cup (7; +\\infty)$."
+          },
+          {
+            "question_number": 4,
+            "question_text": "Giải phương trình $\\log_2(x - 8) + \\log_2(x - 6) = 3$.",
+            "choices": {
+              "A": "$x = 10$",
+              "B": "$x = 10$ hoặc $x = 4$",
+              "C": "$x = 9$",
+              "D": "$x = 8$"
+            },
+            "correct_answer": "A",
+            "explanation": "Điều kiện: $x > 8$. Phương trình viết lại: $\\log_2[(x - 8)(x - 6)] = 3 \\Leftrightarrow x^2 - 14x + 48 = 8 \\Leftrightarrow x^2 - 14x + 40 = 0 \\Leftrightarrow x = 10$ (nhận) hoặc $x = 4$ (loại do điều kiện)."
+          },
+          {
+            "question_number": 5,
+            "question_text": "Tìm nguyên hàm $F(x)$ của hàm số $f(x) = \\frac{2x + 8}{x + 1}$ trên khoảng $(-1; +\\infty)$ biết $F(0) = 2$.",
+            "choices": {
+              "A": "$F(x) = 2x + 6\\ln(x + 1) + 2$",
+              "B": "$F(x) = 2x + 6\\ln|x + 1| + C$",
+              "C": "$F(x) = 2x - 6\\ln(x + 1) + 2$",
+              "D": "$F(x) = 2x + 8\\ln(x + 1) + 2$"
+            },
+            "correct_answer": "A",
+            "explanation": "Ta có $f(x) = \\frac{2(x+1) + 6}{x+1} = 2 + \\frac{6}{x+1}$. Nguyên hàm là $F(x) = 2x + 6\\ln(x+1) + C$ (vì $x > -1$). Từ $F(0) = 2 \\Rightarrow 0 + 0 + C = 2 \\Rightarrow C = 2$. Vậy $F(x) = 2x + 6\\ln(x+1) + 2$."
+          },
+          {
+            "question_number": 6,
+            "question_text": "Tính diện tích $S$ của hình phẳng giới hạn bởi đồ thị hàm số $y = x^3 - 36x$ và trục hoành $Ox$.",
+            "choices": {
+              "A": "$S = \\frac{1296}{2}$",
+              "B": "$S = \\frac{1296}{4}$",
+              "C": "$S = 1296$",
+              "D": "$S = 2(1296)$"
+            },
+            "correct_answer": "A",
+            "explanation": "Phương trình hoành độ giao điểm: $x^3 - 36x = 0 \\Leftrightarrow x = 0, x = \\pm 6$. Do đồ thị đối xứng qua gốc tọa độ: $S = 2 \\int_{0}^{6} |x^3 - 36x| dx = 2 \\int_{0}^{6} (36x - x^3) dx = 2 \\left. \\left( \\frac{36x^2}{2} - \\frac{x^4}{4} \\right) \\right|_{0}^{6} = 2 \\left( \\frac{1296}{2} - \\frac{1296}{4} \\right) = \\frac{1296}{2}$."
+          },
+          {
+            "question_number": 7,
+            "question_text": "Tìm số phức liên hợp $\\overline{z}$ của số phức $z$ thỏa mãn $(1 + i)z = 8 - i$.",
+            "choices": {
+              "A": "$\\overline{z} = \\frac{7}{2} + \\frac{9}{2}i$",
+              "B": "$\\overline{z} = \\frac{7}{2} - \\frac{9}{2}i$",
+              "C": "$\\overline{z} = \\frac{9}{2} + \\frac{7}{2}i$",
+              "D": "$\\overline{z} = -\\frac{7}{2} - \\frac{9}{2}i$"
+            },
+            "correct_answer": "A",
+            "explanation": "Ta có $z = \\frac{8 - i}{1 + i} = \\frac{(8 - i)(1 - i)}{2} = \\frac{7 - (9)i}{2}$. Suy ra số phức liên hợp là $\\overline{z} = \\frac{7}{2} + \\frac{9}{2}i$."
+          },
+          {
+            "question_number": 8,
+            "question_text": "Tính môđun của số phức $z = 6 + 4i$.",
+            "choices": {
+              "A": "$|z| = \\sqrt{52}$",
+              "B": "$|z| = 52$",
+              "C": "$|z| = 10$",
+              "D": "$|z| = \\sqrt{20}$"
+            },
+            "correct_answer": "A",
+            "explanation": "Áp dụng công thức tính môđun của số phức $z = a + bi$: $|z| = \\sqrt{a^2 + b^2} = \\sqrt{6^2 + 4^2} = \\sqrt{52}$."
+          },
+          {
+            "question_number": 9,
+            "question_text": "Trong không gian $Oxyz$, cho hai điểm $A(6; 2; -3)$ và $B(3; 0; -1)$. Tìm tọa độ trung điểm $M$ của đoạn thẳng $AB$.",
+            "choices": {
+              "A": "$M\\left(\\frac{9}{2}; 1; -2\\right)$",
+              "B": "$M(9; 2; -4)$",
+              "C": "$M\\left(\\frac{3}{2}; 1; -1\\right)$",
+              "D": "$M\\left(\\frac{9}{2}; 1; -1\\right)$"
+            },
+            "correct_answer": "A",
+            "explanation": "Áp dụng công thức trung điểm: $x_M = \\frac{x_A + x_B}{2} = \\frac{6 + 3}{2}$; $y_M = 1$; $z_M = -2$. Tọa độ trung điểm là $M\\left(\\frac{9}{2}; 1; -2\\right)$."
+          },
+          {
+            "question_number": 10,
+            "question_text": "Trong không gian $Oxyz$, viết phương trình mặt phẳng đi qua điểm $A(1; 2; 3)$ và song song với mặt phẳng $(P): 2x - y + 6z - 5 = 0$.",
+            "choices": {
+              "A": "$2x - y + 6z - 18 = 0$",
+              "B": "$2x - y + 6z + 18 = 0$",
+              "C": "$2x - y + 6z - 5 = 0$",
+              "D": "$2x - y + 6z = 0$"
+            },
+            "correct_answer": "A",
+            "explanation": "Mặt phẳng song song có dạng $2x - y + 6z + D = 0$. Thế điểm $A(1;2;3)$ vào: $2(1) - (2) + 6(3) + D = 0 \\Leftrightarrow D = -18$. Phương trình cần tìm là $2x - y + 6z - 18 = 0$."
+          },
+          {
+            "question_number": 11,
+            "question_text": "Trong không gian $Oxyz$, cho hai đường thẳng $d_1: \\frac{x-1}{1} = \\frac{y}{6} = \\frac{z-1}{-1}$ và $d_2: \\frac{x}{2} = \\frac{y-1}{1} = \\frac{z+2}{1}$. Tính tích vô hướng của hai vectơ chỉ phương của $d_1$ và $d_2$.",
+            "choices": {
+              "A": "$7$",
+              "B": "$5$",
+              "C": "$6$",
+              "D": "$26$"
+            },
+            "correct_answer": "A",
+            "explanation": "Vectơ chỉ phương của $d_1$ là $\\vec{u}_1 = (1; 6; -1)$, của $d_2$ là $\\vec{u}_2 = (2; 1; 1)$. Tích vô hướng: $\\vec{u}_1 \\cdot \\vec{u}_2 = 1(2) + 6(1) + (-1)(1) = 7$."
+          },
+          {
+            "question_number": 12,
+            "question_text": "Chọn ngẫu nhiên đồng thời 2 tấm thẻ từ một hộp chứa 14 tấm thẻ được đánh số từ 1 đến 14. Tính xác suất để tích hai số ghi trên hai tấm thẻ chọn ra là một số chẵn.",
+            "choices": {
+              "A": "$0.769$",
+              "B": "$0.231$",
+              "C": "$0.5$",
+              "D": "$0.75$"
+            },
+            "correct_answer": "A",
+            "explanation": "Tích hai số ghi trên thẻ là số lẻ khi và chỉ khi cả 2 thẻ đều lẻ. Số thẻ lẻ là 7. Số cách chọn 2 thẻ lẻ là $C_{7}^2 = 21$. Tổng số cách chọn 2 thẻ bất kỳ là $C_{14}^2 = 91$. Xác suất tích lẻ là 21/91. Do đó xác suất tích chẵn là $1 - 21/91 = 0.769$."
+          },
+          {
+            "question_number": 13,
+            "question_text": "Cho cấp số cộng $(u_n)$ có số hạng đầu $u_1 = 6$ và công sai $d = 3$. Tìm số hạng thứ 10 của cấp số cộng đó.",
+            "choices": {
+              "A": "$33$",
+              "B": "$36$",
+              "C": "$30$",
+              "D": "$106$"
+            },
+            "correct_answer": "A",
+            "explanation": "Số hạng thứ 10 là $u_{10} = u_1 + 9d = 6 + 9(3) = 33$."
+          },
+          {
+            "question_number": 14,
+            "question_text": "Cho cấp số nhân $(u_n)$ có số hạng đầu $u_1 = 3$ và công sai (công bội) $q = 2$. Tính tổng 5 số hạng đầu tiên $S_5$.",
+            "choices": {
+              "A": "$93$",
+              "B": "$96$",
+              "C": "$90$",
+              "D": "$15$"
+            },
+            "correct_answer": "A",
+            "explanation": "Áp dụng công thức tính tổng cấp số nhân: $S_5 = u_1 \\frac{q^5 - 1}{q - 1} = 3 \\cdot \\frac{2^5 - 1}{1} = 93$."
+          },
+          {
+            "question_number": 15,
+            "question_text": "Cho khối tứ diện đều $ABCD$ có tất cả các cạnh bằng $6a$. Tính thể tích $V$ của khối tứ diện đều đó.",
+            "choices": {
+              "A": "$V = \\frac{216a^3\\sqrt{2}}{12}$",
+              "B": "$V = \\frac{216a^3\\sqrt{2}}{4}$",
+              "C": "$V = \\frac{216a^3\\sqrt{3}}{12}$",
+              "D": "$V = \\frac{216a^3}{6}$"
+            },
+            "correct_answer": "A",
+            "explanation": "Thể tích khối tứ diện đều cạnh $x$ là $V = \\frac{x^3\\sqrt{2}}{12}$. Với $x = 6a$, ta có $V = \\frac{216a^3\\sqrt{2}}{12}$."
+          },
+          {
+            "question_number": 16,
+            "question_text": "Một hình nón có bán kính đáy $r = 4$ cm và chiều cao $h = 18$ cm. Tính thể tích $V$ của khối nón tương ứng.",
+            "choices": {
+              "A": "$96\\pi$ cm$^3$",
+              "B": "$288\\pi$ cm$^3$",
+              "C": "$32.0\\pi$ cm$^3$",
+              "D": "$20\\pi$ cm$^3$"
+            },
+            "correct_answer": "A",
+            "explanation": "Thể tích hình nón: $V = \\frac{1}{3} \\pi r^2 h = \\frac{1}{3} \\pi (16) (18) = 96\\pi$ cm$^3$."
+          }
+        ]
+      },
+      {
+        "section_id": 2,
+        "section_title": "PHẦN II. TRĂC NGHIỆM ĐÚNG SAI",
+        "questions": [
+          {
+            "question_number": 1,
+            "context_text": "Cho hàm số bậc ba $y = f(x) = x^3 - 3(6)x^2 + 1$ có đồ thị là $(C)$.",
+            "statements": [
+              {
+                "label": "a",
+                "text": "Đạo hàm của hàm số là $f'(x) = 3x^2 - 36x$.",
+                "correct_value": "Đúng",
+                "explanation": "Áp dụng các quy tắc đạo hàm cơ bản ta có: $f'(x) = 3x^2 - 36x$."
+              },
+              {
+                "label": "b",
+                "text": "Hàm số đạt cực đại tại điểm $x = 12$ và cực tiểu tại $x = 0$.",
+                "correct_value": "Sai",
+                "explanation": "Giải phương trình $f'(x) = 0 \\Leftrightarrow x=0$ (cực đại) hoặc $x=12$ (cực tiểu)."
+              },
+              {
+                "label": "c",
+                "text": "Đường thẳng nối hai cực trị của đồ thị có phương trình dạng $y = -72x + 1$.",
+                "correct_value": "Đúng",
+                "explanation": "Đường thẳng qua cực trị là phần dư của phép chia $f(x)$ cho $f'(x)$, tương ứng $y = -72x + 1$."
+              },
+              {
+                "label": "d",
+                "text": "Đồ thị hàm số nhận điểm uốn $I(6; 1 - 432)$ làm tâm đối xứng.",
+                "correct_value": "Đúng",
+                "explanation": "Đạo hàm cấp hai $f''(x) = 6x - 36 = 0 \\Rightarrow x=6$."
+              }
+            ]
+          },
+          {
+            "question_number": 2,
+            "context_text": "Trong không gian tọa độ $Oxyz$, cho điểm $A(1; 2; -1)$ và đường thẳng $d: \\frac{{x-2}}{{1}} = \\frac{{y+1}}{{2}} = \\frac{{z}}{{-2}}$. Gọi $(P)$ là mặt phẳng đi qua $A$ và vuông góc với đường thẳng $d$.",
+            "statements": [
+              {
+                "label": "a",
+                "text": "Vectơ chỉ phương của đường thẳng $d$ là $\\vec{{u}}_d = (1; 2; -2)$.",
+                "correct_value": "Đúng",
+                "explanation": "Từ phương trình chính tắc của đường thẳng $d$, các hệ số dưới mẫu số là tọa độ của vectơ chỉ phương $\\vec{{u}}_d = (1; 2; -2)$."
+              },
+              {
+                "label": "b",
+                "text": "Mặt phẳng $(P)$ nhận vectơ chỉ phương $\\vec{{u}}_d$ làm vectơ pháp tuyến.",
+                "correct_value": "Đúng",
+                "explanation": "Vì $(P) \\perp d$ nên vectơ pháp tuyến $\\vec{{n}}_P = \\vec{{u}}_d = (1; 2; -2)$."
+              },
+              {
+                "label": "c",
+                "text": "Phương trình tổng quát của mặt phẳng $(P)$ là $x + 2y - 2z + 6 = 0$.",
+                "correct_value": "Sai",
+                "explanation": "Phương trình $(P): 1(x-1) + 2(y-2) - 2(z+1) = 0 \\Leftrightarrow x + 2y - 2z - 7 = 0$."
+              },
+              {
+                "label": "d",
+                "text": "Đường thẳng $d$ song song với mặt phẳng $(P)$.",
+                "correct_value": "Sai",
+                "explanation": "Vì đường thẳng $d \\perp (P)$ nên phát biểu $d \\parallel (P)$ là Sai."
+              }
+            ]
+          },
+          {
+            "question_number": 3,
+            "context_text": "Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình vuông cạnh $a$. Cạnh bên $SA$ vuông góc với đáy và $SA = a\\sqrt{2}$. Gọi $\\alpha$ là góc giữa $SC$ và mặt phẳng $(SAB)$.",
+            "statements": [
+              {
+                "label": "a",
+                "text": "Đường thẳng $BC$ vuông góc với mặt phẳng $(SAB)$.",
+                "correct_value": "Đúng",
+                "explanation": "Ta có $BC \\perp AB$ và $BC \\perp SA \\Rightarrow BC \\perp (SAB)$."
+              },
+              {
+                "label": "b",
+                "text": "Hình chiếu vuông góc của đường thẳng $SC$ lên mặt phẳng $(SAB)$ là đường thẳng $SB$.",
+                "correct_value": "Đúng",
+                "explanation": "Hình chiếu của $S$ trên $(SAB)$ chính là $S$. Hình chiếu của $C$ trên $(SAB)$ là $B$ (vì $CB \\perp (SAB)$)."
+              },
+              {
+                "label": "c",
+                "text": "Góc giữa đường thẳng $SC$ và mặt phẳng $(SAB)$ là góc $\\widehat{{BSC}}$.",
+                "correct_value": "Đúng",
+                "explanation": "Góc giữa đường thẳng và mặt phẳng là góc giữa đường thẳng đó và hình chiếu của nó lên mặt phẳng. Vậy $\\alpha = \\widehat{BSC}$."
+              },
+              {
+                "label": "d",
+                "text": "Tam giác $SBC$ là tam giác đều.",
+                "correct_value": "Sai",
+                "explanation": "Tam giác $SBC$ vuông tại $B$ nên không thể là tam giác đều."
+              }
+            ]
+          },
+          {
+            "question_number": 4,
+            "context_text": "Cho hộp thứ nhất chứa 3 viên bi đỏ và 2 viên bi xanh; hộp thứ hai chứa 4 viên bi đỏ và 3 viên bi xanh. Lấy ngẫu nhiên từ mỗi hộp ra 1 viên bi.",
+            "statements": [
+              {
+                "label": "a",
+                "text": "Xác suất để lấy được hai viên bi cùng màu đỏ là $\\frac{{12}}{{35}}$.",
+                "correct_value": "Đúng",
+                "explanation": "Xác suất lấy bi đỏ từ hộp 1 là $P(R_1) = \\frac{3}{5}$. Xác suất lấy bi đỏ từ hộp 2 là $P(R_2) = \\frac{4}{7}$. Xác suất cả hai cùng đỏ là $P = \\frac{3}{5} \\times \\frac{4}{7} = \\frac{12}{35}$."
+              },
+              {
+                "label": "b",
+                "text": "Xác suất để lấy được hai viên bi cùng màu xanh là $\\frac{{6}}{{35}}$.",
+                "correct_value": "Đúng",
+                "explanation": "Xác suất lấy bi xanh từ hộp 1 là $P(G_1) = \\frac{2}{5}$. Xác suất lấy bi xanh từ hộp 2 là $P(G_2) = \\frac{3}{7}$. Xác suất cả hai cùng xanh là $P = \\frac{2}{5} \\times \\frac{3}{7} = \\frac{6}{35}$."
+              },
+              {
+                "label": "c",
+                "text": "Xác suất để lấy được hai viên bi khác màu là $\\frac{{17}}{{35}}$.",
+                "correct_value": "Đúng",
+                "explanation": "Xác suất lấy được 2 viên cùng màu là $P_{cm} = P_{đỏ} + P_{xanh} = \\frac{12}{35} + \\frac{6}{35} = \\frac{18}{35}$. Xác suất hai viên khác màu là $P = 1 - \\frac{18}{35} = \\frac{17}{35}$."
+              },
+              {
+                "label": "d",
+                "text": "Xác suất để có ít nhất một viên bi đỏ là $1.0$.",
+                "correct_value": "Sai",
+                "explanation": "Ít nhất một đỏ: $1 - P(\\text{cả hai cùng xanh}) = 1 - \\frac{6}{35} = \\frac{29}{35} \\neq 1.0$."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "section_id": 3,
+        "section_title": "PHẦN III. TRẢ LỜI NGẮN",
+        "questions": [
+          {
+            "question_number": 1,
+            "question_text": "Một xưởng muốn sản xuất chiếc lon hình trụ có thể tích $V = 54000\\pi$ cm$^3$. Tìm bán kính đáy $R$ (cm) của lon để diện tích kim loại toàn phần làm chiếc lon đạt giá trị nhỏ nhất.",
+            "correct_answer": "30",
+            "explanation": "Thể tích $V = \\pi R^2 h = 2 \\cdot 27000 \\pi \\Rightarrow h = \\frac{2 \\cdot 27000}{R^2}$. Diện tích toàn phần $S(R) = 2\\pi R h + 2\\pi R^2 = \\frac{4\\pi \\cdot 27000}{R} + 2\\pi R^2$. Đạo hàm $S'(R) = -\\frac{4\\pi \\cdot 27000}{R^2} + 4\\pi R = 0 \\Leftrightarrow R = 30$ cm."
+          },
+          {
+            "question_number": 2,
+            "question_text": "Tìm số hạng đầu $u_1$ của cấp số cộng $(u_n)$ biết tổng của 15 số hạng đầu tiên của nó bằng $1215$ và công sai $d = 3$.",
+            "correct_answer": "60",
+            "explanation": "Ta có $S_{15} = \\frac{15}{2}[2u_1 + 14(3)] = 1215 \\Leftrightarrow \\frac{1}{2}[2u_1 + 42] = 81 \\Leftrightarrow u_1 + 21 = 81 \\Leftrightarrow u_1 = 60$."
+          },
+          {
+            "question_number": 3,
+            "question_text": "Có bao nhiêu số tự nhiên chẵn gồm 4 chữ số đôi một khác nhau được lập từ tập hợp gồm 11 chữ số từ 1 đến 11?",
+            "correct_answer": "720",
+            "explanation": "Số cách lập số tự nhiên chẵn được tính bằng việc chọn chữ số hàng đơn vị chẵn trước, sau đó chọn 3 chữ số khác nhau xếp vào 3 vị trí còn lại."
+          },
+          {
+            "question_number": 4,
+            "question_text": "Tính diện tích hình phẳng giới hạn bởi đồ thị hàm số $y = x^2$ và đường thẳng $y = -x + 12$ (Lấy kết quả làm tròn đến 2 chữ số thập phân).",
+            "correct_answer": "12.33",
+            "explanation": "Phương trình hoành độ giao điểm, sau đó tích phân hiệu hai đồ thị trên khoảng hai nghiệm."
+          },
+          {
+            "question_number": 5,
+            "question_text": "Trong không gian $Oxyz$, tìm khoảng cách ngắn nhất từ gốc tọa độ $O(0;0;0)$ đến đường thẳng $d: \\{x = 2 + t, y = 2 - t, z = 6\\}.",
+            "correct_answer": "8",
+            "explanation": "Tính khoảng cách từ điểm đến đường thẳng bằng công thức tích có hướng hoặc lập hàm số cực tiểu."
+          },
+          {
+            "question_number": 6,
+            "question_text": "Một người gửi 100 triệu đồng vào ngân hàng với lãi suất 11%/năm lãi kép. Hỏi sau tối thiểu bao nhiêu năm người đó nhận được số tiền gấp đôi ban đầu?",
+            "correct_answer": "12",
+            "explanation": "Sử dụng bất phương trình lãi kép $100(1 + r)^n > 200$, tìm n tối thiểu."
+          }
+        ]
+      }
+    ]
+  }
+]
