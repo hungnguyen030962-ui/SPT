@@ -10,17 +10,20 @@ export function CountdownTimer({ initialSeconds, onTimeUp, isActive = true }) {
 
   useEffect(() => {
     if (!isActive) return;
-    if (secondsLeft <= 0) {
-      if (onTimeUp) onTimeUp();
-      return;
-    }
 
     const interval = setInterval(() => {
-      setSecondsLeft(prev => prev - 1);
+      setSecondsLeft(prev => {
+        if (prev <= 1) {
+          clearInterval(interval);
+          if (onTimeUp) onTimeUp();
+          return 0;
+        }
+        return prev - 1;
+      });
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [secondsLeft, isActive, onTimeUp]);
+  }, [isActive, onTimeUp]);
 
   const formatTime = (totalSeconds) => {
     const mins = Math.floor(totalSeconds / 60);

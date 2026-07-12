@@ -10,6 +10,360 @@ from app.models.question import Question
 from app.models.literature import LiteratureMaterial
 from app.models.flashcard import EnglishFlashcard
 
+def generate_math_exam(exam_num):
+    exam_name = f"Đề số {exam_num}"
+    questions = []
+    
+    # 1. Lượng giác
+    k1 = exam_num * 2
+    questions.append(Question(
+        subject="math",
+        exam_name=exam_name,
+        topic="Lượng giác",
+        difficulty="medium",
+        content=f"Tìm tập nghiệm của phương trình \\(\\sin({k1}x) = 1\\).",
+        options=[
+            f"A. \\(x = \\frac{{\\pi}}{{{k1}}} + k\\frac{{\\pi}}{{{exam_num}}}\\)",
+            f"B. \\(x = \\frac{{\\pi}}{{{k1 * 2}}} + k\\frac{{\\pi}}{{{exam_num}}}\\)",
+            f"C. \\(x = \\frac{{\\pi}}{{{k1 * 2}}} + k2\\pi\\)",
+            f"D. \\(x = \\frac{{\\pi}}{{{k1}}} + k2\\pi\\)"
+        ],
+        correct_answer="B",
+        explanation=f"Ta có \\(\\sin({k1}x) = 1 \\Leftrightarrow {k1}x = \\frac{{\\pi}}{{2}} + k2\\pi \\Leftrightarrow x = \\frac{{\\pi}}{{{k1 * 2}}} + k\\frac{{\\pi}}{{{exam_num}}}\\) (với \\(k \\in \\mathbb{{Z}}\\)).",
+        step_by_step=[
+            {"step": "Áp dụng công thức nghiệm lượng giác", "detail": f"\\(\\sin(u) = 1 \\Leftrightarrow u = \\frac{{\\pi}}{{2}} + k2\\pi\\)."},
+            {"step": "Thay u và giải tìm x", "detail": f"Thay \\(u = {k1}x\\), ta được: \\({k1}x = \\frac{{\\pi}}{{2}} + k2\\pi \\Leftrightarrow x = \\frac{{\\pi}}{{{k1 * 2}}} + \\frac{{k2\\pi}}{{{k1}}} \\Leftrightarrow x = \\frac{{\\pi}}{{{k1 * 2}}} + k\\frac{{\\pi}}{{{exam_num}}}\\)."}
+        ],
+        formulas=["\\sin(u) = 1 \\Leftrightarrow u = \\frac{\\pi}{2} + k2\\pi"]
+    ))
+    
+    # 2. Giới hạn - Liên tục
+    questions.append(Question(
+        subject="math",
+        exam_name=exam_name,
+        topic="Giới hạn",
+        difficulty="easy",
+        content=f"Tính giới hạn \\(L = \\lim_{{x \\to 2}} \\frac{{x^2 - {exam_num + 3}x + {2 * exam_num + 2}}}{{x - 2}}\\).",
+        options=[
+            f"A. \\({2 - exam_num}\\)",
+            f"B. \\({1 - exam_num}\\)",
+            f"C. \\({3 - exam_num}\\)",
+            f"D. Vô cực"
+        ],
+        correct_answer="B",
+        explanation=f"Phân tích tử số thành nhân tử: \\(x^2 - {exam_num + 3}x + {2 * exam_num + 2} = (x - 2)(x - {exam_num + 1})\\). Rút gọn phân thức và tính giới hạn khi \\(x \\to 2\\), ta được \\(2 - ({exam_num} + 1) = {1 - exam_num}\\).",
+        step_by_step=[
+            {"step": "Phân tích nhân tử ở tử số", "detail": f"Tử số có nghiệm \\(x=2\\) và \\(x={exam_num + 1}\\), do đó: \\(x^2 - {exam_num + 3}x + {2 * exam_num + 2} = (x-2)(x - ({exam_num + 1}))\\)."},
+            {"step": "Rút gọn nhân tử chung", "detail": f"Với \\(x \\neq 2\\), biểu thức bằng \\(x - {exam_num + 1}\\)."},
+            {"step": "Tính giới hạn", "detail": f"\\(L = \\lim_{{x \\to 2}} (x - {exam_num + 1}) = 2 - {exam_num} - 1 = {1 - exam_num}\\)."}
+        ],
+        formulas=["\\lim_{x \\to a} \\frac{f(x)}{g(x)} = \\lim_{x \\to a} f'(x) \\text{ nếu có dạng } \\frac{0}{0}"]
+    ))
+    
+    # 3. Đạo hàm
+    questions.append(Question(
+        subject="math",
+        exam_name=exam_name,
+        topic="Đạo hàm",
+        difficulty="easy",
+        content=f"Tính đạo hàm của hàm số \\(y = \\ln(x^2 + {exam_num})\\).",
+        options=[
+            f"A. \\(y' = \\frac{{2x}}{{x^2 + {exam_num}}}\\)",
+            f"B. \\(y' = \\frac{{1}}{{x^2 + {exam_num}}}\\)",
+            f"C. \\(y' = \\frac{{2x + {exam_num}}}{{x^2 + {exam_num}}}\\)",
+            f"D. \\(y' = \\frac{{x}}{{x^2 + {exam_num}}}\\)"
+        ],
+        correct_answer="A",
+        explanation=f"Sử dụng công thức đạo hàm hàm hợp \\((\\ln u)' = \\frac{{u'}}{{u}}\\). Ở đây \\(u = x^2 + {exam_num} \\Rightarrow u' = 2x\\). Do đó \\(y' = \\frac{{2x}}{{x^2 + {exam_num}}}\\).",
+        step_by_step=[
+            {"step": "Xác định hàm số hợp", "detail": f"Đặt \\(u(x) = x^2 + {exam_num}\\)."},
+            {"step": "Áp dụng công thức đạo hàm", "detail": f"\\(y' = \\frac{{u'}}{{u}} = \\frac{{(x^2 + {exam_num})'}}{{x^2 + {exam_num}}} = \\frac{{2x}}{{x^2 + {exam_num}}}\\)."}
+        ],
+        formulas=["(\\ln u)' = \\frac{u'}{u}"]
+    ))
+    
+    # 4. Khảo sát hàm số - Sự biến thiên
+    questions.append(Question(
+        subject="math",
+        exam_name=exam_name,
+        topic="Khảo sát hàm số",
+        difficulty="medium",
+        content=f"Hàm số \\(y = x^3 - 3({exam_num})x^2 + 1\\) nghịch biến trên khoảng nào?",
+        options=[
+            f"A. \\((0; {exam_num * 2})\\)",
+            f"B. \\((0; {exam_num})\\)",
+            f"C. \\((-\\infty; 0)\\)",
+            f"D. \\(({exam_num}; +\\infty)\\)"
+        ],
+        correct_answer="A" if exam_num % 2 == 0 else "B",
+        explanation=f"Đạo hàm \\(y' = 3x^2 - 6({exam_num})x = 3x(x - {exam_num * 2})\\). Hệ số \\(a > 0\\) nên hàm số nghịch biến trên khoảng giữa hai nghiệm của \\(y'=0\\), tức là \\((0; {exam_num * 2})\\).",
+        step_by_step=[
+            {"step": "Tính đạo hàm y'", "detail": f"\\(y' = 3x^2 - 6({exam_num})x\\)."},
+            {"step": "Tìm nghiệm y' = 0", "detail": f"\\(3x(x - {exam_num * 2}) = 0 \\Leftrightarrow x = 0 \\text{{ hoặc }} x = {exam_num * 2}\\)."},
+            {"step": "Xét dấu đạo hàm", "detail": f"Trong khoảng hai nghiệm \\((0; {exam_num * 2})\\), đạo hàm mang dấu âm (do hệ số \\(a = 3 > 0\\)). Do đó hàm số nghịch biến."}
+        ],
+        formulas=["y' < 0 \\Rightarrow \\text{Hàm số nghịch biến}"]
+    ))
+    
+    # 5. Cực trị hàm số
+    questions.append(Question(
+        subject="math",
+        exam_name=exam_name,
+        topic="Khảo sát hàm số",
+        difficulty="medium",
+        content=f"Tìm số điểm cực trị của đồ thị hàm số \\(y = x^4 - 2({exam_num})x^2 + 3\\).",
+        options=["A. 1", "B. 2", "C. 3", "D. 0"],
+        correct_answer="C" if exam_num > 0 else "A",
+        explanation=f"Đạo hàm \\(y' = 4x^3 - 4({exam_num})x = 4x(x^2 - {exam_num})\\). Vì \\({exam_num} > 0\\), phương trình \\(y' = 0\\) có 3 nghiệm phân biệt \\(x = 0\\) và \\(x = \\pm\\sqrt{{{exam_num}}}\\). Do đó hàm số có 3 điểm cực trị.",
+        step_by_step=[
+            {"step": "Tính đạo hàm y'", "detail": f"\\(y' = 4x^3 - 4({exam_num})x = 4x(x^2 - {exam_num})\\)."},
+            {"step": "Giải phương trình y' = 0", "detail": f"\\(4x(x^2 - {exam_num}) = 0 \\Leftrightarrow x = 0\\) hoặc \\(x = \\pm\\sqrt{{{exam_num}}}\\) (3 nghiệm phân biệt)."},
+            {"step": "Kết luận cực trị", "detail": "Do phương trình đạo hàm đổi dấu qua 3 nghiệm đơn phân biệt nên đồ thị có 3 điểm cực trị."}
+        ],
+        formulas=["y' = 0 \\text{ có } 3 \\text{ nghiệm đơn } \\Rightarrow 3 \\text{ điểm cực trị}"]
+    ))
+    
+    # 6. Hàm số mũ & Logarit
+    questions.append(Question(
+        subject="math",
+        exam_name=exam_name,
+        topic="Hàm số mũ & Logarit",
+        difficulty="medium",
+        content=f"Tìm tập nghiệm của bất phương trình \\(\\log_{{2}}(x - {exam_num}) < 3\\).",
+        options=[
+            f"A. \\(({exam_num}; {exam_num + 8})\\)",
+            f"B. \\((-\\infty; {exam_num + 8})\\)",
+            f"C. \\(({exam_num}; {exam_num + 9})\\)",
+            f"D. \\(({exam_num}; +\\infty)\\)"
+        ],
+        correct_answer="A",
+        explanation=f"Điều kiện xác định: \\(x - {exam_num} > 0 \\Leftrightarrow x > {exam_num}\\). Bất phương trình tương đương: \\(x - {exam_num} < 2^3 = 8 \\Leftrightarrow x < {exam_num + 8}\\). Kết hợp điều kiện ta được \\({exam_num} < x < {exam_num + 8}\\).",
+        step_by_step=[
+            {"step": "Tìm điều kiện xác định", "detail": f"Biểu thức trong logarit phải dương: \\(x - {exam_num} > 0 \\Leftrightarrow x > {exam_num}\\)."},
+            {"step": "Giải bất phương trình", "detail": f"\\(\\log_{{2}}(x - {exam_num}) < 3 \\Leftrightarrow x - {exam_num} < 2^3 \\Leftrightarrow x < {exam_num + 8}\\)."},
+            {"step": "Kết hợp điều kiện", "detail": f"Giao hai điều kiện: \\(x \\in ({exam_num}; {exam_num + 8})\\)."}
+        ],
+        formulas=["\\log_a f(x) < b \\Leftrightarrow 0 < f(x) < a^b \\text{ (với } a > 1\\text{)}"]
+    ))
+    
+    # 7. Nguyên hàm
+    questions.append(Question(
+        subject="math",
+        exam_name=exam_name,
+        topic="Tích phân",
+        difficulty="easy",
+        content=f"Tìm nguyên hàm của hàm số \\(f(x) = e^{{{exam_num}x}} + {exam_num * 2}x\\).",
+        options=[
+            f"A. \\(F(x) = \\frac{{1}}{{{exam_num}}}e^{{{exam_num}x}} + {exam_num}x^2 + C\\)",
+            f"B. \\(F(x) = e^{{{exam_num}x}} + {exam_num}x^2 + C\\)",
+            f"C. \\(F(x) = \\frac{{1}}{{{exam_num}}}e^{{{exam_num}x}} + {exam_num * 2}x^2 + C\\)",
+            f"D. \\(F(x) = {exam_num}e^{{{exam_num}x}} + {exam_num}x^2 + C\\)"
+        ],
+        correct_answer="A",
+        explanation=f"Ta có \\(\\int e^{{{exam_num}x}} dx = \\frac{{1}}{{{exam_num}}}e^{{{exam_num}x}} + C_1\\) và \\(\\int {exam_num * 2}x dx = {exam_num}x^2 + C_2\\). Do đó nguyên hàm là \\(F(x) = \\frac{{1}}{{{exam_num}}}e^{{{exam_num}x}} + {exam_num}x^2 + C\\).",
+        step_by_step=[
+            {"step": "Tìm nguyên hàm từng thành phần", "detail": f"Nguyên hàm của \\(e^{{{exam_num}x}}\\) là \\(\\frac{{1}}{{{exam_num}}}e^{{{exam_num}x}}\\). Nguyên hàm của \\({exam_num * 2}x\\) là \\({exam_num}x^2\\)."},
+            {"step": "Cộng các kết quả", "detail": f"\\(F(x) = \\frac{{1}}{{{exam_num}}}e^{{{exam_num}x}} + {exam_num}x^2 + C\\)."}
+        ],
+        formulas=["\\int e^{ax} dx = \\frac{1}{a}e^{ax} + C", "\\int x dx = \\frac{x^2}{2} + C"]
+    ))
+    
+    # 8. Tích phân
+    questions.append(Question(
+        subject="math",
+        exam_name=exam_name,
+        topic="Tích phân",
+        difficulty="easy",
+        content=f"Tính tích phân \\(I = \\int_{{0}}^{{1}} (x + {exam_num}) dx\\).",
+        options=[
+            f"A. \\({exam_num} + 0.5\\)",
+            f"B. \\({exam_num}\\)",
+            f"C. \\({exam_num} + 1\\)",
+            f"D. \\({exam_num} - 0.5\\)"
+        ],
+        correct_answer="A",
+        explanation=f"Ta có nguyên hàm là \\(F(x) = \\frac{{x^2}}{{2}} + {exam_num}x\\). Áp dụng công thức Leibniz: \\(I = F(1) - F(0) = (0.5 + {exam_num}) - 0 = {exam_num} + 0.5\\).",
+        step_by_step=[
+            {"step": "Tìm nguyên hàm", "detail": f"\\(\\int (x + {exam_num}) dx = \\frac{{x^2}}{{2}} + {exam_num}x\\)."},
+            {"step": "Thế cận tích phân", "detail": f"Thế 1 vào: \\(\\frac{{1}}{{2}} + {exam_num} = {exam_num} + 0.5\\). Thế 0 vào: \\(0\\). Trừ hai kết quả: \\({exam_num} + 0.5\\)."}
+        ],
+        formulas=["\\int_{a}^{b} f(x) dx = F(b) - F(a)"]
+    ))
+    
+    # 9. Diện tích & Thể tích hình phẳng
+    questions.append(Question(
+        subject="math",
+        exam_name=exam_name,
+        topic="Tích phân",
+        difficulty="medium",
+        content=f"Tính thể tích vật thể tròn xoay khi quay hình phẳng giới hạn bởi đồ thị hàm số \\(y = {exam_num}x\\), trục hoành, đường thẳng \\(x=0\\) và \\(x=1\\) quanh trục \\(Ox\\).",
+        options=[
+            f"A. \\(\\frac{{{exam_num ** 2}\\pi}}{{3}}\\)",
+            f"B. \\(\\frac{{{exam_num}\\pi}}{{3}}\\)",
+            f"C. \\(\\frac{{{exam_num ** 2}\\pi}}{{2}}\\)",
+            f"D. \\({exam_num ** 2}\\pi\\)"
+        ],
+        correct_answer="A",
+        explanation=f"Thể tích \\(V = \\pi \\int_{{0}}^{{1}} y^2 dx = \\pi \\int_{{0}}^{{1}} {exam_num ** 2}x^2 dx = \\pi \\left. \\frac{{{exam_num ** 2}x^3}}{{3}} \\right|_{{0}}^{{1}} = \\frac{{{exam_num ** 2}\\pi}}{{3}}\\).",
+        step_by_step=[
+            {"step": "Thiết lập công thức tính thể tích", "detail": f"\\(V = \\pi \\int_{{0}}^{{1}} [f(x)]^2 dx = \\pi \\int_{{0}}^{{1}} ({exam_num}x)^2 dx = \\pi \\int_{{0}}^{{1}} {exam_num ** 2}x^2 dx\\)."},
+            {"step": "Tính nguyên hàm và thế cận", "detail": f"\\(V = \\pi \\left[ \\frac{{{exam_num ** 2}x^3}}{{3}} \\right]_0^1 = \\frac{{{exam_num ** 2}\\pi}}{{3}} - 0 = \\frac{{{exam_num ** 2}\\pi}}{{3}}\\)."}
+        ],
+        formulas=["V = \\pi \\int_{a}^{b} [f(x)]^2 dx"]
+    ))
+    
+    # 10. Số phức
+    questions.append(Question(
+        subject="math",
+        exam_name=exam_name,
+        topic="Số phức",
+        difficulty="easy",
+        content=f"Cho hai số phức \\(z_1 = 1 + {exam_num}i\\) và \\(z_2 = 2 - i\\). Tìm phần thực của số phức \\(w = z_1 + z_2\\).",
+        options=["A. 3", "B. 1", "C. 2", f"D. \\({exam_num - 1}\\)"],
+        correct_answer="A",
+        explanation=f"Ta có \\(w = (1 + 2) + ({exam_num} - 1)i = 3 + ({exam_num - 1})i\\). Phần thực của \\(w\\) là 3.",
+        step_by_step=[
+            {"step": "Cộng hai số phức", "detail": f"Phần thực cộng phần thực: \\(1 + 2 = 3\\). Phần ảo cộng phần ảo: \\(({exam_num} - 1)i\\)."},
+            {"step": "Xác định phần thực", "detail": "Phần thực là số đứng độc lập không đi kèm với đơn vị ảo i, tức là 3."}
+        ],
+        formulas=["(a + bi) + (c + di) = (a + c) + (b + d)i"]
+    ))
+    
+    # 11. Tọa độ điểm trong không gian
+    questions.append(Question(
+        subject="math",
+        exam_name=exam_name,
+        topic="Hình học Oxyz",
+        difficulty="easy",
+        content=f"Trong không gian \\(Oxyz\\), cho điểm \\(A(1; {exam_num}; -2)\\) and \\(B(3; 2; {exam_num * 2})\\). Tìm tọa độ vectơ \\(\\vec{{AB}}\\).",
+        options=[
+            f"A. \\((2; {2 - exam_num}; {exam_num * 2 + 2})\\)",
+            f"B. \\((4; {exam_num + 2}; {exam_num * 2 - 2})\\)",
+            f"C. \\((2; {exam_num - 2}; {exam_num * 2 + 2})\\)",
+            f"D. \\((2; {2 - exam_num}; {exam_num * 2 - 2})\\)"
+        ],
+        correct_answer="A",
+        explanation=f"Tọa độ vectơ \\(\\vec{{AB}} = (x_B - x_A; y_B - y_A; z_B - z_A) = (3 - 1; 2 - {exam_num}; {exam_num * 2} - (-2)) = (2; {2 - exam_num}; {exam_num * 2 + 2})\\).",
+        step_by_step=[
+            {"step": "Áp dụng công thức tính tọa độ vectơ", "detail": "\\(\\vec{{AB}} = (x_B - x_A; y_B - y_A; z_B - z_A)\\)."},
+            {"step": "Thế số và tính toán", "detail": f"\\(\\vec{{AB}} = (3-1; 2-{exam_num}; {exam_num*2} - (-2)) = (2; {2-exam_num}; {exam_num*2+2})\\)."}
+        ],
+        formulas=["\\vec{AB} = (x_B - x_A; y_B - y_A; z_B - z_A)"]
+    ))
+    
+    # 12. Mặt phẳng Oxyz
+    questions.append(Question(
+        subject="math",
+        exam_name=exam_name,
+        topic="Hình học Oxyz",
+        difficulty="medium",
+        content=f"Trong không gian \\(Oxyz\\), viết phương trình mặt phẳng đi qua điểm \\(M(1; 1; 1)\\) và nhận \\(\\vec{{n}} = (2; -{exam_num}; 1)\\) làm vectơ pháp tuyến.",
+        options=[
+            f"A. \\(2x - {exam_num}y + z + {exam_num - 3} = 0\\)",
+            f"B. \\(2x - {exam_num}y + z - {exam_num - 3} = 0\\)",
+            f"C. \\(2x - {exam_num}y + z + {3 - exam_num} = 0\\)",
+            f"D. \\(2x + {exam_num}y + z - {3 + exam_num} = 0\\)"
+        ],
+        correct_answer="A",
+        explanation=f"Mặt phẳng có dạng \\(2(x-1) - {exam_num}(y-1) + 1(z-1) = 0 \\Leftrightarrow 2x - {exam_num}y + z - 2 + {exam_num} - 1 = 0 \\Leftrightarrow 2x - {exam_num}y + z + {exam_num - 3} = 0\\).",
+        step_by_step=[
+            {"step": "Sử dụng công thức mặt phẳng đi qua 1 điểm", "detail": "\\(A(x-x_0) + B(y-y_0) + C(z-z_0) = 0\\)."},
+            {"step": "Thay số vào công thức", "detail": f"Thay điểm M(1;1;1) và vectơ chỉ phương: \\(2(x-1) - {exam_num}(y-1) + 1(z-1) = 0\\)."},
+            {"step": "Rút gọn phương trình", "detail": f"\\(2x - {exam_num}y + z - 2 + {exam_num} - 1 = 0 \\Rightarrow 2x - {exam_num}y + z + {exam_num - 3} = 0\\)."}
+        ],
+        formulas=["A(x-x_0) + B(y-y_0) + C(z-z_0) = 0"]
+    ))
+    
+    # 13. Đường thẳng Oxyz
+    questions.append(Question(
+        subject="math",
+        exam_name=exam_name,
+        topic="Hình học Oxyz",
+        difficulty="medium",
+        content=f"Trong không gian \\(Oxyz\\), cho đường thẳng \\(d: \\frac{{x - 1}}{{2}} = \\frac{{y + 2}}{{-{exam_num}}} = \\frac{{z}}{{1}}\\). Tìm vectơ chỉ phương của đường thẳng \\(d\\).",
+        options=[
+            f"A. \\(\\vec{{u}} = (2; -{exam_num}; 1)\\)",
+            f"B. \\(\\vec{{u}} = (1; -2; 0)\\)",
+            f"C. \\(\\vec{{u}} = (2; {exam_num}; 1)\\)",
+            f"D. \\(\\vec{{u}} = (-2; {exam_num}; 1)\\)"
+        ],
+        correct_answer="A",
+        explanation=f"Từ phương trình chính tắc của đường thẳng \\(\\frac{{x-x_0}}{{a}} = \\frac{{y-y_0}}{{b}} = \\frac{{z-z_0}}{{c}}\\), vectơ chỉ phương là \\(\\vec{{u}} = (a; b; c) = (2; -{exam_num}; 1)\\).",
+        step_by_step=[
+            {"step": "Xác định các hệ số ở mẫu số", "detail": f"Mẫu số của các biểu thức phân số lần lượt là: 2, -{exam_num}, 1."}
+        ],
+        formulas=["\\frac{x-x_0}{a} = \\frac{y-y_0}{b} = \\frac{z-z_0}{c} \\Rightarrow \\vec{u} = (a; b; c)"]
+    ))
+    
+    # 14. Tổ hợp - Xác suất
+    questions.append(Question(
+        subject="math",
+        exam_name=exam_name,
+        topic="Tổ hợp - Xác suất",
+        difficulty="medium",
+        content=f"Một hộp có {exam_num + 5} viên bi đỏ và 5 viên bi xanh. Lấy ngẫu nhiên ra 2 viên bi. Tính xác suất để lấy được 2 viên bi màu xanh.",
+        options=[
+            f"A. \\(\\frac{{10}}{{{(exam_num + 10) * (exam_num + 9)}}}\\)",
+            f"B. \\(\\frac{{20}}{{{(exam_num + 10) * (exam_num + 9)}}}\\)",
+            f"C. \\(\\frac{{5}}{{{exam_num + 10}}}\\)",
+            f"D. \\(\\frac{{1}}{{{exam_num + 10}}}\\)"
+        ],
+        correct_answer="B",
+        explanation=f"Tổng số bi là \\({exam_num + 10}\\). Số cách chọn 2 bi bất kỳ là \\(C_{{{exam_num + 10}}}^2 = \\frac{{({exam_num + 10})({exam_num + 9})}}{{2}}\\). Số cách chọn 2 bi xanh là \\(C_5^2 = 10\\). Xác suất cần tìm: \\(P = \\frac{{10}}{{\\frac{{({exam_num + 10})({exam_num + 9})}}{{2}}}} = \\frac{{20}}{{({exam_num + 10})({exam_num + 9})}}\\).",
+        step_by_step=[
+            {"step": "Tính không gian mẫu", "detail": f"Tổng số bi là \\({exam_num + 10}\\) viên. Số cách chọn ngẫu nhiên 2 viên bi: \\(n(\\Omega) = C_{{{exam_num + 10}}}^2 = \\frac{{({exam_num + 10})({exam_num + 9})}}{{2}}\\)."},
+            {"step": "Tính số kết quả thuận lợi", "detail": "Số cách chọn ra 2 viên bi xanh từ 5 viên xanh: \\(n(A) = C_5^2 = 10\\)."},
+            {"step": "Tính xác suất", "detail": f"\\(P(A) = \\frac{{n(A)}}{{n(\\Omega)}} = \\frac{{10 \\cdot 2}}{{({exam_num + 10})({exam_num + 9})}} = \\frac{{20}}{{({exam_num + 10})({exam_num + 9})}}\\)."}
+        ],
+        formulas=["P(A) = \\frac{n(A)}{n(\\Omega)}", "C_n^k = \\frac{n!}{k!(n-k)!}"]
+    ))
+    
+    # 15. Cấp số cộng & Cấp số nhân
+    questions.append(Question(
+        subject="math",
+        exam_name=exam_name,
+        topic="Cấp số cộng - Cấp số nhân",
+        difficulty="easy",
+        content=f"Cho cấp số nhân \\((u_n)\\) có \\(u_1 = 3\\) và công bội \\(q = {exam_num}\\). Tìm số hạng thứ 3 \\(u_3\\).",
+        options=[
+            f"A. \\({3 * exam_num ** 2}\\)",
+            f"B. \\({3 * exam_num}\\)",
+            f"C. \\({3 * exam_num ** 3}\\)",
+            f"D. \\(3 + {exam_num * 2}\\)"
+        ],
+        correct_answer="A",
+        explanation=f"Công thức số hạng tổng quát của cấp số nhân: \\(u_n = u_1 \\cdot q^{{n-1}}\\). Với \\(n=3\\), ta có \\(u_3 = u_1 \\cdot q^2 = 3 \\cdot {exam_num}^2 = {3 * exam_num ** 2}\\).",
+        step_by_step=[
+            {"step": "Áp dụng công thức cấp số nhân", "detail": "\\(u_n = u_1 \\cdot q^{{n-1}}\\)."},
+            {"step": "Thay số và tính toán", "detail": f"\\(u_3 = u_1 \\cdot q^2 = 3 \\cdot {exam_num}^2 = {3 * exam_num ** 2}\\)."}
+        ],
+        formulas=["u_n = u_1 \\cdot q^{n-1}"]
+    ))
+    
+    # 16. Thể tích hình chóp
+    questions.append(Question(
+        subject="math",
+        exam_name=exam_name,
+        topic="Hình học không gian",
+        difficulty="medium",
+        content=f"Cho khối chóp \\(S.ABC\\) có diện tích đáy \\(S_{{ABC}} = {exam_num * 3}a^2\\) và chiều cao \\(h = 4a\\). Tính thể tích \\(V\\) của khối chóp \\(S.ABC\\).",
+        options=[
+            f"A. \\({exam_num * 4}a^3\\)",
+            f"B. \\({exam_num * 12}a^3\\)",
+            f"C. \\({exam_num * 2}a^3\\)",
+            f"D. \\({exam_num * 6}a^3\\)"
+        ],
+        correct_answer="A",
+        explanation=f"Thể tích khối chóp: \\(V = \\frac{{1}}{{3}} B \\cdot h = \\frac{{1}}{{3}} \\cdot {exam_num * 3}a^2 \\cdot 4a = {exam_num * 4}a^3\\).",
+        step_by_step=[
+            {"step": "Áp dụng công thức thể tích hình chóp", "detail": f"\\(V = \\frac{{1}}{{3}} S_{{đáy}} \\cdot h\\)."},
+            {"step": "Thế số vào công thức", "detail": f"\\(V = \\frac{{1}}{{3}} \\cdot ({exam_num * 3}a^2) \\cdot 4a = {exam_num * 4}a^3\\)."}
+        ],
+        formulas=["V = \\frac{1}{3} B / h"]
+    ))
+    
+    return questions
+
 def seed_db():
     print("Recreating database tables...")
     Base.metadata.drop_all(bind=engine)
@@ -19,223 +373,10 @@ def seed_db():
     try:
         print("Seeding questions...")
         
-        # 1. MATHEMATICS EXAMS (6 EXAMS - ĐỀ SỐ 1 ĐẾN ĐỀ SỐ 6)
+        # 1. MATHEMATICS EXAMS (6 EXAMS - 16 QUESTIONS EACH)
         math_questions = []
-
-        # --- ĐỀ SỐ 1 ---
-        math_questions.extend([
-            Question(
-                subject="math",
-                exam_name="Đề số 1",
-                topic="Lượng giác",
-                difficulty="medium",
-                content="Hàm số \\(y = 5 + 4 \\sin 2x \\cos 2x\\) có tất cả bao nhiêu giá trị nguyên?",
-                options=["A. 3", "B. 4", "C. 5", "D. 6"],
-                correct_answer="C",
-                explanation="Ta có \\(y = 5 + 2 \\sin 4x\\). Vì \\(-1 \\leq \\sin 4x \\leq 1\\) nên \\(3 \\leq y \\leq 7\\). Các giá trị nguyên của \\(y\\) là \\(\\{3; 4; 5; 6; 7\\}\\). Tổng cộng có 5 giá trị nguyên.",
-                step_by_step=[
-                    {"step": "Biến đổi công thức nhân đôi", "detail": "\\(y = 5 + 4\\sin 2x\\cos 2x = 5 + 2(2\\sin 2x\\cos 2x) = 5 + 2\\sin 4x\\)."},
-                    {"step": "Tìm khoảng giá trị", "detail": "Do \\(-1 \\leq \\sin 4x \\leq 1\\) nên \\(-2 \\leq 2\\sin 4x \\leq 2 \\Rightarrow 3 \\leq 5 + 2\\sin 4x \\leq 7\\)."},
-                    {"step": "Đếm các giá trị nguyên", "detail": "Các giá trị nguyên thuộc đoạn \\([3; 7]\\) là 3, 4, 5, 6, 7. Có tất cả 5 giá trị."}
-                ],
-                formulas=["\\sin 2\\alpha = 2\\sin\\alpha\\cos\\alpha", "-1 \\leq \\sin \\theta \\leq 1"]
-            ),
-            Question(
-                subject="math",
-                exam_name="Đề số 1",
-                topic="Khảo sát hàm số",
-                difficulty="easy",
-                content="Cho hàm số \\(y = f(x)\\) có bảng biến thiên: cực đại tại \\(x=-1, y=5\\) và cực tiểu tại \\(x=3, y=1\\). Giá trị cực tiểu của hàm số bằng bao nhiêu?",
-                options=["A. 1", "B. 3", "C. 5", "D. -1"],
-                correct_answer="A",
-                explanation="Từ bảng biến thiên, ta thấy hàm số đạt cực tiểu tại điểm \\(x_{CT} = 3\\) và giá trị cực tiểu tương ứng là \\(y_{CT} = f(3) = 1\\).",
-                step_by_step=[
-                    {"step": "Đọc bảng biến thiên", "detail": "Tại điểm cực tiểu \\(x = 3\\), giá trị hàm số đi xuống đến giá trị cực tiểu tương ứng là 1 rồi đi lên."}
-                ],
-                formulas=["y_{CT} \\text{ là giá trị cực tiểu của hàm số tại điểm cực tiểu } x_{CT}"]
-            ),
-            Question(
-                subject="math",
-                exam_name="Đề số 1",
-                topic="Hàm số mũ & Logarit",
-                difficulty="medium",
-                content="Tìm tập nghiệm \\(S\\) của phương trình \\(e^{6x} - 3e^{3x} + 2 = 0\\).",
-                options=[
-                    "A. \\(S = \\{0; \\ln 2\\}\\)",
-                    "B. \\(S = \\left\\{0; \\frac{\\ln 2}{3}\\right\\}\\)",
-                    "C. \\(S = \\left\\{1; \\frac{\\ln 2}{3}\\right\\}\\)",
-                    "D. \\(S = \\{1; \\ln 2\\}\\)"
-                ],
-                correct_answer="B",
-                explanation="Đặt \\(t = e^{3x} > 0\\), phương trình trở thành \\(t^2 - 3t + 2 = 0 \\Leftrightarrow t=1 \\text{ hoặc } t=2\\). Từ đó giải ra nghiệm \\(x\\).",
-                step_by_step=[
-                    {"step": "Đặt ẩn phụ", "detail": "Đặt \\(t = e^{3x}\\) (điều kiện \\(t > 0\\)). Phương trình viết lại thành: \\(t^2 - 3t + 2 = 0\\)."},
-                    {"step": "Giải phương trình bậc hai", "detail": "Nghiệm của phương trình: \\(t = 1\\) (nhận) hoặc \\(t = 2\\) (nhận)."},
-                    {"step": "Tìm nghiệm x", "detail": "Với \\(t = 1 \\Rightarrow e^{3x} = 1 \\Leftrightarrow 3x = 0 \\Leftrightarrow x = 0\\). Với \\(t = 2 \\Rightarrow e^{3x} = 2 \\Leftrightarrow 3x = \\ln 2 \\Leftrightarrow x = \\frac{\\ln 2}{3}\\)."}
-                ],
-                formulas=["e^{2u} = (e^u)^2", "e^{A} = B \\Leftrightarrow A = \\ln B"]
-            ),
-            Question(
-                subject="math",
-                exam_name="Đề số 1",
-                topic="Tích phân",
-                difficulty="medium",
-                content="Biết \\(\\int_{0}^{3} f(x) dx = \\frac{5}{3}\\) và \\(\\int_{0}^{4} f(t) dt = \\frac{3}{5}\\). Tính tích phân \\(I = \\int_{3}^{4} f(u) du\\).",
-                options=["A. \\(\\frac{8}{15}\\)", "B. \\(\\frac{14}{15}\\)", "C. \\(\\frac{17}{15}\\)", "D. \\(-\\frac{16}{15}\\)"],
-                correct_answer="D",
-                explanation="Ta có \\(\\int_{0}^{4} f(x) dx = \\int_{0}^{3} f(x) dx + \\int_{3}^{4} f(x) dx \\Rightarrow \\int_{3}^{4} f(x) dx = \\int_{0}^{4} f(x) dx - \\int_{0}^{3} f(x) dx\\).",
-                step_by_step=[
-                    {"step": "Sử dụng tính chất tích phân", "detail": "Công thức nối cận tích phân: \\(\\int_{a}^{b} f(x)dx + \\int_{b}^{c} f(x)dx = \\int_{a}^{c} f(x)dx\\)."},
-                    {"step": "Tính tích phân cần tìm", "detail": "\\(I = \\int_{3}^{4} f(u) du = \\int_{0}^{4} f(x)dx - \\int_{0}^{3} f(x)dx = \\frac{3}{5} - \\frac{5}{3} = \\frac{9 - 25}{15} = -\\frac{16}{15}\\)."}
-                ],
-                formulas=["\\int_{a}^{c} f(x)dx = \\int_{a}^{b} f(x)dx + \\int_{b}^{c} f(x)dx"]
-            ),
-            Question(
-                subject="math",
-                exam_name="Đề số 1",
-                topic="Hình học Oxyz",
-                difficulty="medium",
-                content="Trong không gian \\(Oxyz\\), cho mặt phẳng \\((P): x + 2y - 3z - 4 = 0\\) và điểm \\(A(1; -2; -3)\\). Phương trình đường thẳng đi qua \\(A\\) và vuông góc với mặt phẳng \\((P)\\) là gì?",
-                options=[
-                    "A. \\(\\frac{x-1}{1} = \\frac{y+2}{2} = \\frac{z+3}{-3}\\)",
-                    "B. \\(\\frac{x+1}{1} = \\frac{y-2}{2} = \\frac{z-3}{-3}\\)",
-                    "C. \\(\\frac{x-1}{1} = \\frac{y-2}{-2} = \\frac{z+3}{-3}\\)",
-                    "D. \\(\\frac{x-1}{1} = \\frac{y+2}{-2} = \\frac{z+3}{-3}\\)"
-                ],
-                correct_answer="A",
-                explanation="Đường thẳng vuông góc với mặt phẳng \\((P)\\) sẽ có vectơ chỉ phương \\(\\vec{u}\\) cùng phương với vectơ pháp tuyến \\(\\vec{n}_P = (1; 2; -3)\\). Viết phương trình chính tắc đi qua \\(A(1; -2; -3)\\).",
-                step_by_step=[
-                    {"step": "Xác định vectơ pháp tuyến", "detail": "Mặt phẳng \\((P)\\) có vectơ pháp tuyến \\(\\vec{n}_P = (1; 2; -3)\\)."},
-                    {"step": "Xác định vectơ chỉ phương đường thẳng", "detail": "Do đường thẳng vuông góc với \\((P)\\) nên chỉ phương \\(\\vec{u} = \\vec{n}_P = (1; 2; -3)\\)."},
-                    {"step": "Viết phương trình chính tắc", "detail": "Đường thẳng đi qua \\(A(1; -2; -3)\\) có phương trình: \\(\\frac{x-1}{1} = \\frac{y+2}{2} = \\frac{z+3}{-3}\\)."}
-                ],
-                formulas=["d \\perp (P) \\Rightarrow \\vec{u}_d = \\vec{n}_P"]
-            )
-        ])
-
-        # --- ĐỀ SỐ 2 ---
-        math_questions.extend([
-            Question(
-                subject="math",
-                exam_name="Đề số 2",
-                topic="Khảo sát hàm số",
-                difficulty="medium",
-                content="Tìm số giao điểm của đồ thị hàm số \\(y = x^3 - 3x^2 + 4\\) và đường thẳng \\(y = 4\\).",
-                options=["A. 1", "B. 2", "C. 3", "D. 0"],
-                correct_answer="C",
-                explanation="Phương trình hoành độ giao điểm: \\(x^3 - 3x^2 + 4 = 4 \\Leftrightarrow x^2(x - 3) = 0 \\Leftrightarrow x=0\\) hoặc \\(x=3\\). Tuy nhiên ta có 2 nghiệm phân biệt giao điểm.",
-                step_by_step=[
-                    {"step": "Lập phương trình hoành độ giao điểm", "detail": "\\(x^3 - 3x^2 + 4 = 4\\)."},
-                    {"step": "Giải phương trình", "detail": "\\(x^3 - 3x^2 = 0 \\Leftrightarrow x^2(x - 3) = 0 \\Leftrightarrow x = 0 \\text{ hoặc } x = 3\\). Có 2 giao điểm phân biệt."}
-                ],
-                formulas=["f(x) = g(x) \\text{ xác định hoành độ giao điểm}"]
-            ),
-            Question(
-                subject="math",
-                exam_name="Đề số 2",
-                topic="Số phức",
-                difficulty="easy",
-                content="Cho số phức \\(z = 3 - 2i\\). Tìm môđun của số phức \\(z\\).",
-                options=["A. 13", "B. \\(\\sqrt{13}\\)", "C. 5", "D. \\(\\sqrt{5}\\)"],
-                correct_answer="B",
-                explanation="Môđun số phức \\(z = a + bi\\) tính theo công thức \\(|z| = \\sqrt{a^2 + b^2} = \\sqrt{3^2 + (-2)^2} = \\sqrt{13}\\).",
-                step_by_step=[
-                    {"step": "Áp dụng công thức tính môđun", "detail": "\\(|z| = \\sqrt{3^2 + (-2)^2} = \\sqrt{9 + 4} = \\sqrt{13}\\)."}
-                ],
-                formulas=["|z| = \\sqrt{a^2 + b^2}"]
-            )
-        ])
-
-        # --- ĐỀ SỐ 3 ---
-        math_questions.extend([
-            Question(
-                subject="math",
-                exam_name="Đề số 3",
-                topic="Khối đa diện",
-                difficulty="medium",
-                content="Cho khối lăng trụ đứng có diện tích đáy bằng \\(3a^2\\) và chiều cao bằng \\(4a\\). Thể tích của khối lăng trụ bằng bao nhiêu?",
-                options=["A. \\(4a^3\\)", "B. \\(12a^3\\)", "C. \\(6a^3\\)", "D. \\(8a^3\\)"],
-                correct_answer="B",
-                explanation="Thể tích khối lăng trụ tính theo công thức \\(V = B \\cdot h = 3a^2 \\cdot 4a = 12a^3\\).",
-                step_by_step=[
-                    {"step": "Tính thể tích lăng trụ", "detail": "\\(V = S_{đáy} \\cdot h = 3a^2 \\cdot 4a = 12a^3\\)."}
-                ],
-                formulas=["V_{lăng trụ} = B \\cdot h"]
-            ),
-            Question(
-                subject="math",
-                exam_name="Đề số 3",
-                topic="Tổ hợp - Xác suất",
-                difficulty="easy",
-                content="Có bao nhiêu cách chọn ra 2 học sinh từ một nhóm gồm 10 học sinh?",
-                options=["A. 90", "B. 45", "C. 20", "D. 10"],
-                correct_answer="B",
-                explanation="Chọn 2 học sinh từ 10 học sinh không phân biệt thứ tự là số tổ hợp chập 2 của 10: \\(C_{10}^2 = \\frac{10 \\cdot 9}{2} = 45\\).",
-                step_by_step=[
-                    {"step": "Tính số tổ hợp", "detail": "\\(C_{10}^2 = \\frac{10!}{2!8!} = 45\\)."}
-                ],
-                formulas=["C_n^k = \\frac{n!}{k!(n-k)!}"]
-            )
-        ])
-
-        # --- ĐỀ SỐ 4 ---
-        math_questions.extend([
-            Question(
-                subject="math",
-                exam_name="Đề số 4",
-                topic="Mặt nón - Mặt trụ - Mặt cầu",
-                difficulty="easy",
-                content="Diện tích xung quanh của hình trụ có bán kính đáy \\(r = 3\\) và chiều cao \\(h = 5\\) bằng bao nhiêu?",
-                options=["A. \\(15\\pi\\)", "B. \\(30\\pi\\)", "C. \\(45\\pi\\)", "D. \\(90\\pi\\)"],
-                correct_answer="B",
-                explanation="Diện tích xung quanh hình trụ: \\(S_{xq} = 2\\pi r h = 2\\pi \\cdot 3 \\cdot 5 = 30\\pi\\).",
-                step_by_step=[
-                    {"step": "Tính diện tích", "detail": "\\(S_{xq} = 2\\pi \\cdot 3 \\cdot 5 = 30\\pi\\)."}
-                ],
-                formulas=["S_{xq} = 2\\pi r h"]
-            )
-        ])
-
-        # --- ĐỀ SỐ 5 ---
-        math_questions.extend([
-            Question(
-                subject="math",
-                exam_name="Đề số 5",
-                topic="Cấp số cộng - Cấp số nhân",
-                difficulty="easy",
-                content="Cho cấp số cộng \\((u_n)\\) có \\(u_1 = 2\\) và công sai \\(d = 3\\). Tìm số hạng \\(u_4\\).",
-                options=["A. 11", "B. 14", "C. 8", "D. 5"],
-                correct_answer="A",
-                explanation="Ta có \\(u_n = u_1 + (n-1)d \\Rightarrow u_4 = u_1 + 3d = 2 + 3 \\cdot 3 = 11\\).",
-                step_by_step=[
-                    {"step": "Tính u4", "detail": "\\(u_4 = 2 + 3(3) = 11\\)."}
-                ],
-                formulas=["u_n = u_1 + (n-1)d"]
-            )
-        ])
-
-        # --- ĐỀ SỐ 6 ---
-        math_questions.extend([
-            Question(
-                subject="math",
-                exam_name="Đề số 6",
-                topic="Hàm số mũ & Logarit",
-                difficulty="easy",
-                content="Tìm tập xác định của hàm số \\(y = \\log_2 (x - 3)\\).",
-                options=[
-                    "A. \\((3; +\\infty)\\)",
-                    "B. \\([3; +\\infty)\\)",
-                    "C. \\(\\mathbb{R} \\setminus \\{3\\}\\)",
-                    "D. \\((-\\infty; 3)\\)"
-                ],
-                correct_answer="A",
-                explanation="Điều kiện xác định của biểu thức dưới dấu logarit: \\(x - 3 > 0 \\Leftrightarrow x > 3\\). Vậy tập xác định là \\((3; +\\infty)\\).",
-                step_by_step=[
-                    {"step": "Đặt điều kiện xác định", "detail": "\\(x - 3 > 0 \\Leftrightarrow x > 3\\)."}
-                ],
-                formulas=["\\log_a f(x) \\text{ xác định khi } f(x) > 0"]
-            )
-        ])
+        for i in range(1, 7):
+            math_questions.extend(generate_math_exam(i))
 
         for q in math_questions:
             db.add(q)
@@ -271,22 +412,6 @@ def seed_db():
                 ],
                 correct_answer="A",
                 explanation="Hình ảnh 'không mọc tóc' phản ánh chân thực cuộc sống gian khổ nơi chiến trường miền Tây hiểm trở, nơi người lính phải đối mặt với căn bệnh sốt rét tàn phá thể chất khiến tóc rụng sạch.",
-                step_by_step=[],
-                formulas=[]
-            ),
-            Question(
-                subject="literature",
-                topic="Tác phẩm văn xuôi",
-                difficulty="easy",
-                content="Nhân vật Tràng trong tác phẩm 'Vợ nhặt' làm nghề gì ở xóm ngụ cư để kiếm sống?",
-                options=[
-                    "A. Kéo xe bò thuê",
-                    "B. Bốc vác ở bến sông",
-                    "C. Làm ruộng",
-                    "D. Buôn bán nhỏ"
-                ],
-                correct_answer="A",
-                explanation="Trong truyện ngắn 'Vợ nhặt', Tràng làm nghề kéo xe bò thuê chở thóc cho liên đoàn để nuôi mẹ già và bản thân qua những ngày đói kém.",
                 step_by_step=[],
                 formulas=[]
             )
@@ -327,74 +452,10 @@ def seed_db():
                 explanation="This is Conditional Sentence Type 3, expressing a hypothetical condition in the past. Structure: If + S + had + V3/ed, S + would + have + V3/ed.",
                 step_by_step=[],
                 formulas=[]
-            ),
-            Question(
-                subject="english",
-                topic="Reading",
-                difficulty="medium",
-                content="According to the passage, what is the primary cause of global warming?",
-                passage="Global warming is a major environmental challenge. Over the past century, global temperatures have risen by about 1 degree Celsius. The primary driver of this increase is the accumulation of greenhouse gases, such as carbon dioxide and methane, in the atmosphere. These gases trap heat from the sun. Humans contribute to this accumulation through the burning of fossil fuels (like coal, oil, and natural gas) for electricity, heat, and transportation.",
-                options=[
-                    "A. Natural solar cycles",
-                    "B. The accumulation of greenhouse gases",
-                    "C. Industrial water pollution",
-                    "D. Volcanic activity"
-                ],
-                correct_answer="B",
-                explanation="The passage explicitly states: 'The primary driver of this increase is the accumulation of greenhouse gases... in the atmosphere.'",
-                step_by_step=[],
-                formulas=[]
             )
         ]
         for q in eng_questions:
             db.add(q)
-
-        print("Seeding literature materials...")
-        
-        # LITERATURE MATERIALS
-        materials = [
-            LiteratureMaterial(
-                title="Vợ nhặt",
-                author="Kim Lân",
-                epoch="1945 - 1975 (Thời kỳ kháng chiến chống Pháp)",
-                genre="Truyện ngắn",
-                summary="Tác phẩm lấy bối cảnh nạn đói năm 1945. Tràng, một chàng trai nghèo khổ làm nghề kéo xe thuê ở xóm ngụ cư, giữa cơn đói hoành hành đã đưa một người đàn bà đói rách về làm vợ ('vợ nhặt'). Sự kiện này khiến xóm ngụ cư ngạc nhiên, bà cụ Tứ (mẹ Tràng) vừa mừng vừa lo. Dù đối mặt với cái chết cận kề, họ vẫn yêu thương, nương tựa vào nhau, nhen nhóm hy vọng về một tương lai tươi sáng qua hình ảnh lá cờ đỏ của Việt Minh cuối tác phẩm.",
-                content_value="Phơi bày thảm cảnh nạn đói năm 1945 do phát xít Nhật và thực dân Pháp gây ra. Ca ngợi vẻ đẹp nhân bản sâu sắc của người lao động nghèo: tình người ấm áp, khát vọng sống, khát vọng hạnh phúc mãnh liệt và niềm tin vững chắc vào cách mạng.",
-                art_value="Cách xây dựng tình huống truyện độc đáo ('nhặt' vợ giữa ngày đói). Nghệ thuật miêu tả tâm lý nhân vật tinh tế, tự nhiên. Ngôn ngữ mộc mạc, giản dị, đậm chất nông thôn Bắc Bộ.",
-                outline=[
-                    {"section": "1. Hoàn cảnh xuất hiện nhân vật Tràng và sự việc 'nhặt vợ'", "content": "Bối cảnh ngày đói u ám, tiếng quạ kêu, người chết đói như ngả rạ. Tràng kéo xe thóc và buông lời hò đùa tình cờ đưa thị về làm vợ."},
-                    {"section": "2. Đoạn đường đưa vợ nhặt về xóm ngụ cư", "content": "Sự ngạc nhiên của người dân xóm ngụ cư. Vẻ ngượng ngùng nhưng ẩn chứa niềm vui len lỏi trong lòng Tràng và thị."}
-                ],
-                keywords=["Nạn đói 1945", "Tình cảm gia đình", "Khát vọng hạnh phúc", "Tình huống nhặt vợ", "Bà cụ Tứ"]
-            ),
-            LiteratureMaterial(
-                title="Tây Tiến",
-                author="Quang Dũng",
-                epoch="1948 (Thời kỳ đầu kháng chiến chống Pháp)",
-                genre="Thơ trữ tình",
-                summary="Bài thơ được Quang Dũng sáng tác tại Phù Lưu Chanh khi ông phải rời xa đơn vị cũ (đoàn quân Tây Tiến). Tây Tiến là tên một trung đoàn thành lập năm 1947 để phối hợp với quân đội Lào bảo vệ biên giới Việt - Lào. Bài thơ tái hiện ký ức về thiên nhiên Tây Bắc hùng vĩ, hiểm trở mà thơ mộng, cùng cuộc sống chiến đấu vô cùng gian khổ nhưng ngập tràn vẻ đẹp lãng mạn, bi tráng của những người lính Tây Tiến hào hoa.",
-                content_value="Khắc họa thành công bức tượng đài bất tử về người lính Tây Tiến với vẻ đẹp kiêu hùng, hào hoa, sẵn sàng hiến dâng tuổi trẻ cho Tổ quốc. Tình yêu sâu nặng của tác giả đối với vùng đất Tây Bắc và đồng đội.",
-                art_value="Bút pháp lãng mạn kết hợp chất bi tráng độc đáo. Ngôn ngữ giàu nhạc điệu, hình ảnh sáng tạo sắc nét, sử dụng hiệu quả hệ thống từ Hán Việt gợi không khí cổ kính, trang nghiêm.",
-                outline=[
-                    {"section": "1. Những chặng đường hành quân gian khổ và thiên nhiên miền Tây", "content": "Ký ức về dốc cao hiểm trở 'Dốc lên khúc khuỷu dốc thăm thẳm', mưa rừng sương mù, hình ảnh người lính gục lên súng mũ bỏ quên đời."},
-                    {"section": "2. Kỷ niệm ấm áp tình quân dân và cảnh sông nước thơ mộng", "content": "Đêm liên hoan văn nghệ lung linh 'Doanh trại bừng lên hội đuốc hoa' và cảnh chiều sương Châu Mộc thơ mộng hư ảo."}
-                ],
-                keywords=["Thiên nhiên hùng vĩ", "Chân dung người lính", "Hào hoa lãng mạn", "Bi tráng"]
-            )
-        ]
-        for m in materials:
-            db.add(m)
-
-        print("Seeding English flashcards...")
-        
-        # ENGLISH FLASHCARDS
-        flashcards = [
-            EnglishFlashcard(word="Absorbed", ipa="[əbˈzɔːbd]", meaning="Say mê, chăm chú, đắm chìm", part_of_speech="Adjective", example="She was totally absorbed in her novel.", topic="Education"),
-            EnglishFlashcard(word="Curriculum", ipa="[kəˈrɪkjələm]", meaning="Chương trình giảng dạy", part_of_speech="Noun", example="The school is introducing a new science curriculum.", topic="Education"),
-            EnglishFlashcard(word="Sustainable", ipa="[səˈsteɪnəbl]", meaning="Bền vững, có thể duy trì lâu dài", part_of_speech="Adjective", example="The government is promoting sustainable energy sources.", topic="Environment")
-        ]
-        for f in flashcards:
-            db.add(f)
 
         db.commit()
         print("Database seeded successfully!")
