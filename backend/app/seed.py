@@ -235,7 +235,7 @@ def generate_math_exam(exam_num):
         exam_name=exam_name,
         topic="Hình học Oxyz",
         difficulty="easy",
-        content=f"Trong không gian \\(Oxyz\\), cho điểm \\(A(1; {exam_num}; -2)\\) and \\(B(3; 2; {exam_num * 2})\\). Tìm tọa độ vectơ \\(\\vec{{AB}}\\).",
+        content=f"Trong không gian \\(Oxyz\\), cho điểm \\(A(1; {exam_num}; -2)\\) và \\(B(3; 2; {exam_num * 2})\\). Tìm tọa độ vectơ \\(\\vec{{AB}}\\).",
         options=[
             f"A. \\((2; {2 - exam_num}; {exam_num * 2 + 2})\\)",
             f"B. \\((4; {exam_num + 2}; {exam_num * 2 - 2})\\)",
@@ -361,6 +361,55 @@ def generate_math_exam(exam_num):
         ],
         formulas=["V = \\frac{1}{3} B / h"]
     ))
+
+    # 17. TRẮC NGHIỆM ĐÚNG SAI (Được chia làm 4 câu hỏi con: a, b, c, d)
+    for label, correct_val, statement_text in [
+        ("a", "A", f"Vectơ pháp tuyến của mặt phẳng là \\(\\vec{{n}} = (2; -{exam_num}; 1)\\)."),
+        ("b", "B", f"Điểm \\(A(1; {exam_num}; 1)\\) nằm trên mặt phẳng."),
+        ("c", "A", f"Khoảng cách từ gốc tọa độ đến mặt phẳng bằng \\(\\frac{{3}}{{\\sqrt{{5 + {exam_num ** 2}}}}}\\)."),
+        ("d", "B", f"Mặt phẳng đi qua gốc tọa độ \\(O(0;0;0)\\).")
+    ]:
+        questions.append(Question(
+            subject="math",
+            exam_name=exam_name,
+            topic="Đúng/Sai - Hình học Oxyz",
+            difficulty="medium",
+            content=f"**Câu 17 (Trắc nghiệm Đúng/Sai)**: Trong không gian \\(Oxyz\\), cho mặt phẳng \\((P): 2x - {exam_num}y + z + 3 = 0\\).\n\n**Phát biểu {label})**: {statement_text}",
+            options=["Đúng", "Sai"],
+            correct_answer=correct_val,
+            explanation=f"Phát biểu {label}) là {'Đúng' if correct_val == 'A' else 'Sai'}. Mặt phẳng \\((P)\\) có pháp tuyến \\(\\vec{{n}} = (2; -{exam_num}; 1)\\). Thế tọa độ các điểm và áp dụng công thức khoảng cách để kiểm tra.",
+            step_by_step=[],
+            formulas=["d(O, (P)) = \\frac{|D|}{\\sqrt{A^2 + B^2 + C^2}}"]
+        ))
+
+    # 18. TỰ LUẬN TRẢ LỜI NGẮN 1
+    questions.append(Question(
+        subject="math",
+        exam_name=exam_name,
+        topic="Tự luận ngắn - Tối ưu",
+        difficulty="hard",
+        content=f"**Câu 18 (Trả lời ngắn)**: Một chiếc hộp không nắp có đáy hình vuông cạnh \\(x\\) (mét) và thể tích \\(V = {exam_num * 108}\\) m\\(^3\\). Chi phí làm đáy là 10 USD/m\\(^2\\) và làm mặt bên là 5 USD/m\\(^2\\). Tìm \\(x\\) (mét) để chi phí làm chiếc hộp là nhỏ nhất.",
+        options=[], # Empty options list signals Short Answer input!
+        correct_answer=f"{6 * (exam_num ** (1/3)):.1f}".rstrip('0').rstrip('.'),
+        explanation=f"Thể tích \\(V = x^2 y = {exam_num * 108} \\Rightarrow y = \\frac{{{exam_num * 108}}}{{x^2}}\\). Chi phí: \\(C(x) = 10x^2 + 4 \\cdot 5xy = 10x^2 + \\frac{{{exam_num * 2160}}}{{x}}\\). Đạo hàm: \\(C'(x) = 20x - \\frac{{{exam_num * 2160}}}{{x^2}} = 0 \\Leftrightarrow x^3 = {exam_num * 108} \\Rightarrow x = {6 * (exam_num ** (1/3)):.1f}\\).",
+        step_by_step=[],
+        formulas=["V = x^2 y", "C'(x) = 0"]
+    ))
+
+    # 19. TỰ LUẬN TRẢ LỜI NGẮN 2
+    ans_19 = 10 * exam_num
+    questions.append(Question(
+        subject="math",
+        exam_name=exam_name,
+        topic="Tự luận ngắn - Cấp số cộng",
+        difficulty="medium",
+        content=f"**Câu 19 (Trả lời ngắn)**: Tìm số hạng đầu \\(u_1\\) của một cấp số cộng biết tổng 10 số hạng đầu tiên của nó bằng \\({ans_19 * 10}\\) và công sai \\(d = 2\\).",
+        options=[], # Empty options list signals Short Answer input!
+        correct_answer=str(ans_19 - 9),
+        explanation=f"Tổng 10 số hạng đầu: \\(S_{{10}} = 5(2u_1 + 9d) = {ans_19 * 10} \\Rightarrow 2u_1 + 18 = {ans_19 * 2} \\Rightarrow u_1 = {ans_19 - 9}\\).",
+        step_by_step=[],
+        formulas=["S_n = \\frac{n(2u_1 + (n-1)d)}{2}"]
+    ))
     
     return questions
 
@@ -373,7 +422,7 @@ def seed_db():
     try:
         print("Seeding questions...")
         
-        # 1. MATHEMATICS EXAMS (6 EXAMS - 16 QUESTIONS EACH)
+        # 1. MATHEMATICS EXAMS (6 EXAMS - 22 QUESTIONS EACH)
         math_questions = []
         for i in range(1, 7):
             math_questions.extend(generate_math_exam(i))

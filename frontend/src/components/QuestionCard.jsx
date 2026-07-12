@@ -65,66 +65,82 @@ export function QuestionCard({
         <MathRenderer text={question.content} />
       </div>
 
-      {/* Options List */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
-        {options.map((option, index) => {
-          const optionLabel = getOptionLabel(index); // A, B, C, D
-          const isSelected = selectedAnswer === optionLabel;
+      {/* Options List / Short Answer Input */}
+      {options.length === 0 ? (
+        <div className="space-y-2 mb-6">
+          <label className="block text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-2">
+            Nhập câu trả lời ngắn (chỉ điền số hoặc phân số):
+          </label>
+          <input
+            type="text"
+            disabled={showAnswer}
+            placeholder="Nhập kết quả..."
+            value={selectedAnswer || ''}
+            onChange={(e) => onSelectAnswer && onSelectAnswer(e.target.value)}
+            className="w-full max-w-md rounded-xl border border-slate-200 dark:border-slate-700 bg-transparent px-4 py-2.5 text-sm outline-none dark:text-slate-200 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20"
+          />
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+          {options.map((option, index) => {
+            const optionLabel = getOptionLabel(index); // A, B, C, D
+            const isSelected = selectedAnswer === optionLabel;
 
-          // Post-submit styling helper
-          let optionStyle = "border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700/50";
-          if (isSelected) {
-            optionStyle = "border-brand-500 bg-brand-50/50 text-brand-900 dark:border-brand-500 dark:bg-brand-950/20 dark:text-brand-400";
-          }
-
-          if (showAnswer) {
-            const isCorrectOption = optionLabel === question.correct_answer;
-            if (isCorrectOption) {
-              optionStyle = "border-emerald-500 bg-emerald-50/30 text-emerald-950 dark:border-emerald-500 dark:bg-emerald-950/20 dark:text-emerald-400 font-medium";
-            } else if (isSelected) {
-              optionStyle = "border-rose-500 bg-rose-50/30 text-rose-950 dark:border-rose-500 dark:bg-rose-950/20 dark:text-rose-400";
-            } else {
-              optionStyle = "border-slate-200 dark:border-slate-800 opacity-60";
+            // Post-submit styling helper
+            let optionStyle = "border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700/50";
+            if (isSelected) {
+              optionStyle = "border-brand-500 bg-brand-50/50 text-brand-900 dark:border-brand-500 dark:bg-brand-950/20 dark:text-brand-400";
             }
-          }
 
-          return (
-            <button
-              key={index}
-              disabled={showAnswer}
-              onClick={() => onSelectAnswer && onSelectAnswer(optionLabel)}
-              className={`flex items-start gap-3 p-4 rounded-xl border text-left transition-all ${optionStyle}`}
-            >
-              <span className={`flex items-center justify-center w-6 h-6 rounded-full text-xs font-bold ${
-                isSelected 
-                  ? 'bg-brand-600 text-white dark:bg-brand-500' 
-                  : showAnswer && optionLabel === question.correct_answer
-                  ? 'bg-emerald-600 text-white'
-                  : showAnswer && isSelected
-                  ? 'bg-rose-600 text-white'
-                  : 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300'
-              }`}>
-                {optionLabel}
-              </span>
-              <div className="flex-1 text-sm pt-0.5">
-                <MathRenderer text={getOptionText(option)} />
-              </div>
-            </button>
-          );
-        })}
-      </div>
+            if (showAnswer) {
+              const isCorrectOption = optionLabel === question.correct_answer;
+              if (isCorrectOption) {
+                optionStyle = "border-emerald-500 bg-emerald-50/30 text-emerald-950 dark:border-emerald-500 dark:bg-emerald-950/20 dark:text-emerald-400 font-medium";
+              } else if (isSelected) {
+                optionStyle = "border-rose-500 bg-rose-50/30 text-rose-950 dark:border-rose-500 dark:bg-rose-950/20 dark:text-rose-400";
+              } else {
+                optionStyle = "border-slate-200 dark:border-slate-800 opacity-60";
+              }
+            }
+
+            return (
+              <button
+                key={index}
+                disabled={showAnswer}
+                onClick={() => onSelectAnswer && onSelectAnswer(optionLabel)}
+                className={`flex items-start gap-3 p-4 rounded-xl border text-left transition-all ${optionStyle}`}
+              >
+                <span className={`flex items-center justify-center w-6 h-6 rounded-full text-xs font-bold ${
+                  isSelected 
+                    ? 'bg-brand-600 text-white dark:bg-brand-500' 
+                    : showAnswer && optionLabel === question.correct_answer
+                    ? 'bg-emerald-600 text-white'
+                    : showAnswer && isSelected
+                    ? 'bg-rose-600 text-white'
+                    : 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300'
+                }`}>
+                  {optionLabel}
+                </span>
+                <div className="flex-1 text-sm pt-0.5">
+                  <MathRenderer text={getOptionText(option)} />
+                </div>
+              </button>
+            );
+          })}
+        </div>
+      )}
 
       {/* Answer Verification Status */}
       {showAnswer && (
         <div className="mt-4 pt-4 border-t border-slate-100 dark:border-slate-700/50">
           <div className="flex items-center gap-2 mb-3">
-            {selectedAnswer === question.correct_answer ? (
+            {selectedAnswer?.trim().toUpperCase() === question.correct_answer?.trim().toUpperCase() ? (
               <span className="flex items-center gap-1.5 text-sm font-semibold text-emerald-600 dark:text-emerald-400">
                 <CheckCircle className="w-5 h-5" /> Chính xác
               </span>
             ) : (
               <span className="flex items-center gap-1.5 text-sm font-semibold text-rose-600 dark:text-rose-400">
-                <XCircle className="w-5 h-5" /> Chưa chính xác {selectedAnswer ? `(Bạn chọn ${selectedAnswer})` : '(Bạn chưa trả lời)'}
+                <XCircle className="w-5 h-5" /> Chưa chính xác {selectedAnswer ? `(Bạn chọn: ${selectedAnswer})` : '(Bạn chưa trả lời)'}
               </span>
             )}
             <span className="text-sm text-slate-500 dark:text-slate-400 ml-auto">
