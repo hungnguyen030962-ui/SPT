@@ -34,7 +34,7 @@ def startup_event():
     db = SessionLocal()
     try:
         q_count = db.query(Question).count()
-        if q_count < 130:
+        if q_count < 200:
             print(f"Database has only {q_count} questions. Auto-seeding full data...")
             from app.seed import seed_db
             seed_db()
