@@ -1,8 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Timer } from 'lucide-react';
 
 export function CountdownTimer({ initialSeconds, onTimeUp, isActive = true }) {
   const [secondsLeft, setSecondsLeft] = useState(initialSeconds);
+  const onTimeUpRef = useRef(onTimeUp);
+
+  // Keep ref updated with latest parent callback
+  useEffect(() => {
+    onTimeUpRef.current = onTimeUp;
+  }, [onTimeUp]);
 
   useEffect(() => {
     setSecondsLeft(initialSeconds);
@@ -15,7 +21,7 @@ export function CountdownTimer({ initialSeconds, onTimeUp, isActive = true }) {
       setSecondsLeft(prev => {
         if (prev <= 1) {
           clearInterval(interval);
-          if (onTimeUp) onTimeUp();
+          if (onTimeUpRef.current) onTimeUpRef.current();
           return 0;
         }
         return prev - 1;
@@ -23,7 +29,7 @@ export function CountdownTimer({ initialSeconds, onTimeUp, isActive = true }) {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [isActive, onTimeUp]);
+  }, [isActive]);
 
   const formatTime = (totalSeconds) => {
     const mins = Math.floor(totalSeconds / 60);
