@@ -114,14 +114,14 @@ export function Home() {
             </div>
             <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100 mb-2">Ngữ văn</h3>
             <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6">
-              Tra cứu tác giả, tác phẩm, tóm tắt, giá trị nội dung/nghệ thuật, dàn ý chi tiết và hệ thống từ khóa nhớ bài hiệu quả.
+              Luyện đề thi thử môn Ngữ văn đánh giá năng lực HNUE. Bao gồm đọc hiểu, kiến thức văn học chung.
             </p>
           </div>
           <Link
-            to="/literature"
+            to="/exam?subject=literature"
             className="flex items-center gap-1.5 text-sm font-bold text-brand-600 dark:text-brand-400 hover:gap-2.5 transition-all mt-auto"
           >
-            Mở kho tài liệu Văn <ArrowRight className="w-4 h-4" />
+            Vào ôn luyện Văn <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
 

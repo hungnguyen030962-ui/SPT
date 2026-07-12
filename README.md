@@ -2,23 +2,29 @@
 
 Hệ thống luyện thi trực tuyến dành cho kỳ thi Đánh giá năng lực của Đại học Sư phạm Hà Nội (SPT HNUE). 
 
-Để tối ưu trải nghiệm học sinh ("vào làm bài ngay"), hệ thống hoạt động hoàn toàn **không cần đăng ký/đăng nhập**. Toàn bộ tiến trình làm bài, câu hỏi sai, bookmark và lịch sử học từ vựng được tự động lưu trữ và đồng bộ hóa trực tiếp trên trình duyệt qua `localStorage`.
+Để tối ưu trải nghiệm học sinh ("vào làm bài ngay"), hệ thống hoạt động hoàn toàn **không cần đăng ký/đăng nhập**. Toàn bộ tiến trình làm bài, câu hỏi sai và bookmark được tự động lưu trữ và đồng bộ hóa trực tiếp trên trình duyệt qua `localStorage`.
 
 ---
 
 ## 🌟 Tính Năng Chính
 
-- **Ngân hàng câu hỏi**: Tìm kiếm và lọc câu hỏi theo môn học, chuyên đề, độ khó. Hỗ trợ hiển thị công thức toán sắc nét (KaTeX) và lật xem đáp án/giải thích ngay lập tức.
-- **Luyện thi thử**: Cấu hình đề linh hoạt (luyện ngẫu nhiên, luyện theo chuyên đề lựa chọn, làm đề tổng hợp) kèm đồng hồ đếm ngược thông minh tự động nộp bài khi hết giờ.
+- **Luyện thi thử**: Cấu hình đề linh hoạt. Riêng môn **Toán học** cung cấp trực tiếp **6 đề thi thử chuẩn cấu trúc HNUE** cố định dài **90 phút**. Môn Văn và Anh hỗ trợ luyện tập tổng hợp.
 - **Xem lại lời giải**: Chấm điểm tức thì (thang 10), hiển thị chi tiết câu đúng/sai, lời giải từng bước cho môn Toán và liệt kê các công thức liên quan.
-- **Thống kê học tập**: Phân tích biểu đồ tiến độ điểm thi, tổng hợp chuyên đề mạnh (đạt >= 70% đúng) và chuyên đề yếu cần cải thiện.
 - **Trung tâm ôn tập**:
   - **Sửa sai**: Tập hợp các câu làm sai trong các bài thi thử. Hỗ trợ làm lại; nếu giải đúng sẽ tự động gỡ ra khỏi danh sách.
   - **Bookmark**: Lưu trữ các câu hỏi tâm đắc để xem lại nhanh.
   - **Flashcard Tiếng Anh**: Học từ vựng theo phương pháp lật thẻ tương tác 3D mượt mà.
-- **Kho tài liệu Ngữ văn**: Hệ thống tác giả, tác phẩm, tóm tắt cốt truyện, giá trị nghệ thuật/nội dung, dàn ý chi tiết và từ khóa ghi nhớ nhanh.
 
 ---
+
+## ⚡ Khắc phục lỗi "Real-time chậm" (Render Free Tier)
+
+Do sử dụng gói dịch vụ **Free Tier** của Render.com, sau 15 phút không có người sử dụng, server Render sẽ tự động ngủ (spin down). Khi người tiếp theo truy cập, sẽ mất khoảng **30 - 50 giây** để server khởi động lại (gây cảm giác phản hồi chậm ở lần nộp bài hoặc chọn đề đầu tiên).
+
+**Để giải quyết triệt để vấn đề này hoàn toàn miễn phí:**
+1. Đăng ký một tài khoản miễn phí tại **[UptimeRobot.com](https://uptimerobot.com/)** hoặc **[Cron-job.org](https://cron-job.org/)**.
+2. Tạo một giám sát mới dạng **HTTP(s) GET** trỏ thẳng đến link Backend của bạn: `https://spt-backend-7u8p.onrender.com/` (hoặc link Render của bạn).
+3. Thiết lập tần suất ping là **5 phút một lần**. Việc này sẽ giữ cho server của bạn luôn thức 24/7 và phản hồi ngay lập tức khi học sinh làm bài!
 
 ## 🛠️ Công Nghệ Sử Dụng
 

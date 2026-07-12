@@ -8,11 +8,8 @@ import {
 export function Sidebar({ isOpen, onClose }) {
   const menuItems = [
     { name: 'Bảng điều khiển', path: '/', icon: Home },
-    { name: 'Ngân hàng câu hỏi', path: '/questions', icon: BookOpen },
     { name: 'Luyện thi & Đề thi', path: '/exam', icon: FileSpreadsheet },
     { name: 'Trung tâm ôn tập', path: '/review', icon: RefreshCw },
-    { name: 'Tài liệu Ngữ văn', path: '/literature', icon: FileText },
-    { name: 'Thống kê kết quả', path: '/statistics', icon: BarChart3 },
   ];
 
   const sidebarClass = `fixed inset-y-0 left-0 z-50 w-64 border-r border-slate-200 bg-white pt-16 transition-transform dark:border-slate-800 dark:bg-slate-900 md:translate-x-0 ${
