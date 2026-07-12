@@ -10,6 +10,7 @@ def get_question(db: Session, question_id: int):
 def get_questions(
     db: Session,
     subject: Optional[str] = None,
+    exam_name: Optional[str] = None,
     topic: Optional[str] = None,
     difficulty: Optional[str] = None,
     search: Optional[str] = None,
@@ -19,6 +20,8 @@ def get_questions(
     query = db.query(Question)
     if subject:
         query = query.filter(Question.subject == subject)
+    if exam_name:
+        query = query.filter(Question.exam_name == exam_name)
     if topic:
         query = query.filter(Question.topic == topic)
     if difficulty:

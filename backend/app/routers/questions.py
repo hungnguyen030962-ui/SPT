@@ -13,6 +13,7 @@ router = APIRouter(prefix="/questions", tags=["questions"])
 @router.get("/", response_model=Union[List[QuestionOut], List[QuestionPublic]])
 def read_questions(
     subject: Optional[str] = None,
+    exam_name: Optional[str] = None,
     topic: Optional[str] = None,
     difficulty: Optional[str] = None,
     search: Optional[str] = None,
@@ -22,7 +23,7 @@ def read_questions(
     db: Session = Depends(get_db)
 ):
     questions = crud_question.get_questions(
-        db, subject=subject, topic=topic, difficulty=difficulty, search=search, skip=skip, limit=limit
+        db, subject=subject, exam_name=exam_name, topic=topic, difficulty=difficulty, search=search, skip=skip, limit=limit
     )
     if hide_answers:
         # Convert to public schemas (hides correct answer and explanation)

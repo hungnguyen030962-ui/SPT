@@ -12,7 +12,7 @@ export function ExamActive() {
 
   // Redirect if no config was passed
   const config = location.state || {};
-  const { subject, examType, topic, limit, timeLimit } = config;
+  const { subject, examType, examName, topic, limit, timeLimit } = config;
 
   useEffect(() => {
     if (!subject) {
@@ -46,6 +46,7 @@ export function ExamActive() {
           hide_answers: true, // Hide answers during exam
         };
         if (topic) params.topic = topic;
+        if (examName) params.exam_name = examName;
 
         const data = await examService.getQuestions(params);
         if (data.length === 0) {
@@ -64,7 +65,7 @@ export function ExamActive() {
     if (subject) {
       fetchQuestions();
     }
-  }, [subject, topic, limit]);
+  }, [subject, examName, topic, limit]);
 
   // Keep track of time elapsed
   useEffect(() => {
@@ -101,6 +102,7 @@ export function ExamActive() {
         id: Date.now().toString(),
         subject,
         exam_type: examType,
+        exam_name: examName || '',
         topic,
         score: response.score,
         total_questions: response.total_questions,
@@ -132,7 +134,7 @@ export function ExamActive() {
       localStorage.setItem('spt_wrong_questions', JSON.stringify(wrongList));
 
       // 3. Navigate to results page
-      navigate('/exam/result', { state: { resultData: response, subject, examType, topic } });
+      navigate('/exam/result', { state: { resultData: response, subject, examType, examName, topic } });
     } catch (err) {
       console.error("Error submitting test:", err);
       alert("Đã xảy ra lỗi khi nộp bài. Vui lòng thử lại.");

@@ -6,6 +6,7 @@ class Question(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     subject = Column(String(50), nullable=False, index=True)
+    exam_name = Column(String(100), nullable=True, index=True) # e.g. "Đề số 1", "Đề số 2"
     topic = Column(String(100), nullable=False, index=True)
     difficulty = Column(String(20), nullable=False, index=True)
     content = Column(Text, nullable=False)

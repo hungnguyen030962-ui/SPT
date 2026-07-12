@@ -12,7 +12,7 @@ export function ExamResult() {
 
   // Retrieve results data from routing state
   const state = location.state || {};
-  const { resultData, subject, examType, topic } = state;
+  const { resultData, subject, examType, examName, topic } = state;
 
   if (!resultData) {
     return (
@@ -55,7 +55,9 @@ export function ExamResult() {
     <div className="space-y-8">
       {/* Page Header */}
       <div>
-        <h1 className="text-2xl font-extrabold text-slate-800 dark:text-slate-100">Kết quả bài thi</h1>
+        <h1 className="text-2xl font-extrabold text-slate-800 dark:text-slate-100">
+          Kết quả bài thi {examName ? `- ${examName}` : ''}
+        </h1>
         <p className="text-slate-500 dark:text-slate-400 text-sm mt-1">Chúc mừng bạn đã hoàn thành bài thi thử!</p>
       </div>
 

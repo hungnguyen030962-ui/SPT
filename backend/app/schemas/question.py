@@ -3,6 +3,7 @@ from typing import List, Dict, Optional, Any
 
 class QuestionBase(BaseModel):
     subject: str
+    exam_name: Optional[str] = None
     topic: str
     difficulty: str
     content: str
@@ -24,6 +25,7 @@ class QuestionOut(QuestionBase):
 class QuestionPublic(BaseModel):
     id: int
     subject: str
+    exam_name: Optional[str] = None
     topic: str
     difficulty: str
     content: str

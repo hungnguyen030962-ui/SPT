@@ -11,6 +11,7 @@ export function QuestionBank() {
 
   // Filters state
   const [subject, setSubject] = useState('');
+  const [examName, setExamName] = useState('');
   const [topic, setTopic] = useState('');
   const [difficulty, setDifficulty] = useState('');
   const [search, setSearch] = useState('');
@@ -44,6 +45,7 @@ export function QuestionBank() {
     try {
       const params = {};
       if (subject) params.subject = subject;
+      if (examName) params.exam_name = examName;
       if (topic) params.topic = topic;
       if (difficulty) params.difficulty = difficulty;
       if (search) params.search = search;
@@ -60,7 +62,7 @@ export function QuestionBank() {
 
   useEffect(() => {
     loadQuestions();
-  }, [subject, topic, difficulty]);
+  }, [subject, examName, topic, difficulty]);
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
@@ -114,20 +116,36 @@ export function QuestionBank() {
               </select>
             </div>
 
-            {/* Topic Select */}
-            <div>
-              <label className="block text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-2">Chuyên đề</label>
-              <select
-                value={topic}
-                onChange={(e) => setTopic(e.target.value)}
-                className="w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-transparent px-4 py-2.5 text-sm outline-none dark:text-slate-200"
-              >
-                <option value="" className="dark:bg-slate-800">Tất cả chuyên đề</option>
-                {activeTopics.map((t, idx) => (
-                  <option key={idx} value={t} className="dark:bg-slate-800">{t}</option>
-                ))}
-              </select>
-            </div>
+            {/* Topic or Exam Select */}
+            {subject === 'math' ? (
+              <div>
+                <label className="block text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-2">Đề thi (Toán)</label>
+                <select
+                  value={examName}
+                  onChange={(e) => setExamName(e.target.value)}
+                  className="w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-transparent px-4 py-2.5 text-sm outline-none dark:text-slate-200"
+                >
+                  <option value="" className="dark:bg-slate-800">Tất cả đề thi</option>
+                  {["Đề số 1", "Đề số 2", "Đề số 3", "Đề số 4", "Đề số 5", "Đề số 6"].map((name, idx) => (
+                    <option key={idx} value={name} className="dark:bg-slate-800">{name}</option>
+                  ))}
+                </select>
+              </div>
+            ) : (
+              <div>
+                <label className="block text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-2">Chuyên đề</label>
+                <select
+                  value={topic}
+                  onChange={(e) => setTopic(e.target.value)}
+                  className="w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-transparent px-4 py-2.5 text-sm outline-none dark:text-slate-200"
+                >
+                  <option value="" className="dark:bg-slate-800">Tất cả chuyên đề</option>
+                  {activeTopics.map((t, idx) => (
+                    <option key={idx} value={t} className="dark:bg-slate-800">{t}</option>
+                  ))}
+                </select>
+              </div>
+            )}
 
             {/* Difficulty Select */}
             <div>
@@ -166,6 +184,7 @@ export function QuestionBank() {
               type="button"
               onClick={() => {
                 setSubject('');
+                setExamName('');
                 setTopic('');
                 setDifficulty('');
                 setSearch('');
